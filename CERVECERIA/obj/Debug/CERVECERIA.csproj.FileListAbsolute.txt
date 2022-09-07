@@ -1,0 +1,24 @@
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\bin\Debug\CERVECERIA.exe.config
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\bin\Debug\CERVECERIA.exe
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\bin\Debug\CERVECERIA.pdb
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\bin\Debug\BACKUP.dll
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\bin\Debug\DATOS.dll
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\bin\Debug\DINAMICA DE ENTIDADES.dll
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\bin\Debug\IDIOMA.dll
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\bin\Debug\MENSAJES.dll
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\bin\Debug\SEGURIDAD.dll
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\bin\Debug\BACKUP.pdb
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\bin\Debug\DATOS.pdb
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\bin\Debug\DINAMICA DE ENTIDADES.pdb
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\bin\Debug\IDIOMA.pdb
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\bin\Debug\MENSAJES.pdb
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\bin\Debug\SEGURIDAD.pdb
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.csprojAssemblyReference.cache
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.LOGIN.resources
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.Properties.Resources.resources
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.csproj.GenerateResource.cache
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.csproj.CoreCompileInputs.cache
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.csproj.CopyComplete
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.exe
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.pdb
+C:\Users\mauro\source\repos\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.ABM.resources
