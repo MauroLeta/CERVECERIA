@@ -7,3 +7,12 @@ C:\Users\mauro\source\repos\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\DINAMICA 
 C:\Users\mauro\source\repos\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\DINAMICA DE ENTIDADES.csproj.CopyComplete
 C:\Users\mauro\source\repos\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\DINAMICA DE ENTIDADES.dll
 C:\Users\mauro\source\repos\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\DINAMICA DE ENTIDADES.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\bin\Debug\DINAMICA DE ENTIDADES.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\bin\Debug\DINAMICA DE ENTIDADES.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\bin\Debug\DATOS.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\bin\Debug\DATOS.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\DINAMICA DE ENTIDADES.csprojAssemblyReference.cache
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\DINAMICA DE ENTIDADES.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\DINAMICA DE ENTIDADES.csproj.CopyComplete
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\DINAMICA DE ENTIDADES.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\DINAMICA DE ENTIDADES.pdb

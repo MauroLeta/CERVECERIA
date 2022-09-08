@@ -36,9 +36,9 @@ namespace CERVECERIA
 
             if (lector.HasRows == true)
             {
-                ABM frmABM = new ABM();
+                PRINCIPAL frmPrincipal = new PRINCIPAL();
                 this.Hide();
-                frmABM.Show();
+                frmPrincipal.Show();
             }
             else
             {

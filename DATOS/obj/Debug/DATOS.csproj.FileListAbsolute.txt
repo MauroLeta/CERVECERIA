@@ -4,3 +4,9 @@ C:\Users\mauro\source\repos\CERVECERIA\DATOS\obj\Debug\DATOS.csprojAssemblyRefer
 C:\Users\mauro\source\repos\CERVECERIA\DATOS\obj\Debug\DATOS.csproj.CoreCompileInputs.cache
 C:\Users\mauro\source\repos\CERVECERIA\DATOS\obj\Debug\DATOS.dll
 C:\Users\mauro\source\repos\CERVECERIA\DATOS\obj\Debug\DATOS.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DATOS\bin\Debug\DATOS.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DATOS\bin\Debug\DATOS.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DATOS\obj\Debug\DATOS.csprojAssemblyReference.cache
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DATOS\obj\Debug\DATOS.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DATOS\obj\Debug\DATOS.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DATOS\obj\Debug\DATOS.pdb

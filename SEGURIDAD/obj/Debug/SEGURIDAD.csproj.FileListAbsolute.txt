@@ -4,3 +4,9 @@ C:\Users\mauro\source\repos\CERVECERIA\SEGURIDAD\obj\Debug\SEGURIDAD.csprojAssem
 C:\Users\mauro\source\repos\CERVECERIA\SEGURIDAD\obj\Debug\SEGURIDAD.csproj.CoreCompileInputs.cache
 C:\Users\mauro\source\repos\CERVECERIA\SEGURIDAD\obj\Debug\SEGURIDAD.dll
 C:\Users\mauro\source\repos\CERVECERIA\SEGURIDAD\obj\Debug\SEGURIDAD.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\SEGURIDAD\bin\Debug\SEGURIDAD.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\SEGURIDAD\bin\Debug\SEGURIDAD.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\SEGURIDAD\obj\Debug\SEGURIDAD.csprojAssemblyReference.cache
+C:\Users\lucas\Documents\GitHub\CERVECERIA\SEGURIDAD\obj\Debug\SEGURIDAD.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\GitHub\CERVECERIA\SEGURIDAD\obj\Debug\SEGURIDAD.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\SEGURIDAD\obj\Debug\SEGURIDAD.pdb
