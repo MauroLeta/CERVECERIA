@@ -86,7 +86,7 @@ namespace CERVECERIA
             this.btnConfirmar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnConfirmar.Location = new System.Drawing.Point(528, 134);
+            this.btnConfirmar.Location = new System.Drawing.Point(544, 161);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(180, 40);
             this.btnConfirmar.TabIndex = 4;
