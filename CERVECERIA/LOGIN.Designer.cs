@@ -37,6 +37,7 @@ namespace CERVECERIA
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnOjo = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +70,7 @@ namespace CERVECERIA
             // 
             this.txtUser.BackColor = System.Drawing.SystemColors.Menu;
             this.txtUser.Location = new System.Drawing.Point(177, 90);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(146, 20);
             this.txtUser.TabIndex = 2;
@@ -78,7 +79,7 @@ namespace CERVECERIA
             // 
             this.txtPass.BackColor = System.Drawing.SystemColors.Menu;
             this.txtPass.Location = new System.Drawing.Point(177, 145);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(2);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(146, 20);
@@ -91,7 +92,7 @@ namespace CERVECERIA
             this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnConfirmar.Location = new System.Drawing.Point(408, 131);
-            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(135, 32);
             this.btnConfirmar.TabIndex = 4;
@@ -122,12 +123,25 @@ namespace CERVECERIA
             this.btnOjo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnOjo.Image = ((System.Drawing.Image)(resources.GetObject("btnOjo.Image")));
             this.btnOjo.Location = new System.Drawing.Point(338, 139);
-            this.btnOjo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOjo.Margin = new System.Windows.Forms.Padding(2);
             this.btnOjo.Name = "btnOjo";
             this.btnOjo.Size = new System.Drawing.Size(22, 24);
             this.btnOjo.TabIndex = 6;
             this.btnOjo.UseVisualStyleBackColor = false;
             this.btnOjo.Click += new System.EventHandler(this.btnOjo_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(408, 418);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 32);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "CERRAR";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // LOGIN
             // 
@@ -138,6 +152,7 @@ namespace CERVECERIA
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(572, 461);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnOjo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnConfirmar);
@@ -146,7 +161,7 @@ namespace CERVECERIA
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LOGIN";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";
@@ -164,6 +179,7 @@ namespace CERVECERIA
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnOjo;
+        private System.Windows.Forms.Button button1;
     }
 }
 

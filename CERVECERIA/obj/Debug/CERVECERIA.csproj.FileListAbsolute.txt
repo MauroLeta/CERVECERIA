@@ -47,3 +47,5 @@ C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.cspro
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.exe
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.pdb
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.PRINCIPAL.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\ENTIDADES.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\ENTIDADES.pdb

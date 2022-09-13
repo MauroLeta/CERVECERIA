@@ -11,28 +11,79 @@ namespace DATOS
 {
     public class Conexion
     {
-        public static SqlConnection conectar()
-        {
-            SqlConnection conexion = new SqlConnection(@"Data Source = MAURO\SQLEXPRESS; Initial Catalog = CERVECERIA; Integrated Security = True");
-            conexion.Open();
-            return conexion;
-        }
 
-        // SE PODRIA HACER ESTO?
-        /*
-        public void conectar()
-        {
-            SqlConnection conexion = new SqlConnection(@"Data Source = MAURO\SQLEXPRESS; Initial Catalog = CERVECERIA; Integrated Security = True");
-            conexion.Open();
-        }
-        /*/
 
-        public static void cerrar()
+        //Data Source = MAURO\\SQLEXPRESS; Initial Catalog = CERVECERIA; Integrated Security = True
+        //Data Source = DESKTOP - 8UATE5V\\SQLEXPRESS;Initial Catalog = CERVECERIA; Integrated Security = True
+
+        public string conectionString = "Data Source = MAURO\\SQLEXPRESS; Initial Catalog = CERVECERIA; Integrated Security = True";
+        public SqlConnection conectBd = new SqlConnection();
+
+        public Conexion()
         {
-            if (conectar().State == ConnectionState.Open)
+            conectBd.ConnectionString = conectionString;
+        }
+        public void openBD()
+        {
+            try
             {
-                conectar().Close();
+                conectBd.Open();
+                Console.WriteLine("Conexion abierta");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al abrir la BD " + ex.Message);
             }
         }
+        public void closeBD()
+        {
+            conectBd.Close();
+        }
+
+        public DataTable GetBdData(string _query)
+        {
+            openBD();
+            string query = _query;
+            SqlCommand command = new SqlCommand(query, conectBd);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            closeBD();
+            return table;
+        }
+
+        public int GetInt(string _query,string column)
+        {
+            openBD();
+            string query = _query;
+            int valor = 0;
+            SqlCommand command = new SqlCommand(query, conectBd);
+            SqlDataReader lector;
+            lector = command.ExecuteReader();
+            if(lector.Read())
+            {
+                valor = Int32.Parse(lector[column].ToString());
+            }
+            closeBD();
+            return valor;
+        }
+        public bool CRUD_BdData(string _query)
+        {
+            openBD();
+            string query = _query;
+            SqlCommand command = new SqlCommand(query, conectBd);
+            int cant;
+            cant = command.ExecuteNonQuery();
+            closeBD();
+            if (cant >= 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 }

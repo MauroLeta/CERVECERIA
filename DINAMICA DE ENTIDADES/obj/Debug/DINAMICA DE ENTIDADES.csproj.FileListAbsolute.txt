@@ -16,3 +16,5 @@ C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\DINAM
 C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\DINAMICA DE ENTIDADES.csproj.CopyComplete
 C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\DINAMICA DE ENTIDADES.dll
 C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\DINAMICA DE ENTIDADES.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\bin\Debug\ENTIDADES.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\bin\Debug\ENTIDADES.pdb

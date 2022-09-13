@@ -4,3 +4,8 @@ C:\Users\mauro\source\repos\CERVECERIA\ENTIDADES\obj\Debug\ENTIDADES.csprojAssem
 C:\Users\mauro\source\repos\CERVECERIA\ENTIDADES\obj\Debug\ENTIDADES.csproj.CoreCompileInputs.cache
 C:\Users\mauro\source\repos\CERVECERIA\ENTIDADES\obj\Debug\ENTIDADES.dll
 C:\Users\mauro\source\repos\CERVECERIA\ENTIDADES\obj\Debug\ENTIDADES.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\ENTIDADES\bin\Debug\ENTIDADES.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\ENTIDADES\bin\Debug\ENTIDADES.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\ENTIDADES\obj\Debug\ENTIDADES.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\GitHub\CERVECERIA\ENTIDADES\obj\Debug\ENTIDADES.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\ENTIDADES\obj\Debug\ENTIDADES.pdb

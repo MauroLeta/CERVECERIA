@@ -36,6 +36,7 @@
             // 
             // panelCentral
             // 
+            this.panelCentral.Enabled = false;
             this.panelCentral.Location = new System.Drawing.Point(227, 12);
             this.panelCentral.Name = "panelCentral";
             this.panelCentral.Size = new System.Drawing.Size(799, 593);
@@ -68,6 +69,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelCentral);
             this.Name = "PRINCIPAL";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PRINCIPAL";
             this.Load += new System.EventHandler(this.PRINCIPAL_Load);
             this.groupBox1.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ENTIDADES;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,16 @@ namespace CERVECERIA
 
         private void PRINCIPAL_Load(object sender, EventArgs e)
         {
+            USUARIOLOG user = new USUARIOLOG();
+
+            if (user.Id == 0)
+            {
+                this.Hide();
+                LOGIN log = new LOGIN();
+                log.Show();
+                
+
+            }
 
         }
         public void AgregarFormulario(Form f)

@@ -8,8 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DATOS;
-
+using DINAMICA_DE_ENTIDADES;
+using ENTIDADES;
 
 namespace CERVECERIA
 {
@@ -22,33 +22,18 @@ namespace CERVECERIA
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            
-            // LO PUSE ACA PARA QUE FUNCIONE, ESTA CREADO EN LA CAPA DATOS 
-            SqlConnection conexion = new SqlConnection(@"Data Source = MAURO\SQLEXPRESS; Initial Catalog = CERVECERIA; Integrated Security = True");
-            conexion.Open();
-            //------------------------------------------------------------------------------------------------------------------------------------    
-            
+            LOGIN_BDE login = new LOGIN_BDE();
+            USUARIOLOG usuario = new USUARIOLOG();
 
-            string consulta = "Select * from Usuario where Usuario = '" + txtUser.Text + "' and Contraseña = '" + txtPass.Text + "' ";
-            SqlCommand comando = new SqlCommand(consulta, conexion);
-            SqlDataReader lector;
-            lector = comando.ExecuteReader();
+            usuario = login.login(txtUser.Text, txtPass.Text);
 
-            if (lector.HasRows == true)
+            if(usuario != null)
             {
-                PRINCIPAL frmPrincipal = new PRINCIPAL();
-                this.Hide();
-                frmPrincipal.Show();
+                PRINCIPAL form = new PRINCIPAL();
+                AddOwnedForm(form);
+                form.Show();
+                this.Visible = false;
             }
-            else
-            {
-                MessageBox.Show("Usuario o contraseña incorrectos");
-            }
-        }
-
-        private void LOGIN_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnOjo_Click(object sender, EventArgs e)

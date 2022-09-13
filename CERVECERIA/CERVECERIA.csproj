@@ -102,13 +102,13 @@
       <Project>{94a00145-c602-4e55-a593-6e7831e33d70}</Project>
       <Name>BACKUP</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DATOS\DATOS.csproj">
-      <Project>{dec4387c-590b-43ab-8ac7-5364dbf849df}</Project>
-      <Name>DATOS</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DINAMICA DE ENTIDADES\DINAMICA DE ENTIDADES.csproj">
       <Project>{541acbea-5e1f-4cdd-8f07-76437336bb91}</Project>
       <Name>DINAMICA DE ENTIDADES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ENTIDADES\ENTIDADES.csproj">
+      <Project>{f2b3e4db-8963-4c2e-8392-65d3853d2f1d}</Project>
+      <Name>ENTIDADES</Name>
     </ProjectReference>
     <ProjectReference Include="..\IDIOMA\IDIOMA.csproj">
       <Project>{da3b8a9f-b7ba-4a9a-a134-5dec5b0094cb}</Project>

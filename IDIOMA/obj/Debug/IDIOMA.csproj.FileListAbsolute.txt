@@ -6,7 +6,6 @@ C:\Users\mauro\source\repos\CERVECERIA\IDIOMA\obj\Debug\IDIOMA.dll
 C:\Users\mauro\source\repos\CERVECERIA\IDIOMA\obj\Debug\IDIOMA.pdb
 C:\Users\lucas\Documents\GitHub\CERVECERIA\IDIOMA\bin\Debug\IDIOMA.dll
 C:\Users\lucas\Documents\GitHub\CERVECERIA\IDIOMA\bin\Debug\IDIOMA.pdb
-C:\Users\lucas\Documents\GitHub\CERVECERIA\IDIOMA\obj\Debug\IDIOMA.csprojAssemblyReference.cache
 C:\Users\lucas\Documents\GitHub\CERVECERIA\IDIOMA\obj\Debug\IDIOMA.csproj.CoreCompileInputs.cache
 C:\Users\lucas\Documents\GitHub\CERVECERIA\IDIOMA\obj\Debug\IDIOMA.dll
 C:\Users\lucas\Documents\GitHub\CERVECERIA\IDIOMA\obj\Debug\IDIOMA.pdb
