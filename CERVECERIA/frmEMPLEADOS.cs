@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace CERVECERIA
 {
-    public partial class ABM : Form
+    public partial class frmEMPLEADOS : Form
     {
-        public ABM()
+        public frmEMPLEADOS()
         {
             InitializeComponent();
         }

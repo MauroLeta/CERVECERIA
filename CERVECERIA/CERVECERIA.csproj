@@ -46,34 +46,88 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ABM.cs">
+    <Compile Include="frmCLIENTES.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ABM.Designer.cs">
-      <DependentUpon>ABM.cs</DependentUpon>
+    <Compile Include="frmCLIENTES.Designer.cs">
+      <DependentUpon>frmCLIENTES.cs</DependentUpon>
     </Compile>
-    <Compile Include="LOGIN.cs">
+    <Compile Include="frmCOMPRAS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LOGIN.Designer.cs">
-      <DependentUpon>LOGIN.cs</DependentUpon>
+    <Compile Include="frmCOMPRAS.Designer.cs">
+      <DependentUpon>frmCOMPRAS.cs</DependentUpon>
     </Compile>
-    <Compile Include="PRINCIPAL.cs">
+    <Compile Include="frmINICIO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PRINCIPAL.Designer.cs">
-      <DependentUpon>PRINCIPAL.cs</DependentUpon>
+    <Compile Include="frmINICIO.Designer.cs">
+      <DependentUpon>frmINICIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPAGOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPAGOS.Designer.cs">
+      <DependentUpon>frmPAGOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVENTAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVENTAS.Designer.cs">
+      <DependentUpon>frmVENTAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPRODUCTOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPRODUCTOS.Designer.cs">
+      <DependentUpon>frmPRODUCTOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEMPLEADOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEMPLEADOS.Designer.cs">
+      <DependentUpon>frmEMPLEADOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPRINCIPAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPRINCIPAL.Designer.cs">
+      <DependentUpon>frmPRINCIPAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLOGIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLOGIN.Designer.cs">
+      <DependentUpon>frmLOGIN.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ABM.resx">
-      <DependentUpon>ABM.cs</DependentUpon>
+    <EmbeddedResource Include="frmCLIENTES.resx">
+      <DependentUpon>frmCLIENTES.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LOGIN.resx">
-      <DependentUpon>LOGIN.cs</DependentUpon>
+    <EmbeddedResource Include="frmCOMPRAS.resx">
+      <DependentUpon>frmCOMPRAS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PRINCIPAL.resx">
-      <DependentUpon>PRINCIPAL.cs</DependentUpon>
+    <EmbeddedResource Include="frmINICIO.resx">
+      <DependentUpon>frmINICIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPAGOS.resx">
+      <DependentUpon>frmPAGOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPRODUCTOS.resx">
+      <DependentUpon>frmPRODUCTOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEMPLEADOS.resx">
+      <DependentUpon>frmEMPLEADOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVENTAS.resx">
+      <DependentUpon>frmVENTAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLOGIN.resx">
+      <DependentUpon>frmLOGIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPRINCIPAL.resx">
+      <DependentUpon>frmPRINCIPAL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

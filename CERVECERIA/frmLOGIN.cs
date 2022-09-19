@@ -13,9 +13,9 @@ using ENTIDADES;
 
 namespace CERVECERIA
 {
-    public partial class LOGIN : Form
+    public partial class frmLOGIN : Form
     {
-        public LOGIN()
+        public frmLOGIN()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace CERVECERIA
 
             if(usuario != null)
             {
-                PRINCIPAL form = new PRINCIPAL();
+                frmPRINCIPAL form = new frmPRINCIPAL();
                 AddOwnedForm(form);
                 form.Show();
                 this.Visible = false;
@@ -49,6 +49,19 @@ namespace CERVECERIA
                 txtPass.PasswordChar = '*';
             }
 
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (txtPass.PasswordChar == '*')
+            {
+                txtPass.PasswordChar = '\0';
+            }
+            else if (txtPass.PasswordChar == '\0')
+            {
+                txtPass.PasswordChar = '*';
+            }
 
         }
     }
