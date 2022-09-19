@@ -67,8 +67,6 @@ C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\MENSAJES.pdb
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\SEGURIDAD.pdb
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\DATOS.pdb
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.csprojAssemblyReference.cache
-C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.LOGIN.resources
-C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.PRINCIPAL.resources
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.Properties.Resources.resources
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.csproj.GenerateResource.cache
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.csproj.CoreCompileInputs.cache
@@ -82,3 +80,5 @@ C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmCL
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmCOMPRAS.resources
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmPAGOS.resources
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmINICIO.resources
+C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmLOGIN.resources
+C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmPRINCIPAL.resources
