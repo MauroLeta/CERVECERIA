@@ -12,9 +12,12 @@ namespace CERVECERIA
 {
     public partial class frmPRINCIPAL : Form
     {
-        public frmPRINCIPAL()
+        public frmPRINCIPAL(string sector, string nombre, string apellido)
         {
             InitializeComponent();
+            lblApellido.Text = apellido;
+            lblNombre.Text = nombre;
+            lblSector.Text = sector;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -38,6 +41,11 @@ namespace CERVECERIA
             {
                 submenuReportes.Visible = false;
             }
+        }
+
+        internal void Show(string sector, string apellido)
+        {
+            throw new NotImplementedException();
         }
 
         private void btnrptventa_Click(object sender, EventArgs e)

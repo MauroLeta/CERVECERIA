@@ -27,9 +27,9 @@ namespace CERVECERIA
 
             usuario = login.login(txtUser.Text, txtPass.Text);
 
-            if(usuario != null)
+            if(usuario.Id != 0)
             {
-                frmPRINCIPAL form = new frmPRINCIPAL();
+                frmPRINCIPAL form = new frmPRINCIPAL(usuario.Sector,usuario.Nombre,usuario.Apellido);
                 AddOwnedForm(form);
                 form.Show();
                 this.Visible = false;
