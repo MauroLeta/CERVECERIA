@@ -113,8 +113,14 @@ namespace CERVECERIA
             Abrirformhijo(new frmINICIO());
         }
 
+        private void btnCONECTADO_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void btnDESCONECTADO_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

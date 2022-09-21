@@ -46,15 +46,19 @@ namespace CERVECERIA
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCONECTADO = new System.Windows.Forms.Button();
+            this.btnDESCONECTADO = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             this.submenuReportes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.Black;
-            this.MenuVertical.Controls.Add(this.submenuReportes);
+            this.MenuVertical.Controls.Add(this.btnDESCONECTADO);
+            this.MenuVertical.Controls.Add(this.btnCONECTADO);
             this.MenuVertical.Controls.Add(this.btnSalir);
             this.MenuVertical.Controls.Add(this.btnReportes);
             this.MenuVertical.Controls.Add(this.btnPagos);
@@ -76,7 +80,7 @@ namespace CERVECERIA
             this.submenuReportes.Controls.Add(this.btnrptpagos);
             this.submenuReportes.Controls.Add(this.btnrptcompras);
             this.submenuReportes.Controls.Add(this.btnrptventa);
-            this.submenuReportes.Location = new System.Drawing.Point(44, 528);
+            this.submenuReportes.Location = new System.Drawing.Point(53, 506);
             this.submenuReportes.Name = "submenuReportes";
             this.submenuReportes.Size = new System.Drawing.Size(176, 123);
             this.submenuReportes.TabIndex = 8;
@@ -292,6 +296,7 @@ namespace CERVECERIA
             // 
             this.panelContenedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelContenedor.BackgroundImage")));
             this.panelContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelContenedor.Controls.Add(this.submenuReportes);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(220, 0);
             this.panelContenedor.Name = "panelContenedor";
@@ -305,6 +310,40 @@ namespace CERVECERIA
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(6, 700);
             this.panel1.TabIndex = 3;
+            // 
+            // btnCONECTADO
+            // 
+            this.btnCONECTADO.BackColor = System.Drawing.Color.DarkGray;
+            this.btnCONECTADO.FlatAppearance.BorderSize = 0;
+            this.btnCONECTADO.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnCONECTADO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCONECTADO.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCONECTADO.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCONECTADO.Location = new System.Drawing.Point(1, 529);
+            this.btnCONECTADO.Name = "btnCONECTADO";
+            this.btnCONECTADO.Size = new System.Drawing.Size(219, 37);
+            this.btnCONECTADO.TabIndex = 10;
+            this.btnCONECTADO.Text = "CONECTADO";
+            this.btnCONECTADO.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCONECTADO.UseVisualStyleBackColor = false;
+            this.btnCONECTADO.Click += new System.EventHandler(this.btnCONECTADO_Click);
+            // 
+            // btnDESCONECTADO
+            // 
+            this.btnDESCONECTADO.BackColor = System.Drawing.Color.DarkGray;
+            this.btnDESCONECTADO.FlatAppearance.BorderSize = 0;
+            this.btnDESCONECTADO.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnDESCONECTADO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDESCONECTADO.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDESCONECTADO.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDESCONECTADO.Location = new System.Drawing.Point(1, 572);
+            this.btnDESCONECTADO.Name = "btnDESCONECTADO";
+            this.btnDESCONECTADO.Size = new System.Drawing.Size(219, 37);
+            this.btnDESCONECTADO.TabIndex = 11;
+            this.btnDESCONECTADO.Text = "DESCONECTADO";
+            this.btnDESCONECTADO.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDESCONECTADO.UseVisualStyleBackColor = false;
+            this.btnDESCONECTADO.Click += new System.EventHandler(this.btnDESCONECTADO_Click);
             // 
             // frmPRINCIPAL
             // 
@@ -322,6 +361,7 @@ namespace CERVECERIA
             this.MenuVertical.ResumeLayout(false);
             this.submenuReportes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelContenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -343,5 +383,7 @@ namespace CERVECERIA
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnDESCONECTADO;
+        private System.Windows.Forms.Button btnCONECTADO;
     }
 }
