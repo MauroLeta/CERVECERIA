@@ -42,9 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conectado.cs" />
     <Compile Include="Conexion.cs" />
-    <Compile Include="Desconectado.cs" />
+    <Compile Include="EMPLEADOS_DAL.cs" />
     <Compile Include="LOGIN_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

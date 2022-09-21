@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using DATOS;
 
 namespace CERVECERIA
 {
@@ -20,14 +21,10 @@ namespace CERVECERIA
 
         private void ABM_Load(object sender, EventArgs e)
         {
-            SqlConnection conexion = new SqlConnection(@"Data Source = MAURO\SQLEXPRESS; Initial Catalog = CERVECERIA; Integrated Security = True");
-            conexion.Open();
-            string consulta = "select * from Empleados";
-            SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
-            DataTable dt = new DataTable();
-            adaptador.Fill(dt);
-            dataGridView1.DataSource = dt;
+            EMPLEADOS_DAL empladosDAL = new EMPLEADOS_DAL();
 
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = empladosDAL.GetEmpleados();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

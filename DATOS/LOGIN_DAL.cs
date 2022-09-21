@@ -24,7 +24,7 @@ namespace DATOS
             tabla = conection.GetBdData(consulta);
 
             var i = 0;
-
+            
             foreach (DataRow drow in tabla.Rows)
             {
               bool blocked = bool.Parse(tabla.Rows[i]["Bloqueado"].ToString());

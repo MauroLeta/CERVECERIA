@@ -6,7 +6,6 @@ C:\Users\mauro\source\repos\CERVECERIA\BACKUP\obj\Debug\BACKUP.dll
 C:\Users\mauro\source\repos\CERVECERIA\BACKUP\obj\Debug\BACKUP.pdb
 C:\Users\lucas\Documents\GitHub\CERVECERIA\BACKUP\bin\Debug\BACKUP.dll
 C:\Users\lucas\Documents\GitHub\CERVECERIA\BACKUP\bin\Debug\BACKUP.pdb
-C:\Users\lucas\Documents\GitHub\CERVECERIA\BACKUP\obj\Debug\BACKUP.csprojAssemblyReference.cache
 C:\Users\lucas\Documents\GitHub\CERVECERIA\BACKUP\obj\Debug\BACKUP.csproj.CoreCompileInputs.cache
 C:\Users\lucas\Documents\GitHub\CERVECERIA\BACKUP\obj\Debug\BACKUP.dll
 C:\Users\lucas\Documents\GitHub\CERVECERIA\BACKUP\obj\Debug\BACKUP.pdb
