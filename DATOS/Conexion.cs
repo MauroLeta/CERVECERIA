@@ -16,7 +16,7 @@ namespace DATOS
         //Data Source = MAURO\\SQLEXPRESS; Initial Catalog = CERVECERIA; Integrated Security = True
         //Data Source = DESKTOP - 8UATE5V\\SQLEXPRESS;Initial Catalog = CERVECERIA; Integrated Security = True
 
-        public string conectionString = "Data Source=DESKTOP-8UATE5V\\SQLEXPRESS;Initial Catalog=CERVECERIA; Integrated Security=True";
+        public string conectionString = " Data Source=MAURO\\SQLEXPRESS; Initial Catalog = CERVECERIA; Integrated Security = True";
         public SqlConnection conectBd = new SqlConnection();
 
         public Conexion()

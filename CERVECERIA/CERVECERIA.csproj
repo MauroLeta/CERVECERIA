@@ -156,10 +156,6 @@
       <Project>{94a00145-c602-4e55-a593-6e7831e33d70}</Project>
       <Name>BACKUP</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DATOS\DATOS.csproj">
-      <Project>{DEC4387C-590B-43AB-8AC7-5364DBF849DF}</Project>
-      <Name>DATOS</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DINAMICA DE ENTIDADES\DINAMICA DE ENTIDADES.csproj">
       <Project>{541acbea-5e1f-4cdd-8f07-76437336bb91}</Project>
       <Name>DINAMICA DE ENTIDADES</Name>

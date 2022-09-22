@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DINAMICA_DE_ENTIDADES;
 using ENTIDADES;
+using IDIOMA;
 
 namespace CERVECERIA
 {
@@ -19,6 +20,8 @@ namespace CERVECERIA
         {
             InitializeComponent();
         }
+
+
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
@@ -62,6 +65,21 @@ namespace CERVECERIA
             {
                 txtPass.PasswordChar = '*';
             }
+
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmLOGIN_Load(object sender, EventArgs e)
+        {
 
         }
     }

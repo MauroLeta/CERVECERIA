@@ -19,7 +19,7 @@ namespace DATOS
         public USUARIOLOG GetUsuario(string user, string pass) 
         {
             USUARIOLOG usuario = new USUARIOLOG();
-            string consulta = "Select * from Usuario where Usuario = '" + user + "' and Contraseña = '" + pass + "' ";
+            string consulta = "Select * from Usuarios where Usuario = '" + user + "' and Contraseña = '" + pass + "' ";
             DataTable tabla = new DataTable();
             tabla = conection.GetBdData(consulta);
 
@@ -36,7 +36,7 @@ namespace DATOS
                 else
                 {
                     USUARIOLOG us = new USUARIOLOG(
-                        Int32.Parse(tabla.Rows[i]["Id"].ToString()),
+                        Int32.Parse(tabla.Rows[i]["ID"].ToString()),
                         tabla.Rows[i]["Nombre"].ToString(),
                         tabla.Rows[i]["Apellido"].ToString(),
                         tabla.Rows[i]["Sector"].ToString());
@@ -57,13 +57,13 @@ namespace DATOS
 
         public void UpdateIntentos(string user, int intentos)
         {
-            string updateIntentos = "Update Usuario Set Intentos ="+ intentos + "  where Usuario = '" + user + "'";
+            string updateIntentos = "Update Usuarios Set Intentos ="+ intentos + "  where Usuario = '" + user + "'";
             conection.CRUD_BdData(updateIntentos);     
         }
 
         public void Bloquear(string user)
         {
-            string bloquear = "Update Usuario set Bloqueado = 1 where Usuario ='" + user + "'";
+            string bloquear = "Update Usuarios set Bloqueado = 1 where Usuario ='" + user + "'";
             conection.CRUD_BdData(bloquear);
         }
 

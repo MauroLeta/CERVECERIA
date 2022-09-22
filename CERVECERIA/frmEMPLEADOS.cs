@@ -21,6 +21,10 @@ namespace CERVECERIA
 
         private void ABM_Load(object sender, EventArgs e)
         {
+            foreach (Control a in Controls)
+            {
+                listBox1.Items.Add(a.Text);
+            }
             EMPLEADOS_DAL empladosDAL = new EMPLEADOS_DAL();
 
             dataGridView1.DataSource = null;

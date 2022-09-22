@@ -83,7 +83,9 @@ namespace CERVECERIA
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
+           
             Abrirformhijo(new frmEMPLEADOS());
+
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
@@ -127,6 +129,11 @@ namespace CERVECERIA
         }
 
         private void btnDESCONECTADO_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
