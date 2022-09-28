@@ -58,11 +58,23 @@
     <Compile Include="frmCOMPRAS.Designer.cs">
       <DependentUpon>frmCOMPRAS.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCONFIG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCONFIG.Designer.cs">
+      <DependentUpon>frmCONFIG.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmINICIO.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmINICIO.Designer.cs">
       <DependentUpon>frmINICIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLUPA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLUPA.Designer.cs">
+      <DependentUpon>frmLUPA.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPAGOS.cs">
       <SubType>Form</SubType>
@@ -108,8 +120,14 @@
     <EmbeddedResource Include="frmCOMPRAS.resx">
       <DependentUpon>frmCOMPRAS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCONFIG.resx">
+      <DependentUpon>frmCONFIG.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmINICIO.resx">
       <DependentUpon>frmINICIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLUPA.resx">
+      <DependentUpon>frmLUPA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPAGOS.resx">
       <DependentUpon>frmPAGOS.cs</DependentUpon>
@@ -137,6 +155,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -155,6 +174,10 @@
     <ProjectReference Include="..\BACKUP\BACKUP.csproj">
       <Project>{94a00145-c602-4e55-a593-6e7831e33d70}</Project>
       <Name>BACKUP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DATOS\DATOS.csproj">
+      <Project>{DEC4387C-590B-43AB-8AC7-5364DBF849DF}</Project>
+      <Name>DATOS</Name>
     </ProjectReference>
     <ProjectReference Include="..\DINAMICA DE ENTIDADES\DINAMICA DE ENTIDADES.csproj">
       <Project>{541acbea-5e1f-4cdd-8f07-76437336bb91}</Project>
@@ -176,6 +199,33 @@
       <Project>{33630500-9b5d-417b-bb4e-bb94b372a961}</Project>
       <Name>SEGURIDAD</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Español.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ingles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Portugues.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Español1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa_cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ojoTachado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustes.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

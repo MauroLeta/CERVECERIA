@@ -88,3 +88,5 @@ C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmLO
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmPRINCIPAL.resources
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmLOGIN.resources
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmPRINCIPAL.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmLUPA.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmCONFIG.resources

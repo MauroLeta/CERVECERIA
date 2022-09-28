@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Idiomas.cs" />
+    <Compile Include="IDIOMAS_BDE.cs" />
     <Compile Include="LOGIN_BDE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

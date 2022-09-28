@@ -16,7 +16,7 @@ namespace DATOS
         //Data Source = MAURO\\SQLEXPRESS; Initial Catalog = CERVECERIA; Integrated Security = True
         //Data Source = DESKTOP - 8UATE5V\\SQLEXPRESS;Initial Catalog = CERVECERIA; Integrated Security = True
 
-        public string conectionString = " Data Source=MAURO\\SQLEXPRESS; Initial Catalog = CERVECERIA; Integrated Security = True";
+        public string conectionString = "Data Source = DESKTOP-8UATE5V\\SQLEXPRESS;Initial Catalog = CERVECERIA; Integrated Security = True";
         public SqlConnection conectBd = new SqlConnection();
 
         public Conexion()
@@ -63,6 +63,22 @@ namespace DATOS
             if(lector.Read())
             {
                 valor = Int32.Parse(lector[column].ToString());
+            }
+            closeBD();
+            return valor;
+        }
+
+        public string GetString(string _query, string column)
+        {
+            openBD();
+            string query = _query;
+            string valor = "";
+            SqlCommand command = new SqlCommand(query, conectBd);
+            SqlDataReader lector;
+            lector = command.ExecuteReader();
+            if (lector.Read())
+            {
+                valor = lector[column].ToString();
             }
             closeBD();
             return valor;

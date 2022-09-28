@@ -39,7 +39,8 @@ namespace DATOS
                         Int32.Parse(tabla.Rows[i]["ID"].ToString()),
                         tabla.Rows[i]["Nombre"].ToString(),
                         tabla.Rows[i]["Apellido"].ToString(),
-                        tabla.Rows[i]["Sector"].ToString());
+                        tabla.Rows[i]["Sector"].ToString(),
+                        tabla.Rows[i]["Idioma"].ToString());
 
                     usuario = us;
                 }
@@ -49,7 +50,7 @@ namespace DATOS
 
         public int GetIntentos(string user)
         {
-            string consultaIntentos = "Select * from Usuario where Usuario = '" + user + "'";
+            string consultaIntentos = "Select * from Usuarios where Usuario = '" + user + "'";
             int intentos = conection.GetInt(consultaIntentos, "Intentos");
 
             return intentos;

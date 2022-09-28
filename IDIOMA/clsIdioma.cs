@@ -9,6 +9,7 @@ namespace IDIOMA
 {
     public class clsIdioma
     {
+        /*
         DINAMICA_DE_ENTIDADES.Idiomas idio = new DINAMICA_DE_ENTIDADES.Idiomas();
         public List<string> BuscaIdioma(int nf)
         {
@@ -16,6 +17,6 @@ namespace IDIOMA
             return listaIdiomas;
         }
 
-       
+       */
     }
 }

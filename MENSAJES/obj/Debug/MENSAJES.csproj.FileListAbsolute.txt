@@ -9,3 +9,4 @@ C:\Users\lucas\Documents\GitHub\CERVECERIA\MENSAJES\bin\Debug\MENSAJES.pdb
 C:\Users\lucas\Documents\GitHub\CERVECERIA\MENSAJES\obj\Debug\MENSAJES.csproj.CoreCompileInputs.cache
 C:\Users\lucas\Documents\GitHub\CERVECERIA\MENSAJES\obj\Debug\MENSAJES.dll
 C:\Users\lucas\Documents\GitHub\CERVECERIA\MENSAJES\obj\Debug\MENSAJES.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\MENSAJES\obj\Debug\MENSAJES.csprojAssemblyReference.cache

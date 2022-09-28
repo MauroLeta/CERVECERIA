@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DINAMICA_DE_ENTIDADES;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,29 @@ namespace CERVECERIA
 {
     public partial class frmPRINCIPAL : Form
     {
-        public frmPRINCIPAL(string sector, string nombre, string apellido)
+        IDIOMAS_BDE idiomasBDE = new IDIOMAS_BDE();
+        public string Idioma = "Español";
+        public string IdiomaUser = "";
+        string _nombre;
+        string _apellido;
+        string _sector;
+        public frmPRINCIPAL(string sector, string nombre, string apellido, string idioma)
         {
             InitializeComponent();
-            lblApellido.Text = apellido;
-            lblNombre.Text = nombre;
-            lblSector.Text = sector;
+             _nombre = nombre;
+            _apellido = apellido;
+            _sector = sector;
+            IdiomaUser = idioma;
         }
+        private void PRINCIPAL_Load(object sender, EventArgs e)
+        {
+            ChangeLanguaje(IdiomaUser);
+            Idioma = IdiomaUser;
 
+            lblApellido.Text = _apellido;
+            lblNombre.Text = _nombre;
+            lblSector.Text = _sector;
+        }
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -75,11 +91,18 @@ namespace CERVECERIA
             fh.Show();                
         }
 
-
-        private void PRINCIPAL_Load(object sender, EventArgs e)
+        public void ChangeLanguaje(string idiomaN)
         {
-
+            if (Idioma != idiomaN)
+            {
+                idiomasBDE.CambiarIdioma(this, idiomaN, Idioma, MenuVertical);
+            }
+            else
+            {
+                return;
+            }
         }
+
 
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
@@ -136,6 +159,35 @@ namespace CERVECERIA
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnLupa_Click(object sender, EventArgs e)
+        {
+            Form existe = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "frmLUPA").SingleOrDefault<Form>();
+
+            if (existe != null)
+            {
+                btnLupa.BackgroundImage = Properties.Resources.pngwing_com__6_;
+                existe.Close();
+            }
+            else
+            {
+                btnLupa.BackgroundImage = Properties.Resources.lupa_cerrar;
+                frmLUPA Lupa = new frmLUPA();
+                AddOwnedForm(Lupa);
+                Lupa.Show();
+            }
+        }
+
+        private void btnConfig_Click(object sender, EventArgs e)
+        {
+            frmCONFIG config = new frmCONFIG(IdiomaUser);
+            config.Show();
         }
     }
 }
