@@ -1,0 +1,36 @@
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\CERVECERIA.exe.config
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\CERVECERIA.exe
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\CERVECERIA.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\BACKUP.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\DATOS.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\DINAMICA DE ENTIDADES.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\ENTIDADES.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\IDIOMA.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\MENSAJES.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\SEGURIDAD.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\BACKUP.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\DATOS.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\DINAMICA DE ENTIDADES.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\ENTIDADES.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\IDIOMA.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\MENSAJES.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\SEGURIDAD.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmCLIENTES.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmCOMPRAS.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmCONFIG.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmINICIO.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmINSUMOS.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmLUPA.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmPAGOS.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmPRODUCTOS.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmEMPLEADOS.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmVENTAS.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmLOGIN.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmPRINCIPAL.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.Properties.Resources.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\UI.csproj.CopyComplete
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.exe
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.pdb

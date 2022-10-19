@@ -1,0 +1,9 @@
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DATOS\bin\Debug\DATOS.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DATOS\bin\Debug\DATOS.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DATOS\bin\Debug\ENTIDADES.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DATOS\bin\Debug\ENTIDADES.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DATOS\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DATOS\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DATOS\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DATOS\obj\Debug\DATOS.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DATOS\obj\Debug\DATOS.pdb

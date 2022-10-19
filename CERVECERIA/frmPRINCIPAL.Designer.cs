@@ -29,17 +29,12 @@ namespace CERVECERIA
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPRINCIPAL));
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.btnInsumos = new System.Windows.Forms.Button();
             this.btnConfig = new System.Windows.Forms.Button();
             this.btnLupa = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblSector = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
-            this.SECTOR = new System.Windows.Forms.Label();
-            this.NOMBRE = new System.Windows.Forms.Label();
-            this.APELLIDO = new System.Windows.Forms.Label();
             this.submenuReportes = new System.Windows.Forms.Panel();
             this.btnrptpagos = new System.Windows.Forms.Button();
             this.btnrptcompras = new System.Windows.Forms.Button();
@@ -53,24 +48,27 @@ namespace CERVECERIA
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblAmPm = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.lblFecha = new System.Windows.Forms.Label();
+            this.SECTOR = new System.Windows.Forms.Label();
+            this.lblSector = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical.SuspendLayout();
             this.submenuReportes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuVertical
             // 
-            this.MenuVertical.BackColor = System.Drawing.Color.DimGray;
+            this.MenuVertical.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.MenuVertical.Controls.Add(this.btnInsumos);
             this.MenuVertical.Controls.Add(this.btnConfig);
             this.MenuVertical.Controls.Add(this.btnLupa);
-            this.MenuVertical.Controls.Add(this.panel1);
-            this.MenuVertical.Controls.Add(this.lblSector);
-            this.MenuVertical.Controls.Add(this.lblNombre);
-            this.MenuVertical.Controls.Add(this.lblApellido);
-            this.MenuVertical.Controls.Add(this.SECTOR);
-            this.MenuVertical.Controls.Add(this.NOMBRE);
-            this.MenuVertical.Controls.Add(this.APELLIDO);
             this.MenuVertical.Controls.Add(this.submenuReportes);
             this.MenuVertical.Controls.Add(this.btnSalir);
             this.MenuVertical.Controls.Add(this.btnReportes);
@@ -85,20 +83,39 @@ namespace CERVECERIA
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Margin = new System.Windows.Forms.Padding(2);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(236, 786);
+            this.MenuVertical.Size = new System.Drawing.Size(220, 885);
             this.MenuVertical.TabIndex = 1;
-            this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint);
+            // 
+            // btnInsumos
+            // 
+            this.btnInsumos.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnInsumos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInsumos.FlatAppearance.BorderSize = 0;
+            this.btnInsumos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnInsumos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsumos.Image = global::CERVECERIA.Properties.Resources.lupulo;
+            this.btnInsumos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInsumos.Location = new System.Drawing.Point(20, 229);
+            this.btnInsumos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInsumos.Name = "btnInsumos";
+            this.btnInsumos.Size = new System.Drawing.Size(175, 41);
+            this.btnInsumos.TabIndex = 31;
+            this.btnInsumos.Text = "INSUMOS";
+            this.btnInsumos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInsumos.UseVisualStyleBackColor = false;
+            this.btnInsumos.Click += new System.EventHandler(this.btnInsumos_Click);
             // 
             // btnConfig
             // 
             this.btnConfig.AutoSize = true;
-            this.btnConfig.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfig.BackColor = System.Drawing.Color.White;
             this.btnConfig.BackgroundImage = global::CERVECERIA.Properties.Resources.ajustes;
             this.btnConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnConfig.FlatAppearance.BorderSize = 0;
             this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfig.ForeColor = System.Drawing.Color.Transparent;
-            this.btnConfig.Location = new System.Drawing.Point(159, 741);
+            this.btnConfig.Location = new System.Drawing.Point(133, 840);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(33, 33);
             this.btnConfig.TabIndex = 30;
@@ -108,98 +125,25 @@ namespace CERVECERIA
             // btnLupa
             // 
             this.btnLupa.AutoSize = true;
-            this.btnLupa.BackColor = System.Drawing.Color.Transparent;
+            this.btnLupa.BackColor = System.Drawing.Color.White;
             this.btnLupa.BackgroundImage = global::CERVECERIA.Properties.Resources.pngwing_com__6_;
             this.btnLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLupa.FlatAppearance.BorderSize = 0;
             this.btnLupa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLupa.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLupa.Location = new System.Drawing.Point(198, 741);
+            this.btnLupa.Location = new System.Drawing.Point(172, 840);
             this.btnLupa.Name = "btnLupa";
             this.btnLupa.Size = new System.Drawing.Size(33, 33);
             this.btnLupa.TabIndex = 29;
             this.btnLupa.UseVisualStyleBackColor = false;
             this.btnLupa.Click += new System.EventHandler(this.btnLupa_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Location = new System.Drawing.Point(231, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 689);
-            this.panel1.TabIndex = 3;
-            // 
-            // lblSector
-            // 
-            this.lblSector.AutoSize = true;
-            this.lblSector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblSector.Location = new System.Drawing.Point(103, 304);
-            this.lblSector.Name = "lblSector";
-            this.lblSector.Size = new System.Drawing.Size(56, 20);
-            this.lblSector.TabIndex = 15;
-            this.lblSector.Text = "Sector";
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblNombre.Location = new System.Drawing.Point(103, 274);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(65, 20);
-            this.lblNombre.TabIndex = 14;
-            this.lblNombre.Text = "Nombre";
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.AutoSize = true;
-            this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblApellido.Location = new System.Drawing.Point(103, 243);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(65, 20);
-            this.lblApellido.TabIndex = 13;
-            this.lblApellido.Text = "Apellido";
-            // 
-            // SECTOR
-            // 
-            this.SECTOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SECTOR.Location = new System.Drawing.Point(0, 304);
-            this.SECTOR.Name = "SECTOR";
-            this.SECTOR.Size = new System.Drawing.Size(103, 20);
-            this.SECTOR.TabIndex = 12;
-            this.SECTOR.Text = "SECTOR:";
-            this.SECTOR.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // NOMBRE
-            // 
-            this.NOMBRE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.NOMBRE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NOMBRE.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.NOMBRE.Location = new System.Drawing.Point(3, 274);
-            this.NOMBRE.Name = "NOMBRE";
-            this.NOMBRE.Size = new System.Drawing.Size(104, 20);
-            this.NOMBRE.TabIndex = 11;
-            this.NOMBRE.Text = "NOMBRE:";
-            this.NOMBRE.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // APELLIDO
-            // 
-            this.APELLIDO.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.APELLIDO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.APELLIDO.Location = new System.Drawing.Point(6, 243);
-            this.APELLIDO.Name = "APELLIDO";
-            this.APELLIDO.Size = new System.Drawing.Size(101, 20);
-            this.APELLIDO.TabIndex = 10;
-            this.APELLIDO.Text = "APELLIDO:";
-            this.APELLIDO.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
             // submenuReportes
             // 
             this.submenuReportes.Controls.Add(this.btnrptpagos);
             this.submenuReportes.Controls.Add(this.btnrptcompras);
             this.submenuReportes.Controls.Add(this.btnrptventa);
-            this.submenuReportes.Location = new System.Drawing.Point(38, 595);
+            this.submenuReportes.Location = new System.Drawing.Point(52, 623);
             this.submenuReportes.Margin = new System.Windows.Forms.Padding(2);
             this.submenuReportes.Name = "submenuReportes";
             this.submenuReportes.Size = new System.Drawing.Size(132, 100);
@@ -266,7 +210,7 @@ namespace CERVECERIA
             this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(6, 742);
+            this.btnSalir.Location = new System.Drawing.Point(9, 842);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(81, 33);
@@ -285,7 +229,7 @@ namespace CERVECERIA
             this.btnReportes.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(6, 560);
+            this.btnReportes.Location = new System.Drawing.Point(20, 588);
             this.btnReportes.Margin = new System.Windows.Forms.Padding(2);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(164, 30);
@@ -304,7 +248,7 @@ namespace CERVECERIA
             this.btnPagos.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnPagos.Image = ((System.Drawing.Image)(resources.GetObject("btnPagos.Image")));
             this.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPagos.Location = new System.Drawing.Point(6, 525);
+            this.btnPagos.Location = new System.Drawing.Point(20, 553);
             this.btnPagos.Margin = new System.Windows.Forms.Padding(2);
             this.btnPagos.Name = "btnPagos";
             this.btnPagos.Size = new System.Drawing.Size(164, 30);
@@ -323,7 +267,7 @@ namespace CERVECERIA
             this.btnCompras.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnCompras.Image = ((System.Drawing.Image)(resources.GetObject("btnCompras.Image")));
             this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompras.Location = new System.Drawing.Point(6, 490);
+            this.btnCompras.Location = new System.Drawing.Point(20, 518);
             this.btnCompras.Margin = new System.Windows.Forms.Padding(2);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Size = new System.Drawing.Size(164, 30);
@@ -342,7 +286,7 @@ namespace CERVECERIA
             this.btnClientes.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(6, 455);
+            this.btnClientes.Location = new System.Drawing.Point(20, 483);
             this.btnClientes.Margin = new System.Windows.Forms.Padding(2);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(164, 30);
@@ -361,7 +305,7 @@ namespace CERVECERIA
             this.btnVentas.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnVentas.Image")));
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.Location = new System.Drawing.Point(6, 420);
+            this.btnVentas.Location = new System.Drawing.Point(20, 448);
             this.btnVentas.Margin = new System.Windows.Forms.Padding(2);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(164, 30);
@@ -380,7 +324,7 @@ namespace CERVECERIA
             this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(6, 385);
+            this.btnProductos.Location = new System.Drawing.Point(18, 414);
             this.btnProductos.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(164, 30);
@@ -400,7 +344,7 @@ namespace CERVECERIA
             this.btnEmpleados.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btnEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("btnEmpleados.Image")));
             this.btnEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmpleados.Location = new System.Drawing.Point(6, 350);
+            this.btnEmpleados.Location = new System.Drawing.Point(20, 378);
             this.btnEmpleados.Margin = new System.Windows.Forms.Padding(2);
             this.btnEmpleados.Name = "btnEmpleados";
             this.btnEmpleados.Size = new System.Drawing.Size(164, 30);
@@ -415,44 +359,129 @@ namespace CERVECERIA
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(236, 230);
+            this.pictureBox1.Size = new System.Drawing.Size(193, 199);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.lblAmPm);
+            this.panel1.Controls.Add(this.lblHora);
+            this.panel1.Controls.Add(this.lblFecha);
+            this.panel1.Controls.Add(this.SECTOR);
+            this.panel1.Controls.Add(this.lblSector);
+            this.panel1.Controls.Add(this.lblApellido);
+            this.panel1.Location = new System.Drawing.Point(220, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1082, 46);
+            this.panel1.TabIndex = 3;
+            // 
+            // lblAmPm
+            // 
+            this.lblAmPm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmPm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblAmPm.Location = new System.Drawing.Point(1010, 15);
+            this.lblAmPm.Name = "lblAmPm";
+            this.lblAmPm.Size = new System.Drawing.Size(37, 20);
+            this.lblAmPm.TabIndex = 18;
+            this.lblAmPm.Text = "am";
+            this.lblAmPm.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblHora
+            // 
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblHora.Location = new System.Drawing.Point(940, 14);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(68, 20);
+            this.lblHora.TabIndex = 17;
+            this.lblHora.Text = "HORA";
+            this.lblHora.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblFecha.Location = new System.Drawing.Point(838, 14);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(103, 20);
+            this.lblFecha.TabIndex = 16;
+            this.lblFecha.Text = "FECHA";
+            this.lblFecha.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // SECTOR
+            // 
+            this.SECTOR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SECTOR.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.SECTOR.Location = new System.Drawing.Point(469, 15);
+            this.SECTOR.Name = "SECTOR";
+            this.SECTOR.Size = new System.Drawing.Size(103, 20);
+            this.SECTOR.TabIndex = 12;
+            this.SECTOR.Text = "SECTOR:";
+            this.SECTOR.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // lblSector
+            // 
+            this.lblSector.AutoSize = true;
+            this.lblSector.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblSector.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSector.Location = new System.Drawing.Point(578, 15);
+            this.lblSector.Name = "lblSector";
+            this.lblSector.Size = new System.Drawing.Size(56, 20);
+            this.lblSector.TabIndex = 15;
+            this.lblSector.Text = "Sector";
+            // 
+            // lblApellido
+            // 
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblApellido.Location = new System.Drawing.Point(25, 14);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(73, 20);
+            this.lblApellido.TabIndex = 13;
+            this.lblApellido.Text = "Apellido";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // panelContenedor
             // 
             this.panelContenedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelContenedor.BackgroundImage")));
             this.panelContenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(236, 0);
+            this.panelContenedor.Location = new System.Drawing.Point(220, 50);
             this.panelContenedor.Margin = new System.Windows.Forms.Padding(2);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(859, 786);
+            this.panelContenedor.Size = new System.Drawing.Size(1082, 837);
             this.panelContenedor.TabIndex = 2;
-            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
             // frmPRINCIPAL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1095, 786);
+            this.ClientSize = new System.Drawing.Size(1300, 885);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.MenuVertical);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPRINCIPAL";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PRINCIPAL";
             this.Load += new System.EventHandler(this.PRINCIPAL_Load);
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
             this.submenuReportes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -475,12 +504,14 @@ namespace CERVECERIA
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblSector;
-        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label SECTOR;
-        private System.Windows.Forms.Label NOMBRE;
-        private System.Windows.Forms.Label APELLIDO;
         private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.Button btnLupa;
+        private System.Windows.Forms.Button btnInsumos;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Label lblFecha;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblAmPm;
     }
 }

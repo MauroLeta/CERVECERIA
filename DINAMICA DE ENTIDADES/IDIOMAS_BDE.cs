@@ -1,4 +1,5 @@
 ﻿using DATOS;
+using ENTIDADES;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,11 @@ namespace DINAMICA_DE_ENTIDADES
                     componente.Text = idiomasDal.GetString(componente.Text, IdiomaNuevo, Idioma);
                 }
             }
+        }
 
+        public void GuardarIdioma(string nIdioma, USUARIOLOG user) 
+        {
+            idiomasDal.UpdateIdioma(nIdioma, user.Id);
         }
   
     }

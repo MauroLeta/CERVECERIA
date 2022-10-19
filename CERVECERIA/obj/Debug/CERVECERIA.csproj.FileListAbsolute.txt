@@ -90,3 +90,4 @@ C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmLO
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmPRINCIPAL.resources
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmLUPA.resources
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmCONFIG.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmINSUMOS.resources

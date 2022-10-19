@@ -70,6 +70,12 @@
     <Compile Include="frmINICIO.Designer.cs">
       <DependentUpon>frmINICIO.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmINSUMOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmINSUMOS.Designer.cs">
+      <DependentUpon>frmINSUMOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLUPA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     <EmbeddedResource Include="frmINICIO.resx">
       <DependentUpon>frmINICIO.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmINSUMOS.resx">
+      <DependentUpon>frmINSUMOS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLUPA.resx">
       <DependentUpon>frmLUPA.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,17 +184,17 @@
       <Project>{94a00145-c602-4e55-a593-6e7831e33d70}</Project>
       <Name>BACKUP</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DATOS\DATOS.csproj">
+    <ProjectReference Include="..\DATOS\DAL.csproj">
       <Project>{DEC4387C-590B-43AB-8AC7-5364DBF849DF}</Project>
-      <Name>DATOS</Name>
+      <Name>DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DINAMICA DE ENTIDADES\DINAMICA DE ENTIDADES.csproj">
+    <ProjectReference Include="..\DINAMICA DE ENTIDADES\BLL.csproj">
       <Project>{541acbea-5e1f-4cdd-8f07-76437336bb91}</Project>
-      <Name>DINAMICA DE ENTIDADES</Name>
+      <Name>BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ENTIDADES\ENTIDADES.csproj">
+    <ProjectReference Include="..\ENTIDADES\BE.csproj">
       <Project>{f2b3e4db-8963-4c2e-8392-65d3853d2f1d}</Project>
-      <Name>ENTIDADES</Name>
+      <Name>BE</Name>
     </ProjectReference>
     <ProjectReference Include="..\IDIOMA\IDIOMA.csproj">
       <Project>{da3b8a9f-b7ba-4a9a-a134-5dec5b0094cb}</Project>
@@ -226,6 +235,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ajustes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupulo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

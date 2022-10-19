@@ -1,4 +1,5 @@
 ﻿using DINAMICA_DE_ENTIDADES;
+using ENTIDADES;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +14,18 @@ namespace CERVECERIA
 {
     public partial class frmCONFIG : Form
     {
-        String Idioma = "Español";
         IDIOMAS_BDE idiomasBDE = new IDIOMAS_BDE() ;
+        USUARIOLOG user = new USUARIOLOG();
 
-        public frmCONFIG(string idiomaUser)
+        string Idioma = "Español";
+        string nIdioma = "";
+
+        public frmCONFIG(USUARIOLOG usuario)
         {
             InitializeComponent();
-            ChangeLanguaje(idiomaUser);
-            Idioma = idiomaUser;
+            user = usuario;
+            ChangeLanguaje(usuario.Idioma);
+            Idioma = usuario.Idioma;
         }
         private void frmCONFIG_Load(object sender, EventArgs e)
         {
@@ -29,31 +34,21 @@ namespace CERVECERIA
 
         public void load()
         {
-            comboBox1.Items.Clear();
+            CONFIG_BDE config_bde = new CONFIG_BDE();
+
+            config_bde.ComboIdiomas(comboBox1, user.Idioma);
 
             if (Idioma == "Español")
             {
                 pictureBox1.BackgroundImage = Properties.Resources.Español;
-                comboBox1.Items.Add("Español");
-                comboBox1.Items.Add("Ingles");
-                comboBox1.Items.Add("Portugues");
-                comboBox1.Text = "Español";
             }
             if (Idioma == "Ingles")
             {
                 pictureBox1.BackgroundImage = Properties.Resources.Ingles;
-                comboBox1.Items.Add("Spanish");
-                comboBox1.Items.Add("English");
-                comboBox1.Items.Add("Portuguese");
-                comboBox1.Text = "English";
             }
             if (Idioma == "Portugues")
             {
                 pictureBox1.BackgroundImage = Properties.Resources.Portugues;
-                comboBox1.Items.Add("Espanhol");
-                comboBox1.Items.Add("Ingles");
-                comboBox1.Items.Add("Português");
-                comboBox1.Text = "Português";
             }       
         }
         public void ChangeLanguaje(string idiomaN)
@@ -69,12 +64,11 @@ namespace CERVECERIA
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            idiomasBDE.GuardarIdioma(nIdioma, user);
 
         }
         private void comboBox1_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            string nIdioma = "";
-
             switch (comboBox1.SelectedIndex)
             {
                 case 0: ChangeLanguaje("Español");
@@ -91,6 +85,7 @@ namespace CERVECERIA
             }
             if (Idioma != nIdioma)
             {
+                user.Idioma = nIdioma;
                 Idioma = nIdioma;
                 load();
             }

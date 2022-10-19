@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,18 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CONFIG_BDE.cs" />
     <Compile Include="IDIOMAS_BDE.cs" />
+    <Compile Include="INSUMOS_BDE.cs" />
     <Compile Include="LOGIN_BDE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DATOS\DATOS.csproj">
+    <ProjectReference Include="..\DATOS\DAL.csproj">
       <Project>{dec4387c-590b-43ab-8ac7-5364dbf849df}</Project>
-      <Name>DATOS</Name>
+      <Name>DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ENTIDADES\ENTIDADES.csproj">
+    <ProjectReference Include="..\ENTIDADES\BE.csproj">
       <Project>{F2B3E4DB-8963-4C2E-8392-65D3853D2F1D}</Project>
-      <Name>ENTIDADES</Name>
+      <Name>BE</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

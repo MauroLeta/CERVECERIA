@@ -45,9 +45,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DINAMICA DE ENTIDADES\DINAMICA DE ENTIDADES.csproj">
+    <ProjectReference Include="..\DINAMICA DE ENTIDADES\BLL.csproj">
       <Project>{541acbea-5e1f-4cdd-8f07-76437336bb91}</Project>
-      <Name>DINAMICA DE ENTIDADES</Name>
+      <Name>BLL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

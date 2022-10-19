@@ -11,8 +11,6 @@ namespace DATOS
 {
     public class Conexion
     {
-
-
         //Data Source = MAURO\\SQLEXPRESS; Initial Catalog = CERVECERIA; Integrated Security = True
         //Data Source = DESKTOP - 8UATE5V\\SQLEXPRESS;Initial Catalog = CERVECERIA; Integrated Security = True
 
@@ -40,6 +38,8 @@ namespace DATOS
             conectBd.Close();
         }
 
+
+        ///////-------------------------------------------------------------------------------------------------------//////////
         public DataTable GetBdData(string _query)
         {
             openBD();

@@ -1,4 +1,5 @@
 ﻿using DINAMICA_DE_ENTIDADES;
+using ENTIDADES;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,37 +15,49 @@ namespace CERVECERIA
     public partial class frmPRINCIPAL : Form
     {
         IDIOMAS_BDE idiomasBDE = new IDIOMAS_BDE();
+        USUARIOLOG user = new USUARIOLOG();
+
         public string Idioma = "Español";
-        public string IdiomaUser = "";
-        string _nombre;
-        string _apellido;
-        string _sector;
-        public frmPRINCIPAL(string sector, string nombre, string apellido, string idioma)
+
+        public frmPRINCIPAL(USUARIOLOG usuario)
         {
             InitializeComponent();
-             _nombre = nombre;
-            _apellido = apellido;
-            _sector = sector;
-            IdiomaUser = idioma;
+            user = usuario; 
         }
+
         private void PRINCIPAL_Load(object sender, EventArgs e)
         {
-            ChangeLanguaje(IdiomaUser);
-            Idioma = IdiomaUser;
-
-            lblApellido.Text = _apellido;
-            lblNombre.Text = _nombre;
-            lblSector.Text = _sector;
+            timer1.Enabled = true;
+            ChangeLanguaje(user.Idioma);
+           
+            lblApellido.Text = user.Apellido;
+            lblSector.Text = user.Sector;
         }
-        private void btnCerrar_Click(object sender, EventArgs e)
+
+        public void ChangeLanguaje(string idiomaN)
         {
-            Application.Exit();
+            if (Idioma != idiomaN)
+            {
+                idiomasBDE.CambiarIdioma(this, idiomaN, Idioma, MenuVertical);
+            }
+            else
+            {
+                return;
+            }
         }
 
-        private void MenuVertical_Paint(object sender, PaintEventArgs e)
+        private void Abrirformhijo(object formhijo)
         {
-
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+            Form fh = formhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            fh.Show();
         }
+
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
@@ -79,91 +92,52 @@ namespace CERVECERIA
             submenuReportes.Visible = false;
         }
 
-        private void Abrirformhijo (object formhijo)
+
+
+        private void btnInsumos_Click(object sender, EventArgs e)
         {
-            if (this.panelContenedor.Controls.Count > 0)
-                this.panelContenedor.Controls.RemoveAt(0);
-            Form fh = formhijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
-            fh.Show();                
+            Abrirformhijo(new frmINSUMOS(user));
         }
-
-        public void ChangeLanguaje(string idiomaN)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (Idioma != idiomaN)
-            {
-                idiomasBDE.CambiarIdioma(this, idiomaN, Idioma, MenuVertical);
-            }
-            else
-            {
-                return;
-            }
+            Abrirformhijo(new frmEMPLEADOS());
         }
-
-
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-           
             Abrirformhijo(new frmEMPLEADOS());
-
         }
-
         private void btnProductos_Click(object sender, EventArgs e)
         {
             Abrirformhijo(new frmPRODUCTOS());
         }
-
         private void btnVentas_Click(object sender, EventArgs e)
         {
             Abrirformhijo(new frmVENTAS());
         }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void btnClientes_Click(object sender, EventArgs e)
         {
             Abrirformhijo(new frmCLIENTES());
         }
-
         private void btnCompras_Click(object sender, EventArgs e)
         {
             Abrirformhijo(new frmCOMPRAS());
         }
-
         private void btnPagos_Click(object sender, EventArgs e)
         {
             Abrirformhijo(new frmPAGOS());
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Abrirformhijo(new frmINICIO());
         }
-
-        private void btnCONECTADO_Click(object sender, EventArgs e)
+        private void btnConfig_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnDESCONECTADO_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelContenedor_Paint(object sender, PaintEventArgs e)
-        {
-
+            frmCONFIG config = new frmCONFIG(user);
+            config.Show();
         }
 
         private void btnLupa_Click(object sender, EventArgs e)
@@ -183,11 +157,17 @@ namespace CERVECERIA
                 Lupa.Show();
             }
         }
-
-        private void btnConfig_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            frmCONFIG config = new frmCONFIG(IdiomaUser);
-            config.Show();
+            lblHora.Text = DateTime.Now.ToString("hh:mm");
+            lblAmPm.Text = DateTime.Now.ToString("tt", System.Globalization.CultureInfo.InvariantCulture);
+            lblFecha.Text = lblFecha.Text = DateTime.Now.ToLongDateString();
         }
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
     }
 }

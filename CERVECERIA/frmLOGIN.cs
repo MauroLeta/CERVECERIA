@@ -31,7 +31,7 @@ namespace CERVECERIA
 
             if(usuario.Id != 0)
             {
-                frmPRINCIPAL form = new frmPRINCIPAL(usuario.Sector,usuario.Nombre,usuario.Apellido, usuario.Idioma);
+                frmPRINCIPAL form = new frmPRINCIPAL(usuario);
                 AddOwnedForm(form);
                 form.Show();
                 this.Visible = false;

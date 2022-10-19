@@ -1,0 +1,11 @@
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\bin\Debug\DINAMICA DE ENTIDADES.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\bin\Debug\DINAMICA DE ENTIDADES.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\bin\Debug\DATOS.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\bin\Debug\ENTIDADES.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\bin\Debug\DATOS.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\bin\Debug\ENTIDADES.pdb
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\DINAMICA DE ENTIDADES.dll
+C:\Users\lucas\Documents\GitHub\CERVECERIA\DINAMICA DE ENTIDADES\obj\Debug\DINAMICA DE ENTIDADES.pdb
