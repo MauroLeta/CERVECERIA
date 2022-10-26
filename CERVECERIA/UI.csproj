@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmABM_INSUMOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmABM_INSUMOS.Designer.cs">
+      <DependentUpon>frmABM_INSUMOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCLIENTES.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCLIENTES.Designer.cs">
       <DependentUpon>frmCLIENTES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCOCCION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCOCCION.Designer.cs">
+      <DependentUpon>frmCOCCION.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCOMPRAS.cs">
       <SubType>Form</SubType>
@@ -120,8 +132,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmABM_INSUMOS.resx">
+      <DependentUpon>frmABM_INSUMOS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCLIENTES.resx">
       <DependentUpon>frmCLIENTES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCOCCION.resx">
+      <DependentUpon>frmCOCCION.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCOMPRAS.resx">
       <DependentUpon>frmCOMPRAS.cs</DependentUpon>

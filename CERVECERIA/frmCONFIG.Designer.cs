@@ -39,13 +39,13 @@
             // lblIdioma
             // 
             this.lblIdioma.AutoSize = true;
-            this.lblIdioma.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblIdioma.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lblIdioma.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdioma.Location = new System.Drawing.Point(16, 59);
+            this.lblIdioma.BackColor = System.Drawing.Color.Transparent;
+            this.lblIdioma.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdioma.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblIdioma.Location = new System.Drawing.Point(15, 56);
             this.lblIdioma.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIdioma.Name = "lblIdioma";
-            this.lblIdioma.Size = new System.Drawing.Size(65, 21);
+            this.lblIdioma.Size = new System.Drawing.Size(76, 23);
             this.lblIdioma.TabIndex = 2;
             this.lblIdioma.Text = "Idioma";
             // 
@@ -53,7 +53,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(118, 56);
+            this.comboBox1.Location = new System.Drawing.Point(125, 54);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(178, 28);
             this.comboBox1.TabIndex = 3;
@@ -61,9 +61,10 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Location = new System.Drawing.Point(286, 273);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
@@ -86,13 +87,14 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnGuardar.BackColor = System.Drawing.Color.Black;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnGuardar.Location = new System.Drawing.Point(65, 188);
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnGuardar.Location = new System.Drawing.Point(70, 212);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(275, 33);
+            this.btnGuardar.Size = new System.Drawing.Size(258, 26);
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "GUARDAR CAMBIOS";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -102,12 +104,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(382, 312);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.lblIdioma);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmCONFIG";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -26,6 +26,7 @@ namespace DINAMICA_DE_ENTIDADES
                 }
             }
         }
+  
 
         public void GuardarIdioma(string nIdioma, USUARIOLOG user) 
         {

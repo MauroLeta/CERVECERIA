@@ -17,7 +17,11 @@ namespace CERVECERIA
         IDIOMAS_BDE idiomasBDE = new IDIOMAS_BDE();
         USUARIOLOG user = new USUARIOLOG();
         INSUMOS_BDE insumos_bde = new INSUMOS_BDE();
+
         public string Idioma = "Español";
+        public string Grilla = "MALTA";
+        public string Medida = "Kg";
+
         public frmINSUMOS(USUARIOLOG usuario)
         {
             InitializeComponent();
@@ -28,12 +32,14 @@ namespace CERVECERIA
         {
             LoadDatagrid();
         }
-        public void LoadDatagrid() 
+        public void LoadDatagrid()
         {
+            string tabla = Grilla;
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = insumos_bde.getInsumos(tabInsumos.SelectedTab.Text);
+            dataGridView1.DataSource = insumos_bde.getInsumos(tabla);
             dataGridView1.Columns["Rubro"].Visible = false;
             dataGridView1.Columns["Proveedor"].Visible = false;
+            dataGridView1.Columns["id"].Visible = false;
         }
 
         public void ChangeLanguaje(string idiomaN)
@@ -47,27 +53,140 @@ namespace CERVECERIA
                 return;
             }
         }
+        private void btnLupulo_Click(object sender, EventArgs e)
+        {
+            btnMalta.BackColor = Color.PeachPuff;
+            btnLupulo.BackColor = Color.SandyBrown;
+            btnLevadura.BackColor = Color.PeachPuff;
+            btnAdiciones.BackColor = Color.PeachPuff;
+            Grilla = "LUPULO";
+            LoadDatagrid();
+
+            if(Medida == "Gr")
+            {
+                medidaA_GR();
+            }
+        }
+        private void btnMalta_Click(object sender, EventArgs e)
+        {
+            btnMalta.BackColor = Color.SandyBrown;
+            btnLupulo.BackColor = Color.PeachPuff;
+            btnLevadura.BackColor = Color.PeachPuff;
+            btnAdiciones.BackColor = Color.PeachPuff;
+            Grilla = "MALTA";
+            LoadDatagrid();
+
+            if (Medida == "Gr")
+            {
+                medidaA_GR();
+            }
+        }
+        private void btnLevadura_Click(object sender, EventArgs e)
+        {
+            btnMalta.BackColor = Color.PeachPuff;
+            btnLupulo.BackColor = Color.PeachPuff;
+            btnLevadura.BackColor = Color.SandyBrown;
+            btnAdiciones.BackColor = Color.PeachPuff;
+            Grilla = "LEVADURA";
+            LoadDatagrid();
+
+            if (Medida == "Gr")
+            {
+                medidaA_GR();
+            }
+        }
+        private void btnAdiciones_Click(object sender, EventArgs e)
+        {
+            btnMalta.BackColor = Color.PeachPuff;
+            btnLupulo.BackColor = Color.PeachPuff;
+            btnLevadura.BackColor = Color.PeachPuff;
+            btnAdiciones.BackColor = Color.SandyBrown;
+            Grilla = "ADICIONES";
+            LoadDatagrid();
+
+            if (Medida == "Gr")
+            {
+                medidaA_GR();
+            }
+        }
+
+        public void medidaA_GR()
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.Cells["Cantidad"].Value = double.Parse(row.Cells["Cantidad"].Value.ToString()) * 1000;
+            }
+            btnG.BackColor = Color.SandyBrown;
+            btnG.Enabled = false;
+            btnK.BackColor = Color.PeachPuff;
+            btnK.Enabled = true;
+            Medida = "Gr";
+        }
+        public void medidaA_KG()
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.Cells["Cantidad"].Value = double.Parse(row.Cells["Cantidad"].Value.ToString()) / 1000;
+            }
+            btnG.BackColor = Color.PeachPuff;
+            btnG.Enabled = true;
+            btnK.BackColor = Color.SandyBrown;
+            btnK.Enabled = false;
+            Medida = "Kg";
+        }
+        private void btnKg_Click(object sender, EventArgs e)
+        {
+            medidaA_GR();
+        }
+        private void btnGr_Click(object sender, EventArgs e)
+        {
+            medidaA_KG();
+        }
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmABM_INSUMOS abm = new frmABM_INSUMOS("ALTA", user, null);
+            AddOwnedForm(abm);
+            abm.Show();
+        }
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Seleccione una fila");
+                return;
+            }
+            else
+            {
+                INSUMO insumo = dataGridView1.CurrentRow.DataBoundItem as INSUMO;
+                frmABM_INSUMOS abm = new frmABM_INSUMOS("EDITAR", user, insumo);
+                AddOwnedForm(abm);
+                abm.Show();
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Seleccione una fila");
+                return;
+            }
+            else 
+            { 
+                INSUMO insumo = dataGridView1.CurrentRow.DataBoundItem as INSUMO;
+
+                DialogResult resul = MessageBox.Show("¿Seguro que quiere eliminar " + insumo.Nombre + " ?", "Eliminar Registro", MessageBoxButtons.YesNo);
+                if (resul == DialogResult.Yes)
+                {
+                    insumos_bde.EliminarInsumo(insumo.Id);
+                    LoadDatagrid();
+                }
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void tabInsumos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LoadDatagrid();
-        }
-
-
-
-        private void tabInsumos_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            LoadDatagrid();
-
-        }
-
-        private void tabInsumos_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            LoadDatagrid();
         }
     }
 }

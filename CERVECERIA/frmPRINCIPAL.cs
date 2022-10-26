@@ -39,6 +39,7 @@ namespace CERVECERIA
             if (Idioma != idiomaN)
             {
                 idiomasBDE.CambiarIdioma(this, idiomaN, Idioma, MenuVertical);
+                Idioma = user.Idioma;
             }
             else
             {
@@ -137,6 +138,7 @@ namespace CERVECERIA
         private void btnConfig_Click(object sender, EventArgs e)
         {
             frmCONFIG config = new frmCONFIG(user);
+            AddOwnedForm(config);
             config.Show();
         }
 
@@ -161,13 +163,16 @@ namespace CERVECERIA
         {
             lblHora.Text = DateTime.Now.ToString("hh:mm");
             lblAmPm.Text = DateTime.Now.ToString("tt", System.Globalization.CultureInfo.InvariantCulture);
-            lblFecha.Text = lblFecha.Text = DateTime.Now.ToLongDateString();
+            lblFecha.Text = lblFecha.Text = DateTime.Now.ToShortDateString();
         }
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-
+        private void btnLogOut_Click_1(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }

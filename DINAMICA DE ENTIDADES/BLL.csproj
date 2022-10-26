@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABM_BDE.cs" />
     <Compile Include="CONFIG_BDE.cs" />
     <Compile Include="IDIOMAS_BDE.cs" />
     <Compile Include="INSUMOS_BDE.cs" />

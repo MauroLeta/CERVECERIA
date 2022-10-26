@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DINAMICA_DE_ENTIDADES
 {
@@ -24,14 +25,14 @@ namespace DINAMICA_DE_ENTIDADES
             foreach (DataRow drow in tabla.Rows)
             {
                 RUBRO rubro = new RUBRO(Int32.Parse(tabla.Rows[i]["id"].ToString()), tabla.Rows[i]["rubro"].ToString());
-                PROVEEDOR proveedor = new PROVEEDOR(Int32.Parse(tabla.Rows[i]["idProv"].ToString()), tabla.Rows[i]["Nombre"].ToString(), Int32.Parse(tabla.Rows[i]["Telefono"].ToString()), tabla.Rows[i]["Mail"].ToString());
+                PROVEEDOR proveedor = new PROVEEDOR(Int32.Parse(tabla.Rows[i]["idProv"].ToString()), tabla.Rows[i]["NombreProv"].ToString(), Int32.Parse(tabla.Rows[i]["Telefono"].ToString()), tabla.Rows[i]["Mail"].ToString());
 
                 INSUMO insumo = new INSUMO(
                         Int32.Parse(tabla.Rows[i]["idInsumo"].ToString()),
                         rubro,
                         tabla.Rows[i]["Nombre"].ToString(),
                         tabla.Rows[i]["Marca"].ToString(),
-                        Int32.Parse(tabla.Rows[i]["Cantidad"].ToString()), proveedor);
+                        float.Parse(tabla.Rows[i]["Cantidad"].ToString()), proveedor);
 
                 insumos.Add(insumo);
 
@@ -39,7 +40,60 @@ namespace DINAMICA_DE_ENTIDADES
             }
             return insumos;
         }
+        public bool AgregarInsumo(string medida, RUBRO rubro, string nombre, string marca, float cantidad, PROVEEDOR proveedor)
+        {
+            INSUMO insumo = new INSUMO(0, rubro, nombre, marca, cantidad, proveedor);
+            if(medida == "Gr")
+            {
+                insumo.Cantidad = insumo.Cantidad * 1000;
+            }
+            bool insert = insumos_DAL.InsertInsumo(insumo);
 
+            if (insert == true)
+            {
+                MessageBox.Show("Registro Insertado");
+                return insert;
+            }
+            else
+            {
+                MessageBox.Show("No se pudo insertar el Registro");
+                return insert;
+            }
+        }
+        public bool EditarInsumo(string medida, int id, RUBRO rubro, string nombre, string marca, float cantidad, PROVEEDOR proveedor)
+        {
+            INSUMO insumo = new INSUMO(id, rubro, nombre, marca, cantidad, proveedor);
+            if (medida == "Gr")
+            {
+                insumo.Cantidad = insumo.Cantidad * 1000;
+            }
+            bool edit = insumos_DAL.editInsumo(insumo);
 
+            if (edit == true)
+            {
+                MessageBox.Show("Registro Editado");
+                return edit;
+            }
+            else
+            {
+                MessageBox.Show("No se pudo insertar el Editado");
+                return edit;
+            }
+        }
+        public bool EliminarInsumo(int id)
+        {
+            bool delete = insumos_DAL.deleteInsumo(id);
+
+            if (delete == true)
+            {
+                MessageBox.Show("Registro Eliminado");
+                return delete;
+            }
+            else
+            {
+                MessageBox.Show("No se pudo Eliminar el Registro");
+                return delete;
+            }
+        }
     }
 }

@@ -26,8 +26,7 @@ namespace CERVECERIA
             this.TransparencyKey = Color.Turquoise;
             this.BackColor = Color.Turquoise;
             this.TopMost = true;
-            Zoom++;
-            
+            Zoom++;          
         }
         private void timer1_Tick(object sender, EventArgs e)
         {

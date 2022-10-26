@@ -37,32 +37,6 @@ namespace CERVECERIA
                 this.Visible = false;
             }
         }
-        private void btnOjo_Click(object sender, EventArgs e)
-        {
-            // TENGO QUE PODER MOSTRAR Y ESCONDER LA CONTRASEÑA HACIENDO CLICK ACA
-            
-            if(txtPass.PasswordChar == '*')
-            {
-                txtPass.PasswordChar = '\0';
-            }
-            else if (txtPass.PasswordChar == '\0')
-            {
-                txtPass.PasswordChar = '*';
-            }
-        }
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            if (txtPass.PasswordChar == '*')
-            {
-                txtPass.PasswordChar = '\0';
-                pictureBox1.BackgroundImage = Properties.Resources.ojoTachado;
-            }
-            else if (txtPass.PasswordChar == '\0')
-            {
-                txtPass.PasswordChar = '*';
-                pictureBox1.BackgroundImage = Properties.Resources.ojo1;
-            }
-        }
 
         public void ChangeLanguaje(string idiomaN)
         {
@@ -94,12 +68,22 @@ namespace CERVECERIA
             Idioma = "Portugues";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        //-----------------------------------------------------------------------   MOSTRAR Y ESCONDER LA CONTRASEÑA          
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (txtPass.PasswordChar == '*')
+            {
+                txtPass.PasswordChar = '\0';
+                pictureBox1.BackgroundImage = Properties.Resources.ojoTachado;
+            }
+            else if (txtPass.PasswordChar == '\0')
+            {
+                txtPass.PasswordChar = '*';
+                pictureBox1.BackgroundImage = Properties.Resources.ojo1;
+            }
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        //------------------------------------------------------------------------------- ABRIR LUPA
+        private void btnLupa_Click(object sender, EventArgs e)
         {
             Form existe = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "frmLUPA").SingleOrDefault<Form>();
 
@@ -115,6 +99,10 @@ namespace CERVECERIA
                 AddOwnedForm(Lupa);
                 Lupa.Show();          
             }
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

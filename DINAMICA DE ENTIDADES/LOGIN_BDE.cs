@@ -26,11 +26,9 @@ namespace DINAMICA_DE_ENTIDADES
             else
             {
                 UserFail(user);
-
                 return usuario;
             }
         }
-
         public void UserFail(string user)
         {
             int intentos = loginDal.GetIntentos(user);
@@ -52,11 +50,7 @@ namespace DINAMICA_DE_ENTIDADES
                     loginDal.UpdateIntentos(user, (intentos));
                     MessageBox.Show("Te quedan " + (intentos) + " intentos");
                 }
-
             }
-
-        }
-                
-   
+        }                  
     }
 }

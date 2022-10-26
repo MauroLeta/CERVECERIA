@@ -31,19 +31,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmINSUMOS));
             this.label1 = new System.Windows.Forms.Label();
-            this.tabLevadura = new System.Windows.Forms.TabPage();
-            this.tabLupulo = new System.Windows.Forms.TabPage();
-            this.tabInsumos = new System.Windows.Forms.TabControl();
-            this.tabMalta = new System.Windows.Forms.TabPage();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.tabInsumos.SuspendLayout();
+            this.btnMalta = new System.Windows.Forms.Button();
+            this.btnLupulo = new System.Windows.Forms.Button();
+            this.btnLevadura = new System.Windows.Forms.Button();
+            this.btnAdiciones = new System.Windows.Forms.Button();
+            this.btnK = new System.Windows.Forms.Button();
+            this.btnG = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,146 +53,208 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(503, 22);
+            this.label1.Location = new System.Drawing.Point(486, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 26);
+            this.label1.Size = new System.Drawing.Size(118, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "INSUMOS";
             // 
-            // tabLevadura
-            // 
-            this.tabLevadura.Location = new System.Drawing.Point(4, 29);
-            this.tabLevadura.Name = "tabLevadura";
-            this.tabLevadura.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLevadura.Size = new System.Drawing.Size(712, 14);
-            this.tabLevadura.TabIndex = 2;
-            this.tabLevadura.Text = "LEVADURA";
-            this.tabLevadura.UseVisualStyleBackColor = true;
-            // 
-            // tabLupulo
-            // 
-            this.tabLupulo.Location = new System.Drawing.Point(4, 29);
-            this.tabLupulo.Name = "tabLupulo";
-            this.tabLupulo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLupulo.Size = new System.Drawing.Size(712, 14);
-            this.tabLupulo.TabIndex = 1;
-            this.tabLupulo.Text = "LUPULO";
-            this.tabLupulo.UseVisualStyleBackColor = true;
-            // 
-            // tabInsumos
-            // 
-            this.tabInsumos.Controls.Add(this.tabMalta);
-            this.tabInsumos.Controls.Add(this.tabLupulo);
-            this.tabInsumos.Controls.Add(this.tabLevadura);
-            this.tabInsumos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabInsumos.Location = new System.Drawing.Point(303, 82);
-            this.tabInsumos.Name = "tabInsumos";
-            this.tabInsumos.SelectedIndex = 0;
-            this.tabInsumos.Size = new System.Drawing.Size(720, 34);
-            this.tabInsumos.TabIndex = 0;
-            this.tabInsumos.SelectedIndexChanged += new System.EventHandler(this.tabInsumos_SelectedIndexChanged_1);
-            // 
-            // tabMalta
-            // 
-            this.tabMalta.Location = new System.Drawing.Point(4, 29);
-            this.tabMalta.Name = "tabMalta";
-            this.tabMalta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMalta.Size = new System.Drawing.Size(712, 1);
-            this.tabMalta.TabIndex = 0;
-            this.tabMalta.Text = "MALTA";
-            this.tabMalta.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.BackColor = System.Drawing.Color.PeachPuff;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Location = new System.Drawing.Point(888, 713);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 32);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 10;
             this.button1.Text = "CERRAR";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.PapayaWhip;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(303, 114);
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.SaddleBrown;
+            this.dataGridView1.Location = new System.Drawing.Point(302, 118);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PeachPuff;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(720, 575);
-            this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.TabIndex = 6;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAgregar.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAgregar.Location = new System.Drawing.Point(72, 151);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(135, 32);
-            this.btnAgregar.TabIndex = 6;
+            this.btnAgregar.TabIndex = 7;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEditar.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEditar.Location = new System.Drawing.Point(72, 204);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(135, 32);
-            this.btnEditar.TabIndex = 7;
+            this.btnEditar.TabIndex = 8;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnEliminar.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnEliminar.Location = new System.Drawing.Point(72, 260);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(135, 32);
-            this.btnEliminar.TabIndex = 8;
+            this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnMalta
+            // 
+            this.btnMalta.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnMalta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMalta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnMalta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMalta.Location = new System.Drawing.Point(302, 88);
+            this.btnMalta.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMalta.Name = "btnMalta";
+            this.btnMalta.Size = new System.Drawing.Size(120, 32);
+            this.btnMalta.TabIndex = 1;
+            this.btnMalta.Text = "MALTA";
+            this.btnMalta.UseVisualStyleBackColor = false;
+            this.btnMalta.Click += new System.EventHandler(this.btnMalta_Click);
+            // 
+            // btnLupulo
+            // 
+            this.btnLupulo.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnLupulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLupulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLupulo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLupulo.Location = new System.Drawing.Point(420, 88);
+            this.btnLupulo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLupulo.Name = "btnLupulo";
+            this.btnLupulo.Size = new System.Drawing.Size(120, 32);
+            this.btnLupulo.TabIndex = 2;
+            this.btnLupulo.Text = "LUPULO";
+            this.btnLupulo.UseVisualStyleBackColor = false;
+            this.btnLupulo.Click += new System.EventHandler(this.btnLupulo_Click);
+            // 
+            // btnLevadura
+            // 
+            this.btnLevadura.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnLevadura.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLevadura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLevadura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLevadura.Location = new System.Drawing.Point(538, 88);
+            this.btnLevadura.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLevadura.Name = "btnLevadura";
+            this.btnLevadura.Size = new System.Drawing.Size(120, 32);
+            this.btnLevadura.TabIndex = 3;
+            this.btnLevadura.Text = "LEVADURA";
+            this.btnLevadura.UseVisualStyleBackColor = false;
+            this.btnLevadura.Click += new System.EventHandler(this.btnLevadura_Click);
+            // 
+            // btnAdiciones
+            // 
+            this.btnAdiciones.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnAdiciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdiciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAdiciones.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAdiciones.Location = new System.Drawing.Point(657, 88);
+            this.btnAdiciones.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdiciones.Name = "btnAdiciones";
+            this.btnAdiciones.Size = new System.Drawing.Size(120, 32);
+            this.btnAdiciones.TabIndex = 4;
+            this.btnAdiciones.Text = "ADICIONES";
+            this.btnAdiciones.UseVisualStyleBackColor = false;
+            this.btnAdiciones.Click += new System.EventHandler(this.btnAdiciones_Click);
+            // 
+            // btnK
+            // 
+            this.btnK.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnK.Enabled = false;
+            this.btnK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnK.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnK.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnK.Location = new System.Drawing.Point(978, 88);
+            this.btnK.Margin = new System.Windows.Forms.Padding(2);
+            this.btnK.Name = "btnK";
+            this.btnK.Size = new System.Drawing.Size(43, 32);
+            this.btnK.TabIndex = 6;
+            this.btnK.Text = "Kg";
+            this.btnK.UseVisualStyleBackColor = false;
+            this.btnK.Click += new System.EventHandler(this.btnGr_Click);
+            // 
+            // btnG
+            // 
+            this.btnG.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnG.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnG.Location = new System.Drawing.Point(941, 88);
+            this.btnG.Margin = new System.Windows.Forms.Padding(2);
+            this.btnG.Name = "btnG";
+            this.btnG.Size = new System.Drawing.Size(43, 32);
+            this.btnG.TabIndex = 5;
+            this.btnG.Text = "Gr";
+            this.btnG.UseVisualStyleBackColor = false;
+            this.btnG.Click += new System.EventHandler(this.btnKg_Click);
             // 
             // frmINSUMOS
             // 
@@ -199,18 +263,22 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1082, 837);
+            this.Controls.Add(this.btnG);
+            this.Controls.Add(this.btnK);
+            this.Controls.Add(this.btnAdiciones);
+            this.Controls.Add(this.btnLevadura);
+            this.Controls.Add(this.btnLupulo);
+            this.Controls.Add(this.btnMalta);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tabInsumos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmINSUMOS";
             this.Text = "frmINSUMOS";
             this.Load += new System.EventHandler(this.frmINSUMOS_Load);
-            this.tabInsumos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -219,15 +287,17 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage tabLevadura;
-        private System.Windows.Forms.TabPage tabLupulo;
-        private System.Windows.Forms.TabControl tabInsumos;
-        private System.Windows.Forms.TabPage tabMalta;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         internal System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnMalta;
+        private System.Windows.Forms.Button btnLupulo;
+        private System.Windows.Forms.Button btnLevadura;
+        private System.Windows.Forms.Button btnAdiciones;
+        private System.Windows.Forms.Button btnK;
+        private System.Windows.Forms.Button btnG;
     }
 }

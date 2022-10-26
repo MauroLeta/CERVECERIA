@@ -11,6 +11,7 @@ namespace DINAMICA_DE_ENTIDADES
 {
     public class CONFIG_BDE
     {
+        IDIOMAS_BDE idiomasBDE = new IDIOMAS_BDE();
         public void ComboIdiomas(ComboBox combo, string Idioma)
         {
             combo.Items.Clear();
@@ -35,7 +36,16 @@ namespace DINAMICA_DE_ENTIDADES
                 combo.Items.Add("Ingles");
                 combo.Items.Add("Português");
                 combo.Text = "Português";
+            }           
+        }
+
+        public void ActualizarForm(string idiomaNuevo, string idioma)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                    idiomasBDE.CambiarIdioma(form, idiomaNuevo, idioma, null);      
             }
+
         }
     }
 }

@@ -16,9 +16,11 @@ namespace CERVECERIA
     {
         IDIOMAS_BDE idiomasBDE = new IDIOMAS_BDE() ;
         USUARIOLOG user = new USUARIOLOG();
+        CONFIG_BDE config_bde = new CONFIG_BDE();
 
         string Idioma = "Español";
         string nIdioma = "";
+        string vIdioma = "";
 
         public frmCONFIG(USUARIOLOG usuario)
         {
@@ -26,6 +28,7 @@ namespace CERVECERIA
             user = usuario;
             ChangeLanguaje(usuario.Idioma);
             Idioma = usuario.Idioma;
+            vIdioma = usuario.Idioma;
         }
         private void frmCONFIG_Load(object sender, EventArgs e)
         {
@@ -34,8 +37,6 @@ namespace CERVECERIA
 
         public void load()
         {
-            CONFIG_BDE config_bde = new CONFIG_BDE();
-
             config_bde.ComboIdiomas(comboBox1, user.Idioma);
 
             if (Idioma == "Español")
@@ -64,8 +65,13 @@ namespace CERVECERIA
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            frmPRINCIPAL Pform = Owner as frmPRINCIPAL;
+            Pform.ChangeLanguaje(nIdioma);
+            config_bde.ActualizarForm(nIdioma, vIdioma);               
             idiomasBDE.GuardarIdioma(nIdioma, user);
-
+            MessageBox.Show("Cambios realizados");
+            Pform.Focus();
+            this.Close();         
         }
         private void comboBox1_SelectedValueChanged_1(object sender, EventArgs e)
         {

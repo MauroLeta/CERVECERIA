@@ -42,10 +42,10 @@ namespace CERVECERIA
             this.btnIngles = new System.Windows.Forms.Button();
             this.btnPortugues = new System.Windows.Forms.Button();
             this.btnEspañol = new System.Windows.Forms.Button();
+            this.btnLupa = new System.Windows.Forms.Button();
             this.lblEspañol = new System.Windows.Forms.Label();
             this.lblIngles = new System.Windows.Forms.Label();
-            this.lblPortuges = new System.Windows.Forms.Label();
-            this.btnLupa = new System.Windows.Forms.Button();
+            this.lblPortugues = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,9 +101,10 @@ namespace CERVECERIA
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnConfirmar.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnConfirmar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnConfirmar.ForeColor = System.Drawing.Color.Black;
             this.btnConfirmar.Location = new System.Drawing.Point(178, 219);
             this.btnConfirmar.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmar.Name = "btnConfirmar";
@@ -130,9 +131,10 @@ namespace CERVECERIA
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.BackColor = System.Drawing.Color.PeachPuff;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.ForeColor = System.Drawing.SystemColors.MenuText;
             this.button1.Location = new System.Drawing.Point(432, 485);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
@@ -140,7 +142,7 @@ namespace CERVECERIA
             this.button1.TabIndex = 3;
             this.button1.Text = "SALIR";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pictureBox1
             // 
@@ -163,7 +165,7 @@ namespace CERVECERIA
             this.lblIdioma.BackColor = System.Drawing.Color.Transparent;
             this.lblIdioma.Font = new System.Drawing.Font("Century Gothic", 17F, System.Drawing.FontStyle.Bold);
             this.lblIdioma.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIdioma.Location = new System.Drawing.Point(410, 101);
+            this.lblIdioma.Location = new System.Drawing.Point(409, 100);
             this.lblIdioma.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIdioma.Name = "lblIdioma";
             this.lblIdioma.Size = new System.Drawing.Size(183, 27);
@@ -202,7 +204,7 @@ namespace CERVECERIA
             this.btnPortugues.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPortugues.Font = new System.Drawing.Font("Ink Free", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPortugues.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnPortugues.Location = new System.Drawing.Point(476, 353);
+            this.btnPortugues.Location = new System.Drawing.Point(476, 349);
             this.btnPortugues.Name = "btnPortugues";
             this.btnPortugues.Size = new System.Drawing.Size(50, 50);
             this.btnPortugues.TabIndex = 23;
@@ -228,58 +230,10 @@ namespace CERVECERIA
             this.btnEspañol.UseVisualStyleBackColor = false;
             this.btnEspañol.Click += new System.EventHandler(this.btnEspañol_Click);
             // 
-            // lblEspañol
-            // 
-            this.lblEspañol.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEspañol.BackColor = System.Drawing.Color.Transparent;
-            this.lblEspañol.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.lblEspañol.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblEspañol.Location = new System.Drawing.Point(453, 196);
-            this.lblEspañol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblEspañol.Name = "lblEspañol";
-            this.lblEspañol.Size = new System.Drawing.Size(94, 34);
-            this.lblEspañol.TabIndex = 25;
-            this.lblEspañol.Text = "Español";
-            this.lblEspañol.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lblIngles
-            // 
-            this.lblIngles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblIngles.BackColor = System.Drawing.Color.Transparent;
-            this.lblIngles.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.lblIngles.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblIngles.Location = new System.Drawing.Point(458, 298);
-            this.lblIngles.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblIngles.Name = "lblIngles";
-            this.lblIngles.Size = new System.Drawing.Size(89, 33);
-            this.lblIngles.TabIndex = 26;
-            this.lblIngles.Text = "Inglés";
-            this.lblIngles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblPortuges
-            // 
-            this.lblPortuges.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPortuges.BackColor = System.Drawing.Color.Transparent;
-            this.lblPortuges.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
-            this.lblPortuges.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPortuges.Location = new System.Drawing.Point(439, 406);
-            this.lblPortuges.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPortuges.Name = "lblPortuges";
-            this.lblPortuges.Size = new System.Drawing.Size(128, 32);
-            this.lblPortuges.TabIndex = 27;
-            this.lblPortuges.Text = "Portugués";
-            this.lblPortuges.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btnLupa
             // 
             this.btnLupa.AutoSize = true;
-            this.btnLupa.BackColor = System.Drawing.Color.White;
+            this.btnLupa.BackColor = System.Drawing.Color.Transparent;
             this.btnLupa.BackgroundImage = global::CERVECERIA.Properties.Resources.pngwing_com__6_;
             this.btnLupa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLupa.FlatAppearance.BorderSize = 0;
@@ -290,7 +244,55 @@ namespace CERVECERIA
             this.btnLupa.Size = new System.Drawing.Size(45, 40);
             this.btnLupa.TabIndex = 28;
             this.btnLupa.UseVisualStyleBackColor = false;
-            this.btnLupa.Click += new System.EventHandler(this.button2_Click);
+            this.btnLupa.Click += new System.EventHandler(this.btnLupa_Click);
+            // 
+            // lblEspañol
+            // 
+            this.lblEspañol.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEspañol.BackColor = System.Drawing.Color.Transparent;
+            this.lblEspañol.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspañol.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblEspañol.Location = new System.Drawing.Point(437, 193);
+            this.lblEspañol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEspañol.Name = "lblEspañol";
+            this.lblEspañol.Size = new System.Drawing.Size(131, 27);
+            this.lblEspañol.TabIndex = 29;
+            this.lblEspañol.Text = "Español";
+            this.lblEspañol.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblIngles
+            // 
+            this.lblIngles.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblIngles.BackColor = System.Drawing.Color.Transparent;
+            this.lblIngles.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngles.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblIngles.Location = new System.Drawing.Point(438, 296);
+            this.lblIngles.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIngles.Name = "lblIngles";
+            this.lblIngles.Size = new System.Drawing.Size(131, 27);
+            this.lblIngles.TabIndex = 30;
+            this.lblIngles.Text = "Inglés";
+            this.lblIngles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblPortugues
+            // 
+            this.lblPortugues.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPortugues.BackColor = System.Drawing.Color.Transparent;
+            this.lblPortugues.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPortugues.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblPortugues.Location = new System.Drawing.Point(435, 399);
+            this.lblPortugues.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPortugues.Name = "lblPortugues";
+            this.lblPortugues.Size = new System.Drawing.Size(131, 27);
+            this.lblPortugues.TabIndex = 31;
+            this.lblPortugues.Text = "Portugués";
+            this.lblPortugues.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmLOGIN
             // 
@@ -301,10 +303,10 @@ namespace CERVECERIA
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(604, 528);
-            this.Controls.Add(this.btnLupa);
-            this.Controls.Add(this.lblPortuges);
+            this.Controls.Add(this.lblPortugues);
             this.Controls.Add(this.lblIngles);
             this.Controls.Add(this.lblEspañol);
+            this.Controls.Add(this.btnLupa);
             this.Controls.Add(this.btnEspañol);
             this.Controls.Add(this.btnPortugues);
             this.Controls.Add(this.btnIngles);
@@ -341,10 +343,10 @@ namespace CERVECERIA
         private System.Windows.Forms.Button btnIngles;
         private System.Windows.Forms.Button btnPortugues;
         private System.Windows.Forms.Button btnEspañol;
+        private System.Windows.Forms.Button btnLupa;
         private System.Windows.Forms.Label lblEspañol;
         private System.Windows.Forms.Label lblIngles;
-        private System.Windows.Forms.Label lblPortuges;
-        private System.Windows.Forms.Button btnLupa;
+        private System.Windows.Forms.Label lblPortugues;
     }
 }
 
