@@ -30,13 +30,13 @@ namespace CERVECERIA
         }
         private void frmINSUMOS_Load(object sender, EventArgs e)
         {
-            LoadDatagrid();
+            LoadDatagrid(false,"");
         }
-        public void LoadDatagrid()
+        public void LoadDatagrid(bool search, string buscador)
         {
             string tabla = Grilla;
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = insumos_bde.getInsumos(tabla);
+            dataGridView1.DataSource = insumos_bde.getInsumos(tabla, search,buscador);
             dataGridView1.Columns["Rubro"].Visible = false;
             dataGridView1.Columns["Proveedor"].Visible = false;
             dataGridView1.Columns["id"].Visible = false;
@@ -60,7 +60,7 @@ namespace CERVECERIA
             btnLevadura.BackColor = Color.PeachPuff;
             btnAdiciones.BackColor = Color.PeachPuff;
             Grilla = "LUPULO";
-            LoadDatagrid();
+            LoadDatagrid(false, "");
 
             if(Medida == "Gr")
             {
@@ -74,7 +74,7 @@ namespace CERVECERIA
             btnLevadura.BackColor = Color.PeachPuff;
             btnAdiciones.BackColor = Color.PeachPuff;
             Grilla = "MALTA";
-            LoadDatagrid();
+            LoadDatagrid(false, "");
 
             if (Medida == "Gr")
             {
@@ -88,7 +88,7 @@ namespace CERVECERIA
             btnLevadura.BackColor = Color.SandyBrown;
             btnAdiciones.BackColor = Color.PeachPuff;
             Grilla = "LEVADURA";
-            LoadDatagrid();
+            LoadDatagrid(false, "");
 
             if (Medida == "Gr")
             {
@@ -102,7 +102,7 @@ namespace CERVECERIA
             btnLevadura.BackColor = Color.PeachPuff;
             btnAdiciones.BackColor = Color.SandyBrown;
             Grilla = "ADICIONES";
-            LoadDatagrid();
+            LoadDatagrid(false, "");
 
             if (Medida == "Gr")
             {
@@ -179,11 +179,14 @@ namespace CERVECERIA
                 if (resul == DialogResult.Yes)
                 {
                     insumos_bde.EliminarInsumo(insumo.Id);
-                    LoadDatagrid();
+                    LoadDatagrid(false, "");
                 }
             }
         }
-
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            LoadDatagrid(true, textBoxSearch.Text);
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();

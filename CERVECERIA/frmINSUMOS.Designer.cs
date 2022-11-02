@@ -46,6 +46,8 @@
             this.btnAdiciones = new System.Windows.Forms.Button();
             this.btnK = new System.Windows.Forms.Button();
             this.btnG = new System.Windows.Forms.Button();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.lblClave = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +57,7 @@
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(486, 23);
+            this.label1.Location = new System.Drawing.Point(340, 26);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 28);
@@ -68,7 +70,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(888, 713);
+            this.button1.Location = new System.Drawing.Point(630, 506);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 32);
@@ -104,7 +106,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.SaddleBrown;
-            this.dataGridView1.Location = new System.Drawing.Point(302, 118);
+            this.dataGridView1.Location = new System.Drawing.Point(45, 169);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -117,7 +119,7 @@
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(720, 575);
+            this.dataGridView1.Size = new System.Drawing.Size(720, 332);
             this.dataGridView1.TabIndex = 6;
             // 
             // btnAgregar
@@ -126,7 +128,7 @@
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAgregar.Location = new System.Drawing.Point(72, 151);
+            this.btnAgregar.Location = new System.Drawing.Point(45, 506);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(135, 32);
@@ -141,7 +143,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEditar.Location = new System.Drawing.Point(72, 204);
+            this.btnEditar.Location = new System.Drawing.Point(184, 506);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(135, 32);
@@ -156,7 +158,7 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEliminar.Location = new System.Drawing.Point(72, 260);
+            this.btnEliminar.Location = new System.Drawing.Point(323, 506);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(135, 32);
@@ -171,7 +173,7 @@
             this.btnMalta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMalta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnMalta.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMalta.Location = new System.Drawing.Point(302, 88);
+            this.btnMalta.Location = new System.Drawing.Point(45, 139);
             this.btnMalta.Margin = new System.Windows.Forms.Padding(2);
             this.btnMalta.Name = "btnMalta";
             this.btnMalta.Size = new System.Drawing.Size(120, 32);
@@ -186,7 +188,7 @@
             this.btnLupulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLupulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnLupulo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnLupulo.Location = new System.Drawing.Point(420, 88);
+            this.btnLupulo.Location = new System.Drawing.Point(163, 139);
             this.btnLupulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnLupulo.Name = "btnLupulo";
             this.btnLupulo.Size = new System.Drawing.Size(120, 32);
@@ -201,7 +203,7 @@
             this.btnLevadura.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLevadura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnLevadura.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnLevadura.Location = new System.Drawing.Point(538, 88);
+            this.btnLevadura.Location = new System.Drawing.Point(281, 139);
             this.btnLevadura.Margin = new System.Windows.Forms.Padding(2);
             this.btnLevadura.Name = "btnLevadura";
             this.btnLevadura.Size = new System.Drawing.Size(120, 32);
@@ -216,7 +218,7 @@
             this.btnAdiciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdiciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnAdiciones.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAdiciones.Location = new System.Drawing.Point(657, 88);
+            this.btnAdiciones.Location = new System.Drawing.Point(400, 139);
             this.btnAdiciones.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdiciones.Name = "btnAdiciones";
             this.btnAdiciones.Size = new System.Drawing.Size(120, 32);
@@ -232,7 +234,7 @@
             this.btnK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnK.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnK.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnK.Location = new System.Drawing.Point(978, 88);
+            this.btnK.Location = new System.Drawing.Point(721, 139);
             this.btnK.Margin = new System.Windows.Forms.Padding(2);
             this.btnK.Name = "btnK";
             this.btnK.Size = new System.Drawing.Size(43, 32);
@@ -247,7 +249,7 @@
             this.btnG.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnG.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnG.Location = new System.Drawing.Point(941, 88);
+            this.btnG.Location = new System.Drawing.Point(684, 139);
             this.btnG.Margin = new System.Windows.Forms.Padding(2);
             this.btnG.Name = "btnG";
             this.btnG.Size = new System.Drawing.Size(43, 32);
@@ -256,13 +258,37 @@
             this.btnG.UseVisualStyleBackColor = false;
             this.btnG.Click += new System.EventHandler(this.btnKg_Click);
             // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSearch.Location = new System.Drawing.Point(166, 88);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(405, 26);
+            this.textBoxSearch.TabIndex = 11;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            // 
+            // lblClave
+            // 
+            this.lblClave.BackColor = System.Drawing.Color.Transparent;
+            this.lblClave.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblClave.Location = new System.Drawing.Point(40, 88);
+            this.lblClave.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblClave.Name = "lblClave";
+            this.lblClave.Size = new System.Drawing.Size(121, 27);
+            this.lblClave.TabIndex = 12;
+            this.lblClave.Text = "BUSCAR";
+            this.lblClave.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // frmINSUMOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1082, 837);
+            this.ClientSize = new System.Drawing.Size(805, 560);
+            this.Controls.Add(this.lblClave);
+            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.btnG);
             this.Controls.Add(this.btnK);
             this.Controls.Add(this.btnAdiciones);
@@ -299,5 +325,7 @@
         private System.Windows.Forms.Button btnAdiciones;
         private System.Windows.Forms.Button btnK;
         private System.Windows.Forms.Button btnG;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Label lblClave;
     }
 }

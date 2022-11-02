@@ -53,6 +53,7 @@ namespace CERVECERIA
                 textBoxNombre.Text = selectedInsumo.Nombre;
                 textBoxMarca.Text = selectedInsumo.Marca;
                 textBoxCantidad.Text = selectedInsumo.Cantidad.ToString();
+                textBoxPrecio.Text = selectedInsumo.Precio.ToString();
                 cbProveedor.Text = selectedInsumo.Proveedor.Nombre;
             }
         }
@@ -68,7 +69,8 @@ namespace CERVECERIA
                 if (ABM == "ALTA")
                 {
                     bool insert = insumo_bde.AgregarInsumo(Medida, cbRubro.SelectedItem as RUBRO, textBoxNombre.Text, textBoxMarca.Text,
-                        float.Parse(textBoxCantidad.Text, System.Globalization.NumberStyles.Float, new System.Globalization.CultureInfo("en")), cbProveedor.SelectedItem as PROVEEDOR);
+                        float.Parse(textBoxCantidad.Text, System.Globalization.NumberStyles.Float, new System.Globalization.CultureInfo("en")),
+                        float.Parse(textBoxPrecio.Text, System.Globalization.NumberStyles.Float, new System.Globalization.CultureInfo("en")),cbProveedor.SelectedItem as PROVEEDOR);
                     if (insert == true)
                     {
                         textBoxNombre.Text = "";
@@ -76,17 +78,18 @@ namespace CERVECERIA
                         textBoxCantidad.Text = "";
 
                         frmINSUMOS Pform = Owner as frmINSUMOS;
-                        Pform.LoadDatagrid();
+                        Pform.LoadDatagrid(false, "");
                     }
                 }
                 if (ABM == "EDITAR")
                 {
                     bool edit = insumo_bde.EditarInsumo(Medida, selectedInsumo.Id,cbRubro.SelectedItem as RUBRO, textBoxNombre.Text, textBoxMarca.Text, 
-                        float.Parse(textBoxCantidad.Text, System.Globalization.NumberStyles.Float, new System.Globalization.CultureInfo("en")), cbProveedor.SelectedItem as PROVEEDOR);
+                        float.Parse(textBoxCantidad.Text, System.Globalization.NumberStyles.Float, new System.Globalization.CultureInfo("en")),
+                        float.Parse(textBoxPrecio.Text, System.Globalization.NumberStyles.Float, new System.Globalization.CultureInfo("en")), cbProveedor.SelectedItem as PROVEEDOR);
                     if (edit == true)
                     {
                         frmINSUMOS Pform = Owner as frmINSUMOS;
-                        Pform.LoadDatagrid();
+                        Pform.LoadDatagrid(false, "");
                         Pform.Focus();
                         this.Close();
                     }
@@ -142,11 +145,13 @@ namespace CERVECERIA
         {
             OnlyNumbers(sender, e);
         }
+        private void textBoxPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyNumbers(sender, e);
+        }
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-
     }
 }

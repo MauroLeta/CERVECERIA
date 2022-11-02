@@ -36,3 +36,5 @@ C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.exe
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.pdb
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmABM_INSUMOS.resources
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmCOCCION.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmRecetas.resources
+C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmAGREGARCOMPRA.resources

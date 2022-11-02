@@ -13,20 +13,28 @@ namespace DATOS
     {
         Conexion conection = new Conexion();
         public List<INSUMO> insumos = new List<INSUMO>();
+        public string consulta = @"select Insumos.idInsumo, Rubros.id, rubros.rubro, Insumos.nombre, Insumos.Marca, Insumos.Cantidad,Insumos.Precio, Proveedores.idProv,
+                              Proveedores.NombreProv,  Proveedores.Telefono,  Proveedores.Mail from Insumos inner join Rubros on Rubros.id = 
+                              Insumos.Rubro inner join Proveedores on Proveedores.idProv = Insumos.Proveedor";
 
-
-        public DataTable getInsumo(string text)
+        public DataTable getInsumo(string text,bool search, string buscador)
         {
             insumos.Clear();
-            string consulta = @"select Insumos.idInsumo, Rubros.id, rubros.rubro, Insumos.nombre, Insumos.Marca, Insumos.Cantidad, Proveedores.idProv,
-                              Proveedores.NombreProv,  Proveedores.Telefono,  Proveedores.Mail from Insumos inner join Rubros on Rubros.id = 
-                              Insumos.Rubro inner join Proveedores on Proveedores.idProv = Insumos.Proveedor where Rubros.rubro = '" + text +"'";
+            consulta = consulta + " where Rubros.rubro = '" + text + "'";
+            if (search == true) 
+            {
+                consulta = consulta + " and Insumos.Nombre like '" + buscador + "%'";
+            }
 
             DataTable tabla = new DataTable();
             return conection.GetBdData(consulta);
 
         }
-
+        public DataTable getAllInsumos()
+        {
+            DataTable tabla = new DataTable();
+            return conection.GetBdData(consulta);
+        }
         public bool InsertInsumo(INSUMO insumo)
         {
             CultureInfo ci = new CultureInfo("en");

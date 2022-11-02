@@ -47,22 +47,18 @@ namespace CERVECERIA
             }
         }
 
-        private void Abrirformhijo(object formhijo)
+        private void AbrirFormHijo(Form form_hijo)
         {
-            if (this.panelContenedor.Controls.Count > 0)
-                this.panelContenedor.Controls.RemoveAt(0);
-            Form fh = formhijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
-            fh.Show();
+            form_hijo.TopLevel = false;
+            this.panelContenedor.Controls.Clear();
+            this.panelContenedor.Controls.Add(form_hijo);
+            form_hijo.Show();
         }
 
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            //submenuReportes.Visible = true;
+            /*/submenuReportes.Visible = true;
             if(submenuReportes.Visible == false)
             {
                 submenuReportes.Visible = true;
@@ -70,7 +66,7 @@ namespace CERVECERIA
             else if (submenuReportes.Visible == true)
             {
                 submenuReportes.Visible = false;
-            }
+            }*/
         }
 
         internal void Show(string sector, string apellido)
@@ -80,40 +76,40 @@ namespace CERVECERIA
 
         private void btnrptventa_Click(object sender, EventArgs e)
         {
-            submenuReportes.Visible = false;
+           // submenuReportes.Visible = false;
         }
 
         private void btnrptcompras_Click(object sender, EventArgs e)
         {
-            submenuReportes.Visible = false;
+           // submenuReportes.Visible = false;
         }
 
         private void btnrptpagos_Click(object sender, EventArgs e)
         {
-            submenuReportes.Visible = false;
+           // submenuReportes.Visible = false;
         }
 
 
 
         private void btnInsumos_Click(object sender, EventArgs e)
         {
-            Abrirformhijo(new frmINSUMOS(user));
+            AbrirFormHijo(new frmINSUMOS(user));
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Abrirformhijo(new frmEMPLEADOS());
+            AbrirFormHijo(new frmEMPLEADOS());
         }
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
-            Abrirformhijo(new frmEMPLEADOS());
+            AbrirFormHijo(new frmEMPLEADOS());
         }
         private void btnProductos_Click(object sender, EventArgs e)
         {
-            Abrirformhijo(new frmPRODUCTOS());
+            AbrirFormHijo(new frmPRODUCTOS());
         }
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            Abrirformhijo(new frmVENTAS());
+            AbrirFormHijo(new frmVENTAS());
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -121,19 +117,19 @@ namespace CERVECERIA
         }
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            Abrirformhijo(new frmCLIENTES());
+            AbrirFormHijo(new frmCLIENTES());
         }
         private void btnCompras_Click(object sender, EventArgs e)
         {
-            Abrirformhijo(new frmCOMPRAS());
+            AbrirFormHijo(new frmCOMPRAS(user));
         }
         private void btnPagos_Click(object sender, EventArgs e)
         {
-            Abrirformhijo(new frmPAGOS());
+            AbrirFormHijo(new frmPAGOS());
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Abrirformhijo(new frmINICIO());
+            AbrirFormHijo(new frmINICIO());
         }
         private void btnConfig_Click(object sender, EventArgs e)
         {
