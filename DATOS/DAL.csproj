@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agenda_dal.cs" />
+    <Compile Include="Cargos_dal.cs" />
     <Compile Include="Compras_dal.cs" />
+    <Compile Include="Estilos_dal.cs" />
     <Compile Include="Pagos_dal.cs" />
     <Compile Include="Rubro_dal.cs" />
     <Compile Include="Conexion.cs" />

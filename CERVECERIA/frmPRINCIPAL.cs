@@ -11,18 +11,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics; //espacio de nombre para Process
 using IDIOMA;
+using DINAMICA_DE_ENTIDADES;
+using ENTIDADES;
 
 namespace CERVECERIA
 {
     public partial class frmPrincipal : Form
     {
         UserLog user = new UserLog();
+        Cargos_bll cargos = new Cargos_bll();
         public string Idioma = "Español";
 
         public frmPrincipal(UserLog usuario)
         {
             InitializeComponent();
-            user = usuario;            
+            user = usuario;
+            
         }
         private void PRINCIPAL_Load(object sender, EventArgs e)
         {
@@ -31,14 +35,46 @@ namespace CERVECERIA
             ChangeLanguaje(user.Idioma);
                       
             lblApellido.Text = user.Apellido;
-            lblSector.Text = user.Cargo.ToString(); //traer nombre de sector
-            //llamar a permisos
+            lblSector.Text = getCargo();
+            Permisos();
         }
         public void ChangeLanguaje(string idiomaN)
         {
             Idioma idioma = new Idioma();
             idioma.ChangeLanguaje(this, Idioma, idiomaN, MenuVertical);
             Idioma = user.Idioma;
+        }
+        public void Permisos()
+        {
+            int cargo = user.Cargo;
+
+            switch(cargo)
+            {
+                case 2:
+                    btnInsumos.Enabled = false;
+                    btnCompras.Enabled = false;
+                    btnVentas.Enabled = false;
+                    btnAgenda.Enabled = false;
+                    break;
+                case 3:
+                    btnRecetas.Enabled = false;
+                    btnCoccion.Enabled = false;
+                    btnBarriles.Enabled = false;
+                    btnVentas.Enabled = false;
+                    btnAgenda.Enabled = false;
+                    btnProductos.Enabled = false;
+                    break;
+                case 4:
+                    btnInsumos.Enabled = false;
+                    btnCompras.Enabled = false;
+                    btnRecetas.Enabled = false;
+                    btnCoccion.Enabled = false;
+                    btnBarriles.Enabled = false;
+                    btnAgenda.Enabled = false;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void AbrirFormHijo(Form form_hijo)
@@ -125,7 +161,18 @@ namespace CERVECERIA
             lblAmPm.Text = DateTime.Now.ToString("tt", System.Globalization.CultureInfo.InvariantCulture);
             lblFecha.Text = lblFecha.Text = DateTime.Now.ToShortDateString();
         }
-
+        public string getCargo() 
+        {
+           List<Cargo> listaCargos = cargos.getCargos();
+            foreach(Cargo ca in listaCargos)
+            {
+                if(ca.Id == user.Cargo)
+                {
+                    return ca.Descripcion;
+                }               
+            }
+            return "";
+        }
         private void btnLogOut_Click_1(object sender, EventArgs e)
         {
             Application.Restart();

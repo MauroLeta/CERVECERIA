@@ -11,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32; // espacio de nombre para registry
+
 
 namespace CERVECERIA
 {
@@ -18,11 +20,14 @@ namespace CERVECERIA
     {
         Agenda_bll agenda_bll = new Agenda_bll();
         UserLog user = new UserLog();
-        public DataSet ds = new DataSet();
 
-        public string Idioma = "Español";
+        public DataSet ds = new DataSet();
+        static RegistryKey BaseFolderPath = Registry.CurrentUser;
+        static string subFolderPath = "Usuarios_CerveceriaHeldig";
+
+        string Idioma = "Español";
         int nTabla = 0;
-        public bool changes = false;
+        bool changes = false;
         public frmAgenda(UserLog usuario)
         {
             InitializeComponent();
@@ -64,6 +69,8 @@ namespace CERVECERIA
             nTabla = 0;
             LoadDatagrid();
             btnGenerarUsuario.Visible = false;
+            lblUs.Visible = false;
+            lblTieneUsuario.Visible = false;
         }
         private void btnEmpleados_Click(object sender, EventArgs e)
         {
@@ -73,6 +80,8 @@ namespace CERVECERIA
             nTabla = 1;
             LoadDatagrid();
             btnGenerarUsuario.Visible = true;
+            lblUs.Visible = true;
+            lblTieneUsuario.Visible = true;
         }
         private void btnProveedores_Click(object sender, EventArgs e)
         {
@@ -82,6 +91,8 @@ namespace CERVECERIA
             nTabla = 2;
             LoadDatagrid();
             btnGenerarUsuario.Visible = false;
+            lblUs.Visible = false;
+            lblTieneUsuario.Visible = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -165,6 +176,9 @@ namespace CERVECERIA
             }
         }
 
+
+
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             if(changes == true)
@@ -185,6 +199,26 @@ namespace CERVECERIA
             }
         }
 
- 
+        public static string Registry_read(string id) //---------------Registry Read
+        {
+            RegistryKey RegKey = BaseFolderPath;
+            RegistryKey subKey = RegKey.OpenSubKey(subFolderPath);
+            var user = "No tiene usuario";
+            if(subKey.GetValue(id) != null)
+            {
+                user = subKey.GetValue(id).ToString();
+            }
+            return user;
+        }
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dataGridView1.SelectedRows.Count == 1 )
+            {
+                if(Registry_read(((DataRowView)dataGridView1.SelectedRows[0].DataBoundItem).Row[0].ToString()) != null)
+                {
+                    lblTieneUsuario.Text = Registry_read(((DataRowView)dataGridView1.SelectedRows[0].DataBoundItem).Row[0].ToString());
+                }               
+            }           
+        }
     }
 }

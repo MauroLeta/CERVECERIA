@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgenda));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnEmpleados = new System.Windows.Forms.Button();
             this.lblClave = new System.Windows.Forms.Label();
@@ -47,7 +47,8 @@
             this.btnGenerarUsuario = new System.Windows.Forms.Button();
             this.btnDescartarCambio = new System.Windows.Forms.Button();
             this.btnGuardarCambio = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblUs = new System.Windows.Forms.Label();
+            this.lblTieneUsuario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +97,7 @@
             this.lblClave.BackColor = System.Drawing.Color.Transparent;
             this.lblClave.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblClave.Location = new System.Drawing.Point(40, 55);
+            this.lblClave.Location = new System.Drawing.Point(40, 59);
             this.lblClave.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClave.Name = "lblClave";
             this.lblClave.Size = new System.Drawing.Size(121, 27);
@@ -107,7 +108,7 @@
             // textBoxSearch
             // 
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearch.Location = new System.Drawing.Point(166, 55);
+            this.textBoxSearch.Location = new System.Drawing.Point(166, 59);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(371, 26);
             this.textBoxSearch.TabIndex = 1;
@@ -159,47 +160,48 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.PapayaWhip;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SandyBrown;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.PapayaWhip;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.BurlyWood;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.BurlyWood;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.BurlyWood;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.BurlyWood;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.NavajoWhite;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SandyBrown;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.NavajoWhite;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.SaddleBrown;
             this.dataGridView1.Location = new System.Drawing.Point(45, 136);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SandyBrown;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PeachPuff;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SandyBrown;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.PeachPuff;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(720, 332);
             this.dataGridView1.TabIndex = 37;
+            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
             // btnCerrar
             // 
@@ -207,7 +209,7 @@
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCerrar.Location = new System.Drawing.Point(630, 473);
+            this.btnCerrar.Location = new System.Drawing.Point(659, 517);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(135, 32);
@@ -273,10 +275,10 @@
             this.btnDescartarCambio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDescartarCambio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnDescartarCambio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDescartarCambio.Location = new System.Drawing.Point(576, 99);
+            this.btnDescartarCambio.Location = new System.Drawing.Point(542, 99);
             this.btnDescartarCambio.Margin = new System.Windows.Forms.Padding(2);
             this.btnDescartarCambio.Name = "btnDescartarCambio";
-            this.btnDescartarCambio.Size = new System.Drawing.Size(189, 32);
+            this.btnDescartarCambio.Size = new System.Drawing.Size(223, 32);
             this.btnDescartarCambio.TabIndex = 63;
             this.btnDescartarCambio.Text = "DESCARTAR CAMBIOS";
             this.btnDescartarCambio.UseVisualStyleBackColor = false;
@@ -289,30 +291,43 @@
             this.btnGuardarCambio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardarCambio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardarCambio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnGuardarCambio.Location = new System.Drawing.Point(576, 55);
+            this.btnGuardarCambio.Location = new System.Drawing.Point(542, 53);
             this.btnGuardarCambio.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarCambio.Name = "btnGuardarCambio";
-            this.btnGuardarCambio.Size = new System.Drawing.Size(189, 32);
+            this.btnGuardarCambio.Size = new System.Drawing.Size(223, 32);
             this.btnGuardarCambio.TabIndex = 64;
             this.btnGuardarCambio.Text = "GUARDAR CAMBIOS";
             this.btnGuardarCambio.UseVisualStyleBackColor = false;
             this.btnGuardarCambio.Visible = false;
             this.btnGuardarCambio.Click += new System.EventHandler(this.btnGuardarCambio_Click);
             // 
-            // button1
+            // lblUs
             // 
-            this.button1.BackColor = System.Drawing.Color.PeachPuff;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(404, 470);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 72);
-            this.button1.TabIndex = 65;
-            this.button1.Text = "DESCARGAR REPORTE";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
+            this.lblUs.BackColor = System.Drawing.Color.Transparent;
+            this.lblUs.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUs.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblUs.Location = new System.Drawing.Point(404, 471);
+            this.lblUs.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUs.Name = "lblUs";
+            this.lblUs.Size = new System.Drawing.Size(121, 27);
+            this.lblUs.TabIndex = 65;
+            this.lblUs.Text = "USUARIO:";
+            this.lblUs.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblUs.Visible = false;
+            // 
+            // lblTieneUsuario
+            // 
+            this.lblTieneUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lblTieneUsuario.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTieneUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblTieneUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTieneUsuario.Location = new System.Drawing.Point(542, 470);
+            this.lblTieneUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTieneUsuario.Name = "lblTieneUsuario";
+            this.lblTieneUsuario.Size = new System.Drawing.Size(223, 27);
+            this.lblTieneUsuario.TabIndex = 66;
+            this.lblTieneUsuario.Text = "..";
+            this.lblTieneUsuario.Visible = false;
             // 
             // frmAgenda
             // 
@@ -321,7 +336,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(805, 560);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblTieneUsuario);
+            this.Controls.Add(this.lblUs);
             this.Controls.Add(this.btnGuardarCambio);
             this.Controls.Add(this.btnDescartarCambio);
             this.Controls.Add(this.btnGenerarUsuario);
@@ -361,6 +377,7 @@
         private System.Windows.Forms.Button btnGenerarUsuario;
         private System.Windows.Forms.Button btnDescartarCambio;
         private System.Windows.Forms.Button btnGuardarCambio;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblUs;
+        private System.Windows.Forms.Label lblTieneUsuario;
     }
 }

@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agenda_bll.cs" />
+    <Compile Include="Cargos_bll.cs" />
     <Compile Include="Compras_bll.cs" />
     <Compile Include="Config_bll.cs" />
+    <Compile Include="Estilos_bll.cs" />
     <Compile Include="Idiomas_bll.cs" />
     <Compile Include="Insumos_bll.cs" />
     <Compile Include="Login_bll.cs" />

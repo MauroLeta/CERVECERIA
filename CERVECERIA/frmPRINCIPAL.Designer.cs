@@ -37,7 +37,7 @@ namespace CERVECERIA
             this.instaImage = new System.Windows.Forms.PictureBox();
             this.webImage = new System.Windows.Forms.PictureBox();
             this.btnAgenda = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBarriles = new System.Windows.Forms.Button();
             this.btnCompras = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
@@ -75,7 +75,7 @@ namespace CERVECERIA
             this.MenuVertical.Controls.Add(this.instaImage);
             this.MenuVertical.Controls.Add(this.webImage);
             this.MenuVertical.Controls.Add(this.btnAgenda);
-            this.MenuVertical.Controls.Add(this.button2);
+            this.MenuVertical.Controls.Add(this.btnBarriles);
             this.MenuVertical.Controls.Add(this.btnCompras);
             this.MenuVertical.Controls.Add(this.btnProductos);
             this.MenuVertical.Controls.Add(this.btnVentas);
@@ -157,24 +157,24 @@ namespace CERVECERIA
             this.btnAgenda.UseVisualStyleBackColor = false;
             this.btnAgenda.Click += new System.EventHandler(this.btnAgenda_Click);
             // 
-            // button2
+            // btnBarriles
             // 
-            this.button2.BackColor = System.Drawing.Color.PeachPuff;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(11, 337);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(202, 37);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "BARRILES";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnBarriles.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnBarriles.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBarriles.FlatAppearance.BorderSize = 0;
+            this.btnBarriles.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnBarriles.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBarriles.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBarriles.Image = ((System.Drawing.Image)(resources.GetObject("btnBarriles.Image")));
+            this.btnBarriles.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBarriles.Location = new System.Drawing.Point(11, 337);
+            this.btnBarriles.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBarriles.Name = "btnBarriles";
+            this.btnBarriles.Size = new System.Drawing.Size(202, 37);
+            this.btnBarriles.TabIndex = 35;
+            this.btnBarriles.Text = "BARRILES";
+            this.btnBarriles.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBarriles.UseVisualStyleBackColor = false;
             // 
             // btnCompras
             // 
@@ -529,7 +529,7 @@ namespace CERVECERIA
         private System.Windows.Forms.Button btnRecetas;
         private System.Windows.Forms.PictureBox webImage;
         private System.Windows.Forms.Button btnAgenda;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBarriles;
         private System.Windows.Forms.PictureBox instaImage;
         private System.Windows.Forms.Label lblCPU;
         private System.Diagnostics.PerformanceCounter performanceCounter1;

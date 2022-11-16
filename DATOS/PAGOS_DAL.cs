@@ -16,8 +16,6 @@ namespace DAL
         {
             consulta = @"select * from FormasDePago";
 
-            DataTable tabla = new DataTable();
-
             return conection.GetBdDataList<TipoPago>(consulta);
         }
     }

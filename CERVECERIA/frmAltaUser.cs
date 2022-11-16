@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32; // espacio de nombre para registry
 
 namespace CERVECERIA
 {
@@ -18,6 +19,9 @@ namespace CERVECERIA
         Agenda_bll agenda_bll = new Agenda_bll();
         UserLog usuario = new UserLog();
         DataRow data;
+
+        static RegistryKey BaseFolderPath = Registry.CurrentUser;
+        static string subFolderPath = "Usuarios_CerveceriaHeldig";
 
         public string Idioma = "Español";
         public frmAltaUser(UserLog user, DataRow drow)
@@ -34,7 +38,6 @@ namespace CERVECERIA
             lblApellido.Text = data.ItemArray[2].ToString();
             lblNombre.Text = data.ItemArray[1].ToString();
         }
-
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             if(textBoxUsuario.Text == "" || textBoxClave.Text == "" || textBoxClave2.Text == "")
@@ -51,12 +54,18 @@ namespace CERVECERIA
 
                 if (generar == true)
                 {
+                    Registry_write(data.ItemArray[0].ToString(), textBoxUsuario.Text);
                     MessageBox.Show("Usuario Agregado");
                     this.Close();
                 }
             }
         }
-
+        public static void Registry_write(string idEmpleado, string usuario)   //------Registry Write
+        {
+            RegistryKey RegKey = BaseFolderPath;
+            RegistryKey subKey = RegKey.CreateSubKey(subFolderPath);
+            subKey.SetValue(idEmpleado, usuario); 
+        } 
 
         public void mostrarContraseña(TextBox texboxPass,PictureBox ojo)
         {

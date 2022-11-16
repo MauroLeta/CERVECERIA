@@ -11,13 +11,14 @@ namespace ENTIDADES
         private int id;
         private string cargo;
 
+        public Cargo() { }
         public Cargo(int id, string cargo)
         {
             this.Id = id;
-            this._Cargo = cargo;
+            this.Descripcion = cargo;
         }
 
         public int Id { get => id; set => id = value; }
-        public string _Cargo { get => cargo; set => cargo = value; }
+        public string Descripcion { get => cargo; set => cargo = value; }
     }
 }
