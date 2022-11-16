@@ -6,65 +6,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DATOS;
-using ENTIDADES;
+using DAL;
+using BE;
 
-namespace DATOS
-{
-    
-    public class LOGIN_DAL
+namespace DAL
+{ 
+    public class Login_dal
     {
         Conexion conection = new Conexion();
 
-        public USUARIOLOG GetUsuario(string user, string pass) 
+        public UserLog ValidarUsuario(string user, string pass) 
         {
-            USUARIOLOG usuario = new USUARIOLOG();
-            string consulta = "Select * from Usuarios where Usuario = '" + user + "' and Contraseña = '" + pass + "' ";
-            DataTable tabla = new DataTable();
-            tabla = conection.GetBdData(consulta);
+            string consulta = @"Select * from Usuarios where Usuario = '"+ user +"' and  " +
+                                 "CONVERT(nvarchar(30),DECRYPTBYPASSPHRASE('password',Contraseña)) = '"+ pass +"'";
 
-            var i = 0;
-            
-            foreach (DataRow drow in tabla.Rows)
-            {
-              bool blocked = bool.Parse(tabla.Rows[i]["Bloqueado"].ToString());
-
-                if(blocked == true)
-                {
-                    usuario.Id = 0;                  
-                }
-                else
-                {
-                    USUARIOLOG us = new USUARIOLOG(
-                        Int32.Parse(tabla.Rows[i]["ID"].ToString()),
-                        tabla.Rows[i]["Nombre"].ToString(),
-                        tabla.Rows[i]["Apellido"].ToString(),
-                        tabla.Rows[i]["Sector"].ToString(),
-                        tabla.Rows[i]["Idioma"].ToString());
-
-                    usuario = us;
-                }
-            }
+            UserLog usuario = conection.GetBdDataObjet<UserLog>(consulta);
             return usuario;
         }
 
-        public int GetIntentos(string user)
+        public UserLog GetUsuario(string user)
         {
-            string consultaIntentos = "Select * from Usuarios where Usuario = '" + user + "'";
-            int intentos = conection.GetInt(consultaIntentos, "Intentos");
+            string consulta = @"Select * from Usuarios where Usuario = '" + user + "'";
 
-            return intentos;
+            UserLog usuario = conection.GetBdDataObjet<UserLog>(consulta);
+            return usuario;
         }
 
-        public void UpdateIntentos(string user, int intentos)
+        public void UpdateIntentos(UserLog user, int intentos)
         {
-            string updateIntentos = "Update Usuarios Set Intentos ="+ intentos + "  where Usuario = '" + user + "'";
+            string updateIntentos = "Update Usuarios Set Intentos ="+ intentos + "  where ID = " + user.Id;
             conection.CRUD_BdData(updateIntentos);     
         }
 
-        public void Bloquear(string user)
+        public void Bloquear(UserLog user)
         {
-            string bloquear = "Update Usuarios set Bloqueado = 1 where Usuario ='" + user + "'";
+            string bloquear = "Update Usuarios set Bloqueado = 1 where ID =" + user.Id ;
             conection.CRUD_BdData(bloquear);
         }
 

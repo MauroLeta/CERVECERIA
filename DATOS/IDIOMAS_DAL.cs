@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DATOS
+namespace DAL
 {
-    public class IDIOMAS_DAL
+    public class Idiomas_dal
     {
         Conexion conection = new Conexion();
 

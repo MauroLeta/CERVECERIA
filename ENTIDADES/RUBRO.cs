@@ -4,21 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ENTIDADES
+namespace BE
 {
-   public class RUBRO
+   public class Rubro
     {
-        private int id;
-        private string rubro;
-
-        public RUBRO(int id, string rubro)
+        private int _id;
+        private string _rubro;
+        public Rubro()
         {
-            this.Id = id;
-            this.Rubro = rubro;
+
+        }
+        public Rubro(int _id, string rubro)
+        {
+            this.id = _id;
+            this.rubro = rubro;
         }
 
-        public int Id { get => id; set => id = value; }
-        public string Rubro { get => rubro; set => rubro = value; }
+        public int id { get => _id; set => _id = value; }
+        public string rubro { get => _rubro; set => _rubro = value; }
     }
 
     

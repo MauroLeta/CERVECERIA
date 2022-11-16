@@ -4,25 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ENTIDADES
+namespace BE
 {
-    public class PROVEEDOR
+    public class Proveedor
     {
-        private int id;
+        private int _id;
         private string nombre;
         private int telefono;
         private string mail;
 
-        public PROVEEDOR(int id, string nombre, int telefono, string mail)
+        public Proveedor()
         {
-            this.Id = id;
-            this.Nombre = nombre;
+
+        }
+        public Proveedor(int _id, string nombre, int telefono, string mail)
+        {
+            this.idProv = _id;
+            this.NombreProv = nombre;
             this.Telefono = telefono;
             this.Mail = mail;
         }
 
-        public int Id { get => id; set => id = value; }
-        public string Nombre { get => nombre; set => nombre = value; }
+        public int idProv { get => _id; set => _id = value; }
+        public string NombreProv { get => nombre; set => nombre = value; }
         public int Telefono { get => telefono; set => telefono = value; }
         public string Mail { get => mail; set => mail = value; }
     }

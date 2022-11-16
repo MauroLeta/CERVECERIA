@@ -1,6 +1,6 @@
 ﻿namespace CERVECERIA
 {
-    partial class frmINSUMOS
+    partial class frmInsumos
     {
         /// <summary>
         /// Required designer variable.
@@ -32,8 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmINSUMOS));
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInsumos));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -48,21 +47,9 @@
             this.btnG = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.lblClave = new System.Windows.Forms.Label();
+            this.lblAcceso = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(340, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 28);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "INSUMOS";
             // 
             // button1
             // 
@@ -74,10 +61,10 @@
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 32);
-            this.button1.TabIndex = 10;
+            this.button1.TabIndex = 11;
             this.button1.Text = "CERRAR";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // dataGridView1
             // 
@@ -89,7 +76,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.BurlyWood;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.BurlyWood;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.BurlyWood;
@@ -118,6 +105,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(720, 332);
             this.dataGridView1.TabIndex = 6;
@@ -132,7 +120,7 @@
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(135, 32);
-            this.btnAgregar.TabIndex = 7;
+            this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -147,7 +135,7 @@
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(135, 32);
-            this.btnEditar.TabIndex = 8;
+            this.btnEditar.TabIndex = 9;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -162,7 +150,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(135, 32);
-            this.btnEliminar.TabIndex = 9;
+            this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -177,7 +165,7 @@
             this.btnMalta.Margin = new System.Windows.Forms.Padding(2);
             this.btnMalta.Name = "btnMalta";
             this.btnMalta.Size = new System.Drawing.Size(120, 32);
-            this.btnMalta.TabIndex = 1;
+            this.btnMalta.TabIndex = 2;
             this.btnMalta.Text = "MALTA";
             this.btnMalta.UseVisualStyleBackColor = false;
             this.btnMalta.Click += new System.EventHandler(this.btnMalta_Click);
@@ -192,7 +180,7 @@
             this.btnLupulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnLupulo.Name = "btnLupulo";
             this.btnLupulo.Size = new System.Drawing.Size(120, 32);
-            this.btnLupulo.TabIndex = 2;
+            this.btnLupulo.TabIndex = 3;
             this.btnLupulo.Text = "LUPULO";
             this.btnLupulo.UseVisualStyleBackColor = false;
             this.btnLupulo.Click += new System.EventHandler(this.btnLupulo_Click);
@@ -207,7 +195,7 @@
             this.btnLevadura.Margin = new System.Windows.Forms.Padding(2);
             this.btnLevadura.Name = "btnLevadura";
             this.btnLevadura.Size = new System.Drawing.Size(120, 32);
-            this.btnLevadura.TabIndex = 3;
+            this.btnLevadura.TabIndex = 4;
             this.btnLevadura.Text = "LEVADURA";
             this.btnLevadura.UseVisualStyleBackColor = false;
             this.btnLevadura.Click += new System.EventHandler(this.btnLevadura_Click);
@@ -222,7 +210,7 @@
             this.btnAdiciones.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdiciones.Name = "btnAdiciones";
             this.btnAdiciones.Size = new System.Drawing.Size(120, 32);
-            this.btnAdiciones.TabIndex = 4;
+            this.btnAdiciones.TabIndex = 5;
             this.btnAdiciones.Text = "ADICIONES";
             this.btnAdiciones.UseVisualStyleBackColor = false;
             this.btnAdiciones.Click += new System.EventHandler(this.btnAdiciones_Click);
@@ -239,6 +227,7 @@
             this.btnK.Name = "btnK";
             this.btnK.Size = new System.Drawing.Size(43, 32);
             this.btnK.TabIndex = 6;
+            this.btnK.TabStop = false;
             this.btnK.Text = "Kg";
             this.btnK.UseVisualStyleBackColor = false;
             this.btnK.Click += new System.EventHandler(this.btnGr_Click);
@@ -253,7 +242,8 @@
             this.btnG.Margin = new System.Windows.Forms.Padding(2);
             this.btnG.Name = "btnG";
             this.btnG.Size = new System.Drawing.Size(43, 32);
-            this.btnG.TabIndex = 5;
+            this.btnG.TabIndex = 7;
+            this.btnG.TabStop = false;
             this.btnG.Text = "Gr";
             this.btnG.UseVisualStyleBackColor = false;
             this.btnG.Click += new System.EventHandler(this.btnKg_Click);
@@ -264,7 +254,7 @@
             this.textBoxSearch.Location = new System.Drawing.Point(166, 88);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(405, 26);
-            this.textBoxSearch.TabIndex = 11;
+            this.textBoxSearch.TabIndex = 1;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // lblClave
@@ -280,13 +270,29 @@
             this.lblClave.Text = "BUSCAR";
             this.lblClave.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // frmINSUMOS
+            // lblAcceso
+            // 
+            this.lblAcceso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAcceso.BackColor = System.Drawing.Color.Black;
+            this.lblAcceso.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcceso.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblAcceso.Location = new System.Drawing.Point(-3, -1);
+            this.lblAcceso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAcceso.Name = "lblAcceso";
+            this.lblAcceso.Size = new System.Drawing.Size(812, 32);
+            this.lblAcceso.TabIndex = 13;
+            this.lblAcceso.Text = "INSUMOS";
+            this.lblAcceso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // frmInsumos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(805, 560);
+            this.Controls.Add(this.lblAcceso);
             this.Controls.Add(this.lblClave);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.btnG);
@@ -300,9 +306,8 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmINSUMOS";
+            this.Name = "frmInsumos";
             this.Text = "frmINSUMOS";
             this.Load += new System.EventHandler(this.frmINSUMOS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -312,7 +317,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAgregar;
@@ -327,5 +331,6 @@
         private System.Windows.Forms.Button btnG;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Label lblClave;
+        private System.Windows.Forms.Label lblAcceso;
     }
 }

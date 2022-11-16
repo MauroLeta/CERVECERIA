@@ -1,4 +1,4 @@
-﻿using ENTIDADES;
+﻿using BE;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -6,36 +6,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DATOS
+namespace DAL
 {
-  public  class PROVEEDOR_DAL
+  public  class Proveedor_dal
   {
     Conexion conection = new Conexion();
-    List<PROVEEDOR> lista_proveedor = new List<PROVEEDOR>();
-    public List<PROVEEDOR> GetProveedor()
+    List<Proveedor> lista_proveedor = new List<Proveedor>();
+    public List<Proveedor> GetProveedor()
     {
         lista_proveedor.Clear();
         string consulta = "select * from Proveedores";
-        DataTable tabla = new DataTable();
-        tabla = conection.GetBdData(consulta);
-
-        var i = 0;
-
-        foreach (DataRow drow in tabla.Rows)
-        {
-            PROVEEDOR proveedor = new PROVEEDOR(
-                    Int32.Parse(tabla.Rows[i]["idProv"].ToString()),
-                    tabla.Rows[i]["NombreProv"].ToString(),
-                    Int32.Parse(tabla.Rows[i]["Telefono"].ToString()),
-                    tabla.Rows[i]["Mail"].ToString());
-
-            lista_proveedor.Add(proveedor);
-
-            i++;
-        }
+        lista_proveedor = conection.GetBdDataList<Proveedor>(consulta);
         return lista_proveedor;
     }
-
-
-    }
+  }
 }

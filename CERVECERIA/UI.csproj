@@ -46,151 +46,151 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmABM_INSUMOS.cs">
+    <Compile Include="CustomTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomTextBox.Designer.cs">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmABM_INSUMOS.Designer.cs">
-      <DependentUpon>frmABM_INSUMOS.cs</DependentUpon>
+    <Compile Include="frmAgenda.Designer.cs">
+      <DependentUpon>frmAgenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAGREGARCOMPRA.cs">
+    <Compile Include="frmAbmAgenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAGREGARCOMPRA.Designer.cs">
-      <DependentUpon>frmAGREGARCOMPRA.cs</DependentUpon>
+    <Compile Include="frmAbmAgenda.Designer.cs">
+      <DependentUpon>frmAbmAgenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCLIENTES.cs">
+    <Compile Include="frmAbmInsumos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCLIENTES.Designer.cs">
-      <DependentUpon>frmCLIENTES.cs</DependentUpon>
+    <Compile Include="frmAbmInsumos.Designer.cs">
+      <DependentUpon>frmAbmInsumos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCOCCION.cs">
+    <Compile Include="frmAgregarCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCOCCION.Designer.cs">
-      <DependentUpon>frmCOCCION.cs</DependentUpon>
+    <Compile Include="frmAgregarCompra.Designer.cs">
+      <DependentUpon>frmAgregarCompra.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCOMPRAS.cs">
+    <Compile Include="frmAltaUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCOMPRAS.Designer.cs">
-      <DependentUpon>frmCOMPRAS.cs</DependentUpon>
+    <Compile Include="frmAltaUser.Designer.cs">
+      <DependentUpon>frmAltaUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCONFIG.cs">
+    <Compile Include="frmCoccion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCONFIG.Designer.cs">
-      <DependentUpon>frmCONFIG.cs</DependentUpon>
+    <Compile Include="frmCoccion.Designer.cs">
+      <DependentUpon>frmCoccion.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmINICIO.cs">
+    <Compile Include="frmCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmINICIO.Designer.cs">
-      <DependentUpon>frmINICIO.cs</DependentUpon>
+    <Compile Include="frmCompras.Designer.cs">
+      <DependentUpon>frmCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmINSUMOS.cs">
+    <Compile Include="frmConfig.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmINSUMOS.Designer.cs">
-      <DependentUpon>frmINSUMOS.cs</DependentUpon>
+    <Compile Include="frmConfig.Designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLUPA.cs">
+    <Compile Include="frmInsumos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLUPA.Designer.cs">
-      <DependentUpon>frmLUPA.cs</DependentUpon>
+    <Compile Include="frmInsumos.Designer.cs">
+      <DependentUpon>frmInsumos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPAGOS.cs">
+    <Compile Include="frmLupa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPAGOS.Designer.cs">
-      <DependentUpon>frmPAGOS.cs</DependentUpon>
+    <Compile Include="frmLupa.Designer.cs">
+      <DependentUpon>frmLupa.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRECETAS.cs">
+    <Compile Include="frmRecetas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRECETAS.Designer.cs">
-      <DependentUpon>frmRECETAS.cs</DependentUpon>
+    <Compile Include="frmRecetas.Designer.cs">
+      <DependentUpon>frmRecetas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVENTAS.cs">
+    <Compile Include="frmVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVENTAS.Designer.cs">
-      <DependentUpon>frmVENTAS.cs</DependentUpon>
+    <Compile Include="frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPRODUCTOS.cs">
+    <Compile Include="frmProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPRODUCTOS.Designer.cs">
-      <DependentUpon>frmPRODUCTOS.cs</DependentUpon>
+    <Compile Include="frmProductos.Designer.cs">
+      <DependentUpon>frmProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEMPLEADOS.cs">
+    <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEMPLEADOS.Designer.cs">
-      <DependentUpon>frmEMPLEADOS.cs</DependentUpon>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPRINCIPAL.cs">
+    <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPRINCIPAL.Designer.cs">
-      <DependentUpon>frmPRINCIPAL.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmLOGIN.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLOGIN.Designer.cs">
-      <DependentUpon>frmLOGIN.cs</DependentUpon>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmABM_INSUMOS.resx">
-      <DependentUpon>frmABM_INSUMOS.cs</DependentUpon>
+    <EmbeddedResource Include="CustomTextBox.resx">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAGREGARCOMPRA.resx">
-      <DependentUpon>frmAGREGARCOMPRA.cs</DependentUpon>
+    <EmbeddedResource Include="frmAgenda.resx">
+      <DependentUpon>frmAgenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCLIENTES.resx">
-      <DependentUpon>frmCLIENTES.cs</DependentUpon>
+    <EmbeddedResource Include="frmAbmAgenda.resx">
+      <DependentUpon>frmAbmAgenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCOCCION.resx">
-      <DependentUpon>frmCOCCION.cs</DependentUpon>
+    <EmbeddedResource Include="frmAbmInsumos.resx">
+      <DependentUpon>frmAbmInsumos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCOMPRAS.resx">
-      <DependentUpon>frmCOMPRAS.cs</DependentUpon>
+    <EmbeddedResource Include="frmAgregarCompra.resx">
+      <DependentUpon>frmAgregarCompra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCONFIG.resx">
-      <DependentUpon>frmCONFIG.cs</DependentUpon>
+    <EmbeddedResource Include="frmAltaUser.resx">
+      <DependentUpon>frmAltaUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmINICIO.resx">
-      <DependentUpon>frmINICIO.cs</DependentUpon>
+    <EmbeddedResource Include="frmCoccion.resx">
+      <DependentUpon>frmCoccion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmINSUMOS.resx">
-      <DependentUpon>frmINSUMOS.cs</DependentUpon>
+    <EmbeddedResource Include="frmCompras.resx">
+      <DependentUpon>frmCompras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLUPA.resx">
-      <DependentUpon>frmLUPA.cs</DependentUpon>
+    <EmbeddedResource Include="frmConfig.resx">
+      <DependentUpon>frmConfig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPAGOS.resx">
-      <DependentUpon>frmPAGOS.cs</DependentUpon>
+    <EmbeddedResource Include="frmInsumos.resx">
+      <DependentUpon>frmInsumos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPRODUCTOS.resx">
-      <DependentUpon>frmPRODUCTOS.cs</DependentUpon>
+    <EmbeddedResource Include="frmLupa.resx">
+      <DependentUpon>frmLupa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEMPLEADOS.resx">
-      <DependentUpon>frmEMPLEADOS.cs</DependentUpon>
+    <EmbeddedResource Include="frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRECETAS.resx">
-      <DependentUpon>frmRECETAS.cs</DependentUpon>
+    <EmbeddedResource Include="frmRecetas.resx">
+      <DependentUpon>frmRecetas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVENTAS.resx">
-      <DependentUpon>frmVENTAS.cs</DependentUpon>
+    <EmbeddedResource Include="frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLOGIN.resx">
-      <DependentUpon>frmLOGIN.cs</DependentUpon>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPRINCIPAL.resx">
-      <DependentUpon>frmPRINCIPAL.cs</DependentUpon>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -283,6 +283,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\instagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngReturn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

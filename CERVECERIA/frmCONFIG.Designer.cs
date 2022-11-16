@@ -1,6 +1,6 @@
 ﻿namespace CERVECERIA
 {
-    partial class frmCONFIG
+    partial class frmConfig
     {
         /// <summary>
         /// Required designer variable.
@@ -56,7 +56,7 @@
             this.comboBox1.Location = new System.Drawing.Point(125, 54);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(178, 28);
-            this.comboBox1.TabIndex = 3;
+            this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged_1);
             // 
             // button1
@@ -69,10 +69,10 @@
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 28);
-            this.button1.TabIndex = 4;
+            this.button1.TabIndex = 3;
             this.button1.Text = "SALIR";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // pictureBox1
             // 
@@ -95,12 +95,12 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(258, 26);
-            this.btnGuardar.TabIndex = 6;
+            this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "GUARDAR CAMBIOS";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // frmCONFIG
+            // frmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -113,7 +113,7 @@
             this.Controls.Add(this.lblIdioma);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "frmCONFIG";
+            this.Name = "frmConfig";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmCONFIG_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

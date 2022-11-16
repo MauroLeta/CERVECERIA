@@ -1,4 +1,4 @@
-﻿using ENTIDADES;
+﻿using BE;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -6,32 +6,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DATOS
+namespace DAL
 {
-    public class RUBRO_DAL
+    public class Rubro_dal
     {
         Conexion conection = new Conexion();
-        List<RUBRO> lista_rubro = new List<RUBRO>();
+        List<Rubro> lista_rubro = new List<Rubro>();
 
-        public List<RUBRO> GetRubro()
+        public List<Rubro> GetRubro()
         {
             lista_rubro.Clear();
             string consulta = "select * from Rubros";
-            DataTable tabla = new DataTable();
-            tabla = conection.GetBdData(consulta);
+            lista_rubro = conection.GetBdDataList<Rubro>(consulta);
 
-            var i = 0;
-
-            foreach (DataRow drow in tabla.Rows)
-            {
-                RUBRO rubro = new RUBRO(
-                        Int32.Parse(tabla.Rows[i]["id"].ToString()),
-                        tabla.Rows[i]["rubro"].ToString());
-
-                lista_rubro.Add(rubro);
-
-                i++;
-            }
             return lista_rubro;
         }
 

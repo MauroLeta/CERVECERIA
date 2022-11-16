@@ -1,22 +1,24 @@
-﻿using System;
+﻿using BE;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DATOS
+namespace DAL
 {
-   public class PAGOS_DAL
+   public class Pagos_dal
     {
         Conexion conection = new Conexion();
         public string consulta = "";
-        public DataTable getPagos()
+        public List<TipoPago> getPagos()
         {
             consulta = @"select * from FormasDePago";
 
             DataTable tabla = new DataTable();
-            return conection.GetBdData(consulta);
+
+            return conection.GetBdDataList<TipoPago>(consulta);
         }
     }
 }

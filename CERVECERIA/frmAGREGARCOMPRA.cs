@@ -1,6 +1,6 @@
-﻿using DATOS;
-using DINAMICA_DE_ENTIDADES;
-using ENTIDADES;
+﻿using DAL;
+using BLL;
+using BE;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,45 +11,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IDIOMA;
 
 namespace CERVECERIA
 {
-    public partial class frmAGREGARCOMPRA : Form
+    public partial class frmAgregarCompra : Form
     {
-        IDIOMAS_BDE idiomasBDE = new IDIOMAS_BDE();
-        INSUMOS_BDE insumos_bde = new INSUMOS_BDE();
-        ABM_BDE abm_bde = new ABM_BDE();
-        PAGOS_BDE pagos_bde = new PAGOS_BDE();
+        Insumos_bll insumos_bll = new Insumos_bll();
+        Proveedor_bll proveedor_bll = new Proveedor_bll();
+        Pagos_bll pagos_bll = new Pagos_bll();
+        Compras_bll compras_bll = new Compras_bll();
 
-        USUARIOLOG user = new USUARIOLOG();
-        List<INSUMO> listaInsumo = new List<INSUMO>();
+        UserLog user = new UserLog();
+        List<Insumo> listaInsumo = new List<Insumo>();
 
-        public List<DETALLECOMPRA> nuevaCompra = new List<DETALLECOMPRA>();
+        public List<DetalleCompra> nuevaCompra = new List<DetalleCompra>();
         public float total = 0;
         public int i = 0;
-        public float precioViejo = 0;
+        public double precioViejo = 0;
         public string Idioma = "Español";
-        public frmAGREGARCOMPRA(USUARIOLOG usuario)
+        public string Medida = "Kg";
+
+        public frmAgregarCompra(UserLog usuario)
         {
             InitializeComponent();
             user = usuario;
-            ChangeLanguaje(user.Idioma);
+            Idioma idioma = new Idioma();
+            idioma.ChangeLanguaje(this, Idioma, user.Idioma, null);
 
             CultureInfo ci = new CultureInfo("en");
             ci = new CultureInfo("en");
             CultureInfo.CurrentCulture = ci;
 
-            listaInsumo = insumos_bde.getAllInsumos();
+            insumos_bll.getDataSet();
         }
         private void frmAGREGARCOMPRA_Load(object sender, EventArgs e)
         {
+            var tablas = new List<int>{ 0,1,2,3};
+            foreach (int tabla in tablas)
+            {
+                listaInsumo.AddRange(insumos_bll.ListarInsumos(tabla));
+            }
             AutoCompleteStringCollection coleccionInsumo = new AutoCompleteStringCollection();
 
             comboBoxProducto.DataSource = listaInsumo;
             comboBoxProducto.DisplayMember = "Nombre";
             comboBoxProducto.ValueMember = "Id";
 
-            foreach ( INSUMO insumo in listaInsumo)
+            foreach ( Insumo insumo in listaInsumo)
             {
                 coleccionInsumo.Add(insumo.Nombre);
             }
@@ -57,20 +66,84 @@ namespace CERVECERIA
             comboBoxProducto.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             comboBoxProducto.AutoCompleteSource = AutoCompleteSource.CustomSource;
 
-            abm_bde.CargarCombo("PROVEEDOR", comboBoxProv);
-
-            comboBoxPago.DataSource = pagos_bde.GetPagos();
+            comboBoxProv.DataSource = proveedor_bll.ListProveedor();
+            comboBoxProv.DisplayMember = "NombreProv";
+            comboBoxProv.ValueMember = "idProv";
+        
+            comboBoxPago.DataSource = pagos_bll.GetPagos();
             comboBoxPago.DisplayMember = "Pago";
             comboBoxPago.ValueMember = "Id";
         }
+
         private void comboBoxProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (INSUMO insumo in listaInsumo)
+            foreach (Insumo insumo in listaInsumo)
             {
                 if(insumo.Id.ToString() == comboBoxProducto.SelectedValue.ToString())
                 {
                     textBoxPrecio.Text = insumo.Precio.ToString();
                     precioViejo = insumo.Precio;
+                }
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+            if (textBoxCantidad.Text == "" || textBoxPrecio.Text == "")
+            {
+                MessageBox.Show("Faltan ingresar datos");
+                return;
+            }
+            else
+            {
+                float cantidad;
+                if (Medida == "Gr")
+                {
+                    cantidad = float.Parse(textBoxCantidad.Text) / 1000;
+                }
+                else
+                {
+                    cantidad = float.Parse(textBoxCantidad.Text);
+                }
+
+                Insumo insumo = comboBoxProducto.SelectedItem as Insumo;
+                DetalleCompra detail = new DetalleCompra(insumo.Id, insumo.Nombre, float.Parse(textBoxPrecio.Text), cantidad);
+                nuevaCompra.Add(detail); //agrego el detalle
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = nuevaCompra;
+                dataGridView1.Columns["id"].Visible = false;
+                total = total + (float.Parse(textBoxPrecio.Text) * cantidad);   //calcular precio
+                lblTotal.Text = total.ToString();
+                label8.Text = " TOTAL: $";
+                textBoxCantidad.Text = "";
+
+                if (lblProv.Text == "") //bloquea datos de compra
+                {
+                    lblProv.Text = comboBoxProv.Text;
+                    lblFecha.Text = dateTimePicker1.Value.ToString("dd-MM-yyyy");
+                    comboBoxProv.Enabled = false;
+                    dateTimePicker1.Enabled = false;
+                    comboBoxPago.Enabled = false;
+                }
+                i = i + 1;
+            }
+            if (double.Parse(textBoxPrecio.Text) != precioViejo)  //actualizar precio
+            {
+                Insumo insumo = comboBoxProducto.SelectedItem as Insumo;
+                DialogResult resul = MessageBox.Show("¿Desea actualizar el precio?", "Actualizar Precio", MessageBoxButtons.YesNo);
+                if (resul == DialogResult.Yes)
+                {
+                    bool cambioPrecio = insumos_bll.ActualizarPrecio(insumo.Id, double.Parse(textBoxPrecio.Text));
+
+                    if (cambioPrecio == true)
+                    {
+                        MessageBox.Show("Cambio Realizado");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se pudo realizar el cambio");
+                    }
                 }
             }
         }
@@ -83,52 +156,38 @@ namespace CERVECERIA
             }
             else
             {
-                DETALLECOMPRA detalle = dataGridView1.CurrentRow.DataBoundItem as DETALLECOMPRA;
+                DetalleCompra detalle = dataGridView1.CurrentRow.DataBoundItem as DetalleCompra;
                 nuevaCompra.Remove(detalle);
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = nuevaCompra;
                 dataGridView1.Columns["id"].Visible = false;
-                total = total - (detalle.Precio * detalle.Cantidad);    ////bde??? calcular precio
+                total = total - (detalle.Precio * detalle.Cantidad);    ////calcular precio
                 lblTotal.Text = total.ToString();
             }
-
         }
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            if (textBoxCantidad.Text == "" || textBoxPrecio.Text == "")
-            {
-                MessageBox.Show("Faltan ingresar datos");
-                return;
-            }
-            else
-            {
-                INSUMO insumo = comboBoxProducto.SelectedItem as INSUMO;
-                DETALLECOMPRA detail = new DETALLECOMPRA(insumo.Id, insumo.Nombre , float.Parse(textBoxPrecio.Text), float.Parse(textBoxCantidad.Text));
-                nuevaCompra.Add(detail);
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = nuevaCompra;                
-                dataGridView1.Columns["id"].Visible = false;
-                total = total + (float.Parse(textBoxPrecio.Text) * float.Parse(textBoxCantidad.Text));   ////bde??? calcular precio
-                lblTotal.Text = total.ToString();
-                label8.Text = " TOTAL: $";
 
-                if (lblProv.Text == "")
-                {
-                    lblProv.Text = comboBoxProv.Text;
-                    lblFecha.Text = dateTimePicker1.Value.ToString("dd-MM-yyyy");
-                    comboBoxProv.Enabled = false;
-                    dateTimePicker1.Enabled = false;
-                    comboBoxPago.Enabled = false;
-                }
-                i = i + 1;
-            }
-            if(Int32.Parse(textBoxPrecio.Text) != precioViejo)
+        private void btnK_Click(object sender, EventArgs e)
+        {
+            btnG.BackColor = Color.PeachPuff;
+            btnG.Enabled = true;
+            btnK.BackColor = Color.SandyBrown;
+            btnK.Enabled = false;
+            Medida = "Kg";
+            if (textBoxCantidad.Text != "")
             {
-                DialogResult resul = MessageBox.Show("¿Desea actualizar el precio?","Actualizar Precio", MessageBoxButtons.YesNo);
-                if (resul == DialogResult.Yes)
-                {
-                    // BDE actualiar precio
-                }
+                textBoxCantidad.Text = (double.Parse(textBoxCantidad.Text) / 1000).ToString();
+            }
+        }
+        private void btnG_Click(object sender, EventArgs e)
+        {
+            btnG.BackColor = Color.SandyBrown;
+            btnG.Enabled = false;
+            btnK.BackColor = Color.PeachPuff;
+            btnK.Enabled = true;
+            Medida = "Gr";
+            if (textBoxCantidad.Text != "")
+            {
+                textBoxCantidad.Text = (double.Parse(textBoxCantidad.Text) * 1000).ToString();
             }
         }
 
@@ -141,27 +200,30 @@ namespace CERVECERIA
             }
             else
             {
-                //agregar compra (lbl fecha, lbltotal, combobox prov value )
-                //agregar detalle ()  id + "," + detail.Precio + "," + detail.Cantidad +
-            }
+                Compra compra = new Compra(0, dateTimePicker1.Value, comboBoxProv.SelectedItem as Proveedor, total, comboBoxPago.SelectedItem as TipoPago);
+                bool insert = compras_bll.agregarCompra(compra); //carga la compra
+                if(insert == true)
+                {
+                    MessageBox.Show("Compra Agregada");
 
+                    int lastId = compras_bll.getLastId();
+                    if(lastId == 0)
+                    {
+                        lastId = 1;
+                    }
+                    foreach (DetalleCompra detalle in nuevaCompra) 
+                    {
+                        compras_bll.agregarDetalle(lastId, detalle.Id, detalle.Precio, detalle.Cantidad); //carga el detalle
+                        insumos_bll.ActualizarCantidad(detalle.Id, detalle.Cantidad); //actualiza el stock
 
-        }
-        public void ChangeLanguaje(string idiomaN)
-        {
-            if (Idioma != idiomaN)
-            {
-                idiomasBDE.CambiarIdioma(this, idiomaN, Idioma, null);
-            }
-            else
-            {
-                return;
+                        frmCompras Pform = Owner as frmCompras;
+                        Pform.loadData();
+                        this.Close();
+                    }
+                }   
             }
         }
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
         public void OnlyNumbers(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -173,11 +235,14 @@ namespace CERVECERIA
         {
             OnlyNumbers(sender, e);
         }
-
         private void textBoxCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
             OnlyNumbers(sender, e);
         }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

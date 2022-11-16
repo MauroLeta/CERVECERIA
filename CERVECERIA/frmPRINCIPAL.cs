@@ -1,5 +1,5 @@
-﻿using DINAMICA_DE_ENTIDADES;
-using ENTIDADES;
+﻿using BLL;
+using BE;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,42 +9,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics; //espacio de nombre para Process
+using IDIOMA;
 
 namespace CERVECERIA
 {
-    public partial class frmPRINCIPAL : Form
+    public partial class frmPrincipal : Form
     {
-        IDIOMAS_BDE idiomasBDE = new IDIOMAS_BDE();
-        USUARIOLOG user = new USUARIOLOG();
-
+        UserLog user = new UserLog();
         public string Idioma = "Español";
 
-        public frmPRINCIPAL(USUARIOLOG usuario)
+        public frmPrincipal(UserLog usuario)
         {
             InitializeComponent();
-            user = usuario; 
+            user = usuario;            
         }
-
         private void PRINCIPAL_Load(object sender, EventArgs e)
         {
             timer1.Enabled = true;
-            ChangeLanguaje(user.Idioma);
-           
-            lblApellido.Text = user.Apellido;
-            lblSector.Text = user.Sector;
-        }
 
+            ChangeLanguaje(user.Idioma);
+                      
+            lblApellido.Text = user.Apellido;
+            lblSector.Text = user.Cargo.ToString(); //traer nombre de sector
+            //llamar a permisos
+        }
         public void ChangeLanguaje(string idiomaN)
         {
-            if (Idioma != idiomaN)
-            {
-                idiomasBDE.CambiarIdioma(this, idiomaN, Idioma, MenuVertical);
-                Idioma = user.Idioma;
-            }
-            else
-            {
-                return;
-            }
+            Idioma idioma = new Idioma();
+            idioma.ChangeLanguaje(this, Idioma, idiomaN, MenuVertical);
+            Idioma = user.Idioma;
         }
 
         private void AbrirFormHijo(Form form_hijo)
@@ -55,89 +49,48 @@ namespace CERVECERIA
             form_hijo.Show();
         }
 
-
-        private void btnReportes_Click(object sender, EventArgs e)
-        {
-            /*/submenuReportes.Visible = true;
-            if(submenuReportes.Visible == false)
-            {
-                submenuReportes.Visible = true;
-            }
-            else if (submenuReportes.Visible == true)
-            {
-                submenuReportes.Visible = false;
-            }*/
-        }
-
-        internal void Show(string sector, string apellido)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void btnrptventa_Click(object sender, EventArgs e)
-        {
-           // submenuReportes.Visible = false;
-        }
-
-        private void btnrptcompras_Click(object sender, EventArgs e)
-        {
-           // submenuReportes.Visible = false;
-        }
-
-        private void btnrptpagos_Click(object sender, EventArgs e)
-        {
-           // submenuReportes.Visible = false;
-        }
-
-
-
         private void btnInsumos_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new frmINSUMOS(user));
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AbrirFormHijo(new frmEMPLEADOS());
-        }
-        private void btnEmpleados_Click(object sender, EventArgs e)
-        {
-            AbrirFormHijo(new frmEMPLEADOS());
-        }
-        private void btnProductos_Click(object sender, EventArgs e)
-        {
-            AbrirFormHijo(new frmPRODUCTOS());
-        }
-        private void btnVentas_Click(object sender, EventArgs e)
-        {
-            AbrirFormHijo(new frmVENTAS());
-        }
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        private void btnClientes_Click(object sender, EventArgs e)
-        {
-            AbrirFormHijo(new frmCLIENTES());
+            AbrirFormHijo(new frmInsumos(user));
         }
         private void btnCompras_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new frmCOMPRAS(user));
+            AbrirFormHijo(new frmCompras(user));
         }
-        private void btnPagos_Click(object sender, EventArgs e)
+        private void btnRecetas_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new frmPAGOS());
+            AbrirFormHijo(new frmRecetas(user));
         }
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnProductos_Click(object sender, EventArgs e)
         {
-            AbrirFormHijo(new frmINICIO());
+            AbrirFormHijo(new frmProductos());
         }
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new frmVentas());
+        }
+        private void btnAgenda_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new frmAgenda(user));
+        }
+
+        private void webImage_Click(object sender, EventArgs e)  //----------------------------------------   process
+        {
+            ProcessStartInfo process = new ProcessStartInfo("chrome.exe", "https://cervezaheldig.com/");
+            Process.Start(process);
+        }
+        private void instaImage_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo process = new ProcessStartInfo("chrome.exe", "https://www.instagram.com/cerveza.heldig/");
+            Process.Start(process);
+        }
+
         private void btnConfig_Click(object sender, EventArgs e)
         {
-            frmCONFIG config = new frmCONFIG(user);
+            frmConfig config = new frmConfig(user);
             AddOwnedForm(config);
             config.Show();
         }
-
         private void btnLupa_Click(object sender, EventArgs e)
         {
             Form existe = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "frmLUPA").SingleOrDefault<Form>();
@@ -150,25 +103,36 @@ namespace CERVECERIA
             else
             {
                 btnLupa.BackgroundImage = Properties.Resources.lupa_cerrar;
-                frmLUPA Lupa = new frmLUPA();
+                frmLupa Lupa = new frmLupa();
                 AddOwnedForm(Lupa);
                 Lupa.Show();
             }
         }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
+ 
+            performanceCounter1.CategoryName = "Procesador";
+            performanceCounter1.CounterName = "% de tiempo de procesador";
+            performanceCounter1.InstanceName = "_Total";
+            try
+            {
+                lblCPU.Text = performanceCounter1.NextValue().ToString() + "%";
+            }
+            catch { }
+
             lblHora.Text = DateTime.Now.ToString("hh:mm");
             lblAmPm.Text = DateTime.Now.ToString("tt", System.Globalization.CultureInfo.InvariantCulture);
             lblFecha.Text = lblFecha.Text = DateTime.Now.ToShortDateString();
-        }
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void btnLogOut_Click_1(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

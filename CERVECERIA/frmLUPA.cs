@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CERVECERIA
 {
-    public partial class frmLUPA : Form
+    public partial class frmLupa : Form
     {
         public bool Active = false;
         Graphics GraficoCaptura;
@@ -19,7 +19,7 @@ namespace CERVECERIA
         Point frmMover;
         Boolean MoverMouse;
         int Zoom = 1;
-        public frmLUPA()
+        public frmLupa()
         {
             InitializeComponent();
             

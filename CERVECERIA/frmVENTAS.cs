@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CERVECERIA
 {
-    public partial class frmVENTAS : Form
+    public partial class frmVentas : Form
     {
-        public frmVENTAS()
+        public frmVentas()
         {
             InitializeComponent();
         }

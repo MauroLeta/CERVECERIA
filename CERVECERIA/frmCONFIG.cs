@@ -1,5 +1,5 @@
-﻿using DINAMICA_DE_ENTIDADES;
-using ENTIDADES;
+﻿using BLL;
+using BE;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,20 +9,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IDIOMA;
 
 namespace CERVECERIA
 {
-    public partial class frmCONFIG : Form
+    public partial class frmConfig : Form
     {
-        IDIOMAS_BDE idiomasBDE = new IDIOMAS_BDE() ;
-        USUARIOLOG user = new USUARIOLOG();
-        CONFIG_BDE config_bde = new CONFIG_BDE();
+        UserLog user = new UserLog();
+        Config_bll config_bde = new Config_bll();
 
         string Idioma = "Español";
         string nIdioma = "";
         string vIdioma = "";
-
-        public frmCONFIG(USUARIOLOG usuario)
+        Idioma idioma = new Idioma();
+        public frmConfig(UserLog usuario)
         {
             InitializeComponent();
             user = usuario;
@@ -34,7 +34,11 @@ namespace CERVECERIA
         {
             load();
         }
-
+        public void ChangeLanguaje(string idiomaN)
+        {
+            
+            idioma.ChangeLanguaje(this, Idioma, idiomaN, null);
+        }
         public void load()
         {
             config_bde.ComboIdiomas(comboBox1, user.Idioma);
@@ -52,37 +56,18 @@ namespace CERVECERIA
                 pictureBox1.BackgroundImage = Properties.Resources.Portugues;
             }       
         }
-        public void ChangeLanguaje(string idiomaN)
-        {
-            if (Idioma != idiomaN)
-            {
-                idiomasBDE.CambiarIdioma(this, idiomaN, Idioma, null);
-            }
-            else
-            {
-                return;
-            }
-        }
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            frmPRINCIPAL Pform = Owner as frmPRINCIPAL;
-            Pform.ChangeLanguaje(nIdioma);
-            config_bde.ActualizarForm(nIdioma, vIdioma);               
-            idiomasBDE.GuardarIdioma(nIdioma, user);
-            MessageBox.Show("Cambios realizados");
-            Pform.Focus();
-            this.Close();         
-        }
+
         private void comboBox1_SelectedValueChanged_1(object sender, EventArgs e)
         {
             switch (comboBox1.SelectedIndex)
             {
-                case 0: ChangeLanguaje("Español");
+                case 0:
+                    ChangeLanguaje("Español");
                     nIdioma = "Español";
                     break;
                 case 1:
                     ChangeLanguaje("Ingles");
-                   nIdioma = "Ingles";
+                    nIdioma = "Ingles";
                     break;
                 case 2:
                     ChangeLanguaje("Portugues");
@@ -96,7 +81,18 @@ namespace CERVECERIA
                 load();
             }
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            frmPrincipal Pform = Owner as frmPrincipal;
+            Pform.ChangeLanguaje(nIdioma);
+            config_bde.ActualizarForm(nIdioma, vIdioma);               
+            idioma.SaveLanguaje(nIdioma, user);
+            MessageBox.Show("Cambios realizados");
+            Pform.Focus();
+            this.Close();         
+        }
+        private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace CERVECERIA
 {
-    partial class frmVENTAS
+    partial class frmVentas
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace CERVECERIA
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVENTAS));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVentas));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();

@@ -4,20 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ENTIDADES
+namespace BE
 {
-    public class TIPOPAGO
+    public class TipoPago
     {
         private int id;
         private string tipo;
 
-        public TIPOPAGO(int id, string tipo)
+        public TipoPago() { }
+        public TipoPago(int id, string tipo)
         {
             this.id = id;
             this.tipo = tipo;
         }
 
         public int Id { get => id; set => id = value; }
-        public string Tipo { get => tipo; set => tipo = value; }
+        public string Pago { get => tipo; set => tipo = value; }
     }
 }

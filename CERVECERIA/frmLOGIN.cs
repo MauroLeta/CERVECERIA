@@ -8,45 +8,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DINAMICA_DE_ENTIDADES;
-using ENTIDADES;
+using BLL;
+using BE;
 using IDIOMA;
 
 namespace CERVECERIA
 {
-    public partial class frmLOGIN : Form
+    public partial class frmLogin : Form
     {
-        IDIOMAS_BDE idiomasBDE = new IDIOMAS_BDE();
         string Idioma = "Español";
-        public frmLOGIN()
+        public frmLogin()
         {
             InitializeComponent();
         }
+        public void ChangeLanguaje(string idiomaN)
+        {
+            Idioma idioma = new Idioma();
+            idioma.ChangeLanguaje(this, Idioma, idiomaN, null);
+        }
+
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            LOGIN_BDE login = new LOGIN_BDE();
-            USUARIOLOG usuario = new USUARIOLOG();
+            Login_bll login = new Login_bll();
+            UserLog usuario = login.login(txtUser.Texts, txtPass.Texts);
 
-            usuario = login.login(txtUser.Text, txtPass.Text);
-
-            if(usuario.Id != 0)
+            if (usuario == null) { return; }
+            else if (usuario.Bloqueado == false && usuario != null)
             {
-                frmPRINCIPAL form = new frmPRINCIPAL(usuario);
+                frmPrincipal form = new frmPrincipal(usuario);
                 AddOwnedForm(form);
                 form.Show();
                 this.Visible = false;
-            }
-        }
-
-        public void ChangeLanguaje(string idiomaN)
-        {
-            if(Idioma != idiomaN)
-            {
-                idiomasBDE.CambiarIdioma(this, idiomaN, Idioma,null);
-            }
-            else
-            {
-                return;
             }
         }
 
@@ -55,35 +47,31 @@ namespace CERVECERIA
             ChangeLanguaje("Español");
             Idioma = "Español";
         }
-
         private void btnIngles_Click(object sender, EventArgs e)
         {
             ChangeLanguaje("Ingles");
             Idioma = "Ingles";
         }
-
         private void btnPortugues_Click(object sender, EventArgs e)
         {
             ChangeLanguaje("Portugues");
             Idioma = "Portugues";
         }
-
-        //-----------------------------------------------------------------------   MOSTRAR Y ESCONDER LA CONTRASEÑA          
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            if (txtPass.PasswordChar == '*')
+ 
+        private void pictureBox1_Click(object sender, EventArgs e) //-------------------   Mostrar y Esconder Contra     
+        {           
+            if (txtPass.PasswordChar == false)
             {
-                txtPass.PasswordChar = '\0';
+                pictureBox1.BackgroundImage = Properties.Resources.ojo1;              
+                txtPass.PasswordChar = true;
+            }
+            else if (txtPass.PasswordChar == true)
+            {
                 pictureBox1.BackgroundImage = Properties.Resources.ojoTachado;
+                txtPass.PasswordChar = false;
             }
-            else if (txtPass.PasswordChar == '\0')
-            {
-                txtPass.PasswordChar = '*';
-                pictureBox1.BackgroundImage = Properties.Resources.ojo1;
-            }
-        }
-        //------------------------------------------------------------------------------- ABRIR LUPA
-        private void btnLupa_Click(object sender, EventArgs e)
+        } 
+        private void btnLupa_Click(object sender, EventArgs e)  //-------------------------- Abrir y Cerrar lupa
         {
             Form existe = Application.OpenForms.OfType<Form>().Where(pre => pre.Name == "frmLUPA").SingleOrDefault<Form>();
 
@@ -95,11 +83,12 @@ namespace CERVECERIA
             else
             {
                 btnLupa.BackgroundImage = Properties.Resources.lupa_cerrar;
-                frmLUPA Lupa = new frmLUPA();
+                frmLupa Lupa = new frmLupa();
                 AddOwnedForm(Lupa);
                 Lupa.Show();          
             }
         }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -43,13 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ABM_BDE.cs" />
-    <Compile Include="CONFIG_BDE.cs" />
-    <Compile Include="IDIOMAS_BDE.cs" />
-    <Compile Include="INSUMOS_BDE.cs" />
-    <Compile Include="LOGIN_BDE.cs" />
-    <Compile Include="PAGOS_BDE.cs" />
+    <Compile Include="Agenda_bll.cs" />
+    <Compile Include="Compras_bll.cs" />
+    <Compile Include="Config_bll.cs" />
+    <Compile Include="Idiomas_bll.cs" />
+    <Compile Include="Insumos_bll.cs" />
+    <Compile Include="Login_bll.cs" />
+    <Compile Include="Pagos_bll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proveedor_bll.cs" />
+    <Compile Include="Rubros_bll.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DATOS\DAL.csproj">

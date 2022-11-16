@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ENTIDADES
+namespace BE
 {
-    public class DETALLECOMPRA
+    public class DetalleCompra
     {
         int id;
         string insumo;
         float precio;
         float cantidad;
 
-        public DETALLECOMPRA(int id,string insumo, float precio, float cantidad)
+        public DetalleCompra(int id,string insumo, float precio, float cantidad)
         {
             this.Id = id;
             this.Insumo = insumo;

@@ -42,15 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PAGOS_DAL.cs" />
-    <Compile Include="RUBRO_DAL.cs" />
+    <Compile Include="Agenda_dal.cs" />
+    <Compile Include="Compras_dal.cs" />
+    <Compile Include="Pagos_dal.cs" />
+    <Compile Include="Rubro_dal.cs" />
     <Compile Include="Conexion.cs" />
-    <Compile Include="EMPLEADOS_DAL.cs" />
-    <Compile Include="IDIOMAS_DAL.cs" />
-    <Compile Include="INSUMOS_DAL.cs" />
-    <Compile Include="LOGIN_DAL.cs" />
+    <Compile Include="Idiomas_dal.cs" />
+    <Compile Include="Insumos_dal.cs" />
+    <Compile Include="Login_dal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PROVEEDOR_DAL.cs" />
+    <Compile Include="Proveedor_dal.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ENTIDADES\BE.csproj">
