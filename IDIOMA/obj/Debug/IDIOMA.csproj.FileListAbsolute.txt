@@ -17,3 +17,16 @@ C:\Users\lucas\Documents\GitHub\CERVECERIA\IDIOMA\bin\Debug\DINAMICA DE ENTIDADE
 C:\Users\lucas\Documents\GitHub\CERVECERIA\IDIOMA\bin\Debug\DATOS.pdb
 C:\Users\lucas\Documents\GitHub\CERVECERIA\IDIOMA\bin\Debug\ENTIDADES.pdb
 C:\Users\lucas\Documents\GitHub\CERVECERIA\IDIOMA\obj\Debug\IDIOMA.csproj.CopyComplete
+C:\Users\mauro\Documents\GitHub\CERVECERIA\IDIOMA\bin\Debug\IDIOMA.dll
+C:\Users\mauro\Documents\GitHub\CERVECERIA\IDIOMA\bin\Debug\IDIOMA.pdb
+C:\Users\mauro\Documents\GitHub\CERVECERIA\IDIOMA\bin\Debug\DINAMICA DE ENTIDADES.dll
+C:\Users\mauro\Documents\GitHub\CERVECERIA\IDIOMA\bin\Debug\DATOS.dll
+C:\Users\mauro\Documents\GitHub\CERVECERIA\IDIOMA\bin\Debug\ENTIDADES.dll
+C:\Users\mauro\Documents\GitHub\CERVECERIA\IDIOMA\bin\Debug\DINAMICA DE ENTIDADES.pdb
+C:\Users\mauro\Documents\GitHub\CERVECERIA\IDIOMA\bin\Debug\DATOS.pdb
+C:\Users\mauro\Documents\GitHub\CERVECERIA\IDIOMA\bin\Debug\ENTIDADES.pdb
+C:\Users\mauro\Documents\GitHub\CERVECERIA\IDIOMA\obj\Debug\IDIOMA.csprojAssemblyReference.cache
+C:\Users\mauro\Documents\GitHub\CERVECERIA\IDIOMA\obj\Debug\IDIOMA.csproj.CoreCompileInputs.cache
+C:\Users\mauro\Documents\GitHub\CERVECERIA\IDIOMA\obj\Debug\IDIOMA.csproj.CopyComplete
+C:\Users\mauro\Documents\GitHub\CERVECERIA\IDIOMA\obj\Debug\IDIOMA.dll
+C:\Users\mauro\Documents\GitHub\CERVECERIA\IDIOMA\obj\Debug\IDIOMA.pdb
