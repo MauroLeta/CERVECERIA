@@ -34,12 +34,15 @@ C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmCO
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmRecetas.resources
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmAGREGARCOMPRA.resources
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.CustomTextBox.resources
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmAbmInsumos.resources
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmAbmAgenda.resources
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmAgenda.resources
 C:\Users\lucas\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.frmAltaUser.resources
 =======
+=======
+>>>>>>> Stashed changes
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\CERVECERIA.exe.config
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\CERVECERIA.exe
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\bin\Debug\CERVECERIA.pdb
@@ -80,4 +83,7 @@ C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\UI.csproj.CoreCo
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\UI.csproj.CopyComplete
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.exe
 C:\Users\mauro\Documents\GitHub\CERVECERIA\CERVECERIA\obj\Debug\CERVECERIA.pdb
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
