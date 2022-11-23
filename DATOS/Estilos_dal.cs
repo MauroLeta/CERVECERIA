@@ -17,8 +17,16 @@ namespace DATOS
         public DataSet getEstilos()
         {
             DataSet ds = new DataSet();
-            string query = @"select * from Estilos
+            string query = @"select a.id, a.estilo, b.Nombre as BrewMaster from Estilos as a inner join Empleados as b on b.id = a.BrewMaster
                              select b.idDetalle, a.nombre, b.cantidad from DetalleEstilo as b inner join Insumos as a on idProducto = idInsumo";
+            ds = conection.GetDataSet(query);
+            return ds;
+        }
+
+        public  DataSet getOnlyEstilos()
+        {
+            DataSet ds = new DataSet();
+            string query = @"select * from Estilos";
             ds = conection.GetDataSet(query);
             return ds;
         }

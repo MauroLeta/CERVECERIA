@@ -97,6 +97,10 @@ namespace CERVECERIA
         {
             AbrirFormHijo(new frmRecetas(user));
         }
+        private void btnCoccion_Click(object sender, EventArgs e)
+        {
+            AbrirFormHijo(new frmCoccion(user));
+        }
         private void btnProductos_Click(object sender, EventArgs e)
         {
             AbrirFormHijo(new frmProductos());
@@ -173,6 +177,7 @@ namespace CERVECERIA
             }
             return "";
         }
+
         private void btnLogOut_Click_1(object sender, EventArgs e)
         {
             Application.Restart();

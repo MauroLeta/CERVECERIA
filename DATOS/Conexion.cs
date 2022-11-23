@@ -14,16 +14,9 @@ namespace DAL
         //Data Source = MAURO\\SQLEXPRESS; Initial Catalog = CERVECERIA; Integrated Security = True
         //Data Source = DESKTOP - 8UATE5V\\SQLEXPRESS;Initial Catalog = CERVECERIA; Integrated Security = True
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
         static string conectionString = "Data Source = DESKTOP-8UATE5V\\SQLEXPRESS;Initial Catalog = CERVECERIA; Integrated Security = True";
         public SqlConnection connectBD = new SqlConnection(conectionString);
-=======
-=======
->>>>>>> Stashed changes
-        public string conectionString = "Data Source = MAURO\\SQLEXPRESS;Initial Catalog = CERVECERIA; Integrated Security = True";
-        public SqlConnection conectBd = new SqlConnection();
->>>>>>> Stashed changes
+
 
         //------------------------------------------------------------------------------ MODO NO CONECTADO.
         public DataSet GetDataSet(string query) //-------- Get del DataSet

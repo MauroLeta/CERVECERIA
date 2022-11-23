@@ -204,5 +204,12 @@ namespace CERVECERIA
         {
             this.Close();
         }
+
+        private void btnInforme_Click(object sender, EventArgs e)
+        {
+            frmReporte reporte = new frmReporte();
+            AddOwnedForm(reporte);
+            reporte.Show();
+        }
     }
 }

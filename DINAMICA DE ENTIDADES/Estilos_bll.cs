@@ -34,5 +34,26 @@ namespace DINAMICA_DE_ENTIDADES
             estilos_dal.insertDetalleEstilo(id, Insumo, Cantidad);
         }
 
+        public List<Estilo> Listar()
+        {
+            List<Estilo> estilos = new List<Estilo>();
+            DataSet ds = estilos_dal.getOnlyEstilos();
+
+            estilos.Clear();
+            var i = 0;
+            foreach (DataRow drow in ds.Tables[0].Rows)
+            {
+                Estilo estilo = new Estilo(
+                    Int32.Parse(ds.Tables[0].Rows[i]["id"].ToString()),
+                    ds.Tables[0].Rows[i]["Estilo"].ToString(),
+                    Int32.Parse(ds.Tables[0].Rows[i]["BrewMaster"].ToString()));
+
+                estilos.Add(estilo);
+
+                i++;
+            }
+            return estilos;
+        }
+
     }
 }

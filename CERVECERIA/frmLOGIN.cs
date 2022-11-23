@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using BLL;
 using BE;
 using IDIOMA;
+using System.Text.RegularExpressions;
 
 namespace CERVECERIA
 {
@@ -92,6 +93,11 @@ namespace CERVECERIA
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtPass__TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

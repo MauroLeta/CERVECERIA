@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInsumos));
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -48,6 +47,7 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.lblClave = new System.Windows.Forms.Label();
             this.lblAcceso = new System.Windows.Forms.Label();
+            this.btnInforme = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -285,6 +285,21 @@
             this.lblAcceso.Text = "INSUMOS";
             this.lblAcceso.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // btnInforme
+            // 
+            this.btnInforme.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnInforme.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnInforme.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnInforme.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnInforme.Location = new System.Drawing.Point(630, 88);
+            this.btnInforme.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInforme.Name = "btnInforme";
+            this.btnInforme.Size = new System.Drawing.Size(135, 32);
+            this.btnInforme.TabIndex = 14;
+            this.btnInforme.Text = "INFORME";
+            this.btnInforme.UseVisualStyleBackColor = false;
+            this.btnInforme.Click += new System.EventHandler(this.btnInforme_Click);
+            // 
             // frmInsumos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,6 +307,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(805, 560);
+            this.Controls.Add(this.btnInforme);
             this.Controls.Add(this.lblAcceso);
             this.Controls.Add(this.lblClave);
             this.Controls.Add(this.textBoxSearch);
@@ -317,7 +333,6 @@
         }
 
         #endregion
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEditar;
@@ -332,5 +347,6 @@
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Label lblClave;
         private System.Windows.Forms.Label lblAcceso;
+        private System.Windows.Forms.Button btnInforme;
     }
 }

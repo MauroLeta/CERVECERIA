@@ -81,7 +81,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(14, 201);
+            this.label2.Location = new System.Drawing.Point(-12, 201);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 42);
@@ -92,10 +92,11 @@
             // textBoxMail
             // 
             this.textBoxMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMail.Location = new System.Drawing.Point(150, 198);
+            this.textBoxMail.Location = new System.Drawing.Point(124, 198);
             this.textBoxMail.Name = "textBoxMail";
-            this.textBoxMail.Size = new System.Drawing.Size(196, 26);
+            this.textBoxMail.Size = new System.Drawing.Size(237, 26);
             this.textBoxMail.TabIndex = 4;
+            this.textBoxMail.TextChanged += new System.EventHandler(this.textBoxMail_TextChanged);
             // 
             // label1
             // 
@@ -105,7 +106,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(14, 158);
+            this.label1.Location = new System.Drawing.Point(-12, 158);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 42);
@@ -116,9 +117,9 @@
             // textBoxTelefono
             // 
             this.textBoxTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTelefono.Location = new System.Drawing.Point(150, 155);
+            this.textBoxTelefono.Location = new System.Drawing.Point(124, 155);
             this.textBoxTelefono.Name = "textBoxTelefono";
-            this.textBoxTelefono.Size = new System.Drawing.Size(196, 26);
+            this.textBoxTelefono.Size = new System.Drawing.Size(237, 26);
             this.textBoxTelefono.TabIndex = 3;
             this.textBoxTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefono_KeyPress);
             // 
@@ -130,7 +131,7 @@
             this.lblApellido.BackColor = System.Drawing.Color.Transparent;
             this.lblApellido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblApellido.Location = new System.Drawing.Point(0, 70);
+            this.lblApellido.Location = new System.Drawing.Point(-26, 70);
             this.lblApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(145, 26);
@@ -146,7 +147,7 @@
             this.lblNombre.BackColor = System.Drawing.Color.Transparent;
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblNombre.Location = new System.Drawing.Point(13, 112);
+            this.lblNombre.Location = new System.Drawing.Point(-13, 112);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(131, 42);
@@ -162,7 +163,7 @@
             this.lblPuesto.BackColor = System.Drawing.Color.Transparent;
             this.lblPuesto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPuesto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblPuesto.Location = new System.Drawing.Point(14, 244);
+            this.lblPuesto.Location = new System.Drawing.Point(-12, 244);
             this.lblPuesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPuesto.Name = "lblPuesto";
             this.lblPuesto.Size = new System.Drawing.Size(131, 42);
@@ -173,26 +174,26 @@
             // textBoxApellido
             // 
             this.textBoxApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxApellido.Location = new System.Drawing.Point(150, 70);
+            this.textBoxApellido.Location = new System.Drawing.Point(124, 70);
             this.textBoxApellido.Name = "textBoxApellido";
-            this.textBoxApellido.Size = new System.Drawing.Size(196, 26);
+            this.textBoxApellido.Size = new System.Drawing.Size(237, 26);
             this.textBoxApellido.TabIndex = 1;
             // 
             // textBoxNombre
             // 
             this.textBoxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombre.Location = new System.Drawing.Point(149, 113);
+            this.textBoxNombre.Location = new System.Drawing.Point(123, 113);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(196, 26);
+            this.textBoxNombre.Size = new System.Drawing.Size(238, 26);
             this.textBoxNombre.TabIndex = 2;
             // 
             // cbPuesto
             // 
             this.cbPuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPuesto.FormattingEnabled = true;
-            this.cbPuesto.Location = new System.Drawing.Point(150, 244);
+            this.cbPuesto.Location = new System.Drawing.Point(124, 244);
             this.cbPuesto.Name = "cbPuesto";
-            this.cbPuesto.Size = new System.Drawing.Size(196, 28);
+            this.cbPuesto.Size = new System.Drawing.Size(237, 28);
             this.cbPuesto.TabIndex = 5;
             // 
             // lblABM
@@ -232,6 +233,7 @@
             this.Controls.Add(this.lblABM);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAbmAgenda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.frmAbmAgenda_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -271,6 +271,7 @@ namespace CERVECERIA
             this.btnCoccion.Text = "COCCIONES ";
             this.btnCoccion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCoccion.UseVisualStyleBackColor = false;
+            this.btnCoccion.Click += new System.EventHandler(this.btnCoccion_Click);
             // 
             // btnLogOut
             // 
@@ -370,7 +371,7 @@ namespace CERVECERIA
             this.pictureBox1.Location = new System.Drawing.Point(2, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(152, 154);
+            this.pictureBox1.Size = new System.Drawing.Size(151, 155);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;

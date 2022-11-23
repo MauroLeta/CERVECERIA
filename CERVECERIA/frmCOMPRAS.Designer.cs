@@ -53,6 +53,9 @@ namespace CERVECERIA
             this.label5 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
+            this.btnDescarga = new System.Windows.Forms.Button();
+            this.btnWatcher = new System.Windows.Forms.Button();
+            this.tbArchivo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +87,7 @@ namespace CERVECERIA
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.SaddleBrown;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 102);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 91);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -98,7 +101,7 @@ namespace CERVECERIA
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(390, 390);
+            this.dataGridView1.Size = new System.Drawing.Size(413, 390);
             this.dataGridView1.TabIndex = 53;
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             // 
@@ -180,10 +183,10 @@ namespace CERVECERIA
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAgregar.Location = new System.Drawing.Point(12, 497);
+            this.btnAgregar.Location = new System.Drawing.Point(12, 488);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(237, 32);
+            this.btnAgregar.Size = new System.Drawing.Size(209, 32);
             this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "AGREGAR COMPRA";
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -321,6 +324,45 @@ namespace CERVECERIA
             this.btnReturn.UseVisualStyleBackColor = false;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
+            // btnDescarga
+            // 
+            this.btnDescarga.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnDescarga.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDescarga.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDescarga.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDescarga.Location = new System.Drawing.Point(276, 523);
+            this.btnDescarga.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDescarga.Name = "btnDescarga";
+            this.btnDescarga.Size = new System.Drawing.Size(149, 32);
+            this.btnDescarga.TabIndex = 69;
+            this.btnDescarga.Text = "DESCARGAR";
+            this.btnDescarga.UseVisualStyleBackColor = false;
+            this.btnDescarga.Click += new System.EventHandler(this.btnDescarga_Click);
+            // 
+            // btnWatcher
+            // 
+            this.btnWatcher.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnWatcher.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnWatcher.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.btnWatcher.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnWatcher.Location = new System.Drawing.Point(225, 488);
+            this.btnWatcher.Margin = new System.Windows.Forms.Padding(2);
+            this.btnWatcher.Name = "btnWatcher";
+            this.btnWatcher.Size = new System.Drawing.Size(200, 31);
+            this.btnWatcher.TabIndex = 70;
+            this.btnWatcher.Text = "VER DOCUMENTOS";
+            this.btnWatcher.UseVisualStyleBackColor = false;
+            this.btnWatcher.Click += new System.EventHandler(this.btnWatcher_Click);
+            // 
+            // tbArchivo
+            // 
+            this.tbArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbArchivo.Location = new System.Drawing.Point(12, 529);
+            this.tbArchivo.Name = "tbArchivo";
+            this.tbArchivo.Size = new System.Drawing.Size(259, 26);
+            this.tbArchivo.TabIndex = 71;
+            this.tbArchivo.Text = "Nombre de Archivo de Descarga..";
+            // 
             // frmCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,6 +370,9 @@ namespace CERVECERIA
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(805, 560);
+            this.Controls.Add(this.tbArchivo);
+            this.Controls.Add(this.btnWatcher);
+            this.Controls.Add(this.btnDescarga);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label5);
@@ -371,5 +416,8 @@ namespace CERVECERIA
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.Button btnDescarga;
+        private System.Windows.Forms.Button btnWatcher;
+        private System.Windows.Forms.TextBox tbArchivo;
     }
 }

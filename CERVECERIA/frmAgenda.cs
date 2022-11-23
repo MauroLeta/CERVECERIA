@@ -175,10 +175,6 @@ namespace CERVECERIA
                 btnDescartarCambio.Visible = false;
             }
         }
-
-
-
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             if(changes == true)
@@ -198,6 +194,16 @@ namespace CERVECERIA
                 this.Close();
             }
         }
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                if (Registry_read(((DataRowView)dataGridView1.SelectedRows[0].DataBoundItem).Row[0].ToString()) != null)
+                {
+                    lblTieneUsuario.Text = Registry_read(((DataRowView)dataGridView1.SelectedRows[0].DataBoundItem).Row[0].ToString());
+                }
+            }
+        }
 
         public static string Registry_read(string id) //---------------Registry Read
         {
@@ -210,15 +216,8 @@ namespace CERVECERIA
             }
             return user;
         }
-        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            if(dataGridView1.SelectedRows.Count == 1 )
-            {
-                if(Registry_read(((DataRowView)dataGridView1.SelectedRows[0].DataBoundItem).Row[0].ToString()) != null)
-                {
-                    lblTieneUsuario.Text = Registry_read(((DataRowView)dataGridView1.SelectedRows[0].DataBoundItem).Row[0].ToString());
-                }               
-            }           
-        }
+
+ 
+
     }
 }

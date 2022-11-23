@@ -10,9 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
 using System.Xml;
 using IDIOMA;
+using SpreadsheetLight; //Espacio de nombre para SLDocument
 
 namespace CERVECERIA
 {
@@ -90,6 +90,13 @@ namespace CERVECERIA
             dataGridView2.DataSource = tablaDetalle;
         }
 
+        private void btnWatcher_Click(object sender, EventArgs e)
+        {
+            frmWatcher watcher = new frmWatcher();
+            AddOwnedForm(watcher);
+            watcher.Show();
+        } //-----------file systemWatcher
+
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             LoadDetail();
@@ -100,6 +107,40 @@ namespace CERVECERIA
             this.Close();
         }
 
+        private void btnDescarga_Click(object sender, EventArgs e)
+        {
+            Export(dataGridView1, tbArchivo.Text);
+            MessageBox.Show("¡Archivo Descargado!");
+            tbArchivo.Text = "";
+        }
+
+        public void Export(DataGridView dataGridView, string ndocumento)
+        {
+            SLDocument sl = new SLDocument();
+
+            int columna = 1;
+            foreach (DataGridViewColumn column in dataGridView.Columns)
+            {
+                sl.SetCellValue(1, columna, column.HeaderText.ToString());
+                columna++;
+            }
+
+            int fila = 2;
+            foreach(DataGridViewRow row in dataGridView.Rows)
+            {
+                if(row.Cells[0].Value != null)
+                {
+                    sl.SetCellValue(fila, 1, row.Cells[0].Value.ToString());
+                    sl.SetCellValue(fila, 2, row.Cells[1].Value.ToString());
+                    sl.SetCellValue(fila, 3, row.Cells[2].Value.ToString());
+                    sl.SetCellValue(fila, 4, row.Cells[3].Value.ToString());
+                    sl.SetCellValue(fila, 5, row.Cells[4].Value.ToString());
+                }
+
+                fila++;
+            }
+            sl.SaveAs(@"C:\Users\lucas\Documents\GitHub\CERVECERIA\CarpetaHeldig\"+ndocumento+".xlsx");
+        }
     }
 }
 

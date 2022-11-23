@@ -6,8 +6,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO; //*---------------------------------------
+using System.Diagnostics; //--espacio de nombre para EventLog
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -23,6 +26,7 @@ namespace CERVECERIA
         public string Idioma = "Español";
         public string ABM = "";
         public int tabla = 0;
+        public bool mailOk = false;
 
         public frmAbmAgenda(DataSet ds,string modo,int tab,UserLog user, DataRow drow)
         {
@@ -71,11 +75,11 @@ namespace CERVECERIA
                 }
                 else if (tabla == 1)
                 {
-                    lblABM.Text = "EDITAR DE EMPLEADO";
+                    lblABM.Text = "EDITAR EMPLEADO";
                 }
                 else if (tabla == 2)
                 {
-                    lblABM.Text = "EDITAR DE PROVEEDOR";
+                    lblABM.Text = "EDITAR PROVEEDOR";
                     lblPuesto.Visible = false;
                     cbPuesto.Visible = false;
                     lblApellido.Visible = false;
@@ -125,6 +129,8 @@ namespace CERVECERIA
                 if (textBoxApellido.Text == "" || textBoxNombre.Text == "")
                 {
                     MessageBox.Show("Faltan Completar Campos");
+
+                    //EventLogCerveceria();
                 }
                 else
                 {
@@ -158,18 +164,31 @@ namespace CERVECERIA
         {
             if(abm == "ALTA") 
             {
-               bool add= agenda_bll.AgregarRow(dataSet, tabla, textBoxApellido.Text, textBoxNombre.Text, textBoxTelefono.Text, textBoxMail.Text,cbPuesto.Text ,Int32.Parse(cbPuesto.SelectedValue.ToString()));   
-               if(add== true)
-               {
-                    MessageBox.Show("Agregado correctamente");
-               }                    
+                if(mailOk != true)
+                {
+                    MessageBox.Show("El eMail no es valido");
+                }
+                else
+                {
+                    bool add = agenda_bll.AgregarRow(dataSet, tabla, textBoxApellido.Text, textBoxNombre.Text, textBoxTelefono.Text, textBoxMail.Text, cbPuesto.Text, Int32.Parse(cbPuesto.SelectedValue.ToString()));
+                    if (add == true)
+                    {
+                        MessageBox.Show("Agregado correctamente");
+                    }
+                }                  
             }
             else if(abm == "EDITAR")
             {
-                agenda_bll.ModificarRow(data,tabla, textBoxApellido.Text, textBoxNombre.Text, textBoxTelefono.Text, textBoxMail.Text,cbPuesto.Text ,Int32.Parse(cbPuesto.SelectedValue.ToString()));
-                MessageBox.Show("Modificado correctamente");
+                if (mailOk != true)
+                {
+                    MessageBox.Show("El eMail no es valido");
+                }
+                else
+                {
+                    agenda_bll.ModificarRow(data, tabla, textBoxApellido.Text, textBoxNombre.Text, textBoxTelefono.Text, textBoxMail.Text, cbPuesto.Text, Int32.Parse(cbPuesto.SelectedValue.ToString()));
+                    MessageBox.Show("Modificado correctamente");
+                }
             }
-
             frmAgenda Pform = Owner as frmAgenda;
             Pform.cambiosEnTabla();
             this.Close();
@@ -191,5 +210,47 @@ namespace CERVECERIA
         {
             this.Close();
         }
+
+        private void textBoxMail_TextChanged(object sender, EventArgs e) // ------------Uso expresiones regulares para validar el mail
+        {
+            Regex emailRegex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);
+            if (emailRegex.IsMatch(textBoxMail.Text) == false)
+            {
+                textBoxMail.BackColor = Color.IndianRed;
+            }
+            else
+            {
+                textBoxMail.BackColor = Color.LightGreen;
+                mailOk = true;
+            }
+        }
+
+        static void EventLogCerveceria()  //------------------------------Event Log
+        {
+            StreamWriter sw = new StreamWriter("C:\\Users\\lucas\\Desktop\\EventosCerveceria\\Registro.txt");
+
+            if (EventLog.Exists("EventLog"))
+            {
+                EventLog.CreateEventSource("Aplicacion de Registro", "EventLogCerveceria");
+            }
+
+            DateTime dt = DateTime.Now;
+            string fecha = dt.ToString("dd/MM/YYYY");
+
+            EventLog eventLog = new EventLog("EventLogCerveceria");
+            eventLog.Source = "Aplicacion de Registro";
+            eventLog.WriteEntry(fecha + "Error!!!");
+
+            Console.WriteLine("EventLog Enviado");
+            Console.ReadKey();
+            Console.Clear();
+
+            foreach (EventLogEntry entry in eventLog.Entries)
+            {
+                sw.WriteLine(entry.Message);
+                sw.Close();
+            }
+
+        } 
     }
 }
